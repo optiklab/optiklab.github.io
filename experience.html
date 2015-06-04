@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>OptikLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+	
+    <!-- Le scripts -->	
+	<script type="text/javascript" src="js/jquery1.9.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">OptikLab</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Contact with me <a href="anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a> <span id="languages"></span>
+			</p>
+          </div>
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+			  <li class="active"><a href="#">My experience</a></li>
+			  <li><a href="books.html">Books</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <div class="span12">
+          <div class="hero-unit" style="padding: 30px;">
+			<div style="float: right; margin:20px 0px 0px 0px;">
+				<a href="img/photo.jpg"><img src="img/photo.jpg" width="120" height="120" /></a>
+			</div>
+			<div>
+            <h1>He110, w0r1d!</h1> My name is Anton and I'm a software developer. Most of the time I'm working on major projects in companies and writing code...
+			But sometimes I have a free time and I learn something new and write small funny and useful applications.
+			Here are presented some of my applications and their descriptions. Most of the source code you can get from <a href="https://github.com/optiklab">GitHub</a>.
+			
+			Now I work in team and you may want also to hire us, read more about our <a href="http://gdriv.es/soliddevs">team</a>.
+			</div>
+		  </div>
+          <div class="row-fluid" style="border-bottom: 1px solid #eeeeee; text-decoration: none;" >
+		    <h3>Below you can see list of projects which is <b>not open-source</b> because it was designed and created with commercial reasons.</h3>
+		  </div>
+  <div id="page" class="page-global">
+    <h2 id="ctl00_cphBody_h1Title" class="page-global-title">My experience</h2>
+    <div id="ctl00_cphBody_divText">
+	<style>
+
+/************************************************/
+
+.oTable {
+	border-collapse: separate;
+	border-spacing: 0
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	color: #252523;
+	word-wrap: break-word;
+}
+.oTable th {
+	color: #252523;
+	padding: 6px 15px 6px 11px;
+	font-size: 12px;
+	font-weight: 700
+}
+.oTable td {
+	border: 1px solid #ededeb;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	padding: 8px 11px 7px
+}
+.oTable tbody tr:last-child td {
+border-bottom-width: 3px;
+}
+.oTable td:last-child {
+border-right-width: 3px;
+}
+.oTable td:first-child {
+border-left-width: 3px;
+}
+.oTable thead tr:first-child  th:first-child{
+	-moz-border-radius-topleft: 7px;
+	-webkit-border-top-left-radius: 7px;
+	border-top-left-radius: 7px
+}
+
+.oTable thead tr:last-child  th:first-child{
+	-moz-border-radius-bottomleft: 7px;
+	-webkit-border-bottom-left-radius: 7px;
+	border-bottom-left-radius: 7px
+}
+
+.oTable thead tr:last-child  th:last-child{
+	-moz-border-radius-bottomright: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	border-bottom-right-radius: 7px
+}
+
+.oTable tbody tr:first-child  th:first-child{
+	-moz-border-radius-topleft: 7px;
+	-webkit-border-top-left-radius: 7px;
+	border-top-left-radius: 7px
+}
+
+.oTable tbody tr:first-child  th:last-child{
+	-moz-border-radius-topright: 7px;
+	-webkit-border-top-right-radius: 7px;
+	border-top-right-radius: 7px
+}
+
+.oTable tbody tr:first-child  td{
+	border-top-width: 3px
+}
+
+.oTable tbody tr:last-child  th:first-child{
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px
+}
+
+.oTable tbody tr:last-child  th:last-child{
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px
+}
+.oTable tbody tr:last-child  td{
+	border-bottom-width: 3px
+}
+
+
+.nowrap {
+white-space: nowrap;
+}
+.oScore {
+vertical-align: middle;
+display: inline-block;
+font-size: 10px;
+font-weight: 700;
+white-space: nowrap;
+margin-left: 18px;
+}
+.oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
+padding: 5px 8px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+}
+.oScore10 {
+background-color: #87b829;
+}
+.oScore20 {
+background-color: #00a0e8;
+}
+.oScore30 {
+background-color: #03c3e5;
+}
+
+/*********************************/
+.oInlineList>li {
+display: inline-block;
+vertical-align: top;
+}
+.oTag {
+line-height: 1;
+font-size: 11px;
+padding: 7px 9px;
+margin: 2px;
+border-radius: 4px;
+-webkit-font-smoothing: antialiased;
+color: #646165;
+}
+.oTag:hover {
+cursor: pointer;
+text-decoration: none;
+}
+
+ul>li {
+list-style-position: outside;
+}
+
+.oSkill {
+background-color: #f2f2ed;
+}
+.oSkill.isCertified, .oSkill.isTested {
+position: relative;
+padding-right: 24px;
+border-radius: 4px;
+}
+.oSkill.isCertified:after, .oSkill.isTested:after {
+content: "\00a0";
+position: absolute;
+padding: 7px 11px 7px 10px;
+top: 0;
+border-radius: 0 4px 4px 0;
+background: url(image.svg) no-repeat center center transparent;
+background-size: 12px;
+font-size: 11px;
+-webkit-filter: opacity(50%);
+filter: opacity(50%);
+}
+.oSkill:hover, .oSkill.isActive {
+color: #fff;
+background: #00aeec;
+}
+
+/*********************************************/
+.xList>li, .oListLite>li, ul.oList>li, section.oList>.oBd>li, .xList>article, .oListLite>article, ul.oList>article, section.oList>.oBd>article {
+padding-bottom: 18px;
+margin-bottom: 18px;
+border-bottom: 1px solid #b2b2b2;
+}
+.oHMin {
+color: #8C8C89;
+font-weight: 400;
+}
+.oHMin:before {
+content: "|";
+color: #252523;
+padding-right: 6px;
+}
+.oRowTitle {
+display: block;
+margin-bottom: 6px;
+font: 700 14px sans-serif;
+}
+.oSupportInfo {
+font-size: 11px;
+color: #7c7c7a;
+line-height: 16px;
+font-weight: 400;
+}
+.isHidden, .hidden {
+display: none!important;
+}
+.oLinkButton, .oMore, .oMoreLarge {
+font-weight: 400!important;
+color: #0093f0!important;
+text-transform: none!important;
+}
+.oLinkButton:hover, .oMore:hover, .oMoreLarge:hover {
+color: #0093f0!important;
+text-decoration: underline;
+}
+
+</style>
+<div>
+I'm a coder and I feel cool myself with it. I like analyze interesting problems to solve, write and optimize code. I like to build systems for users and see results and responses.
+My experience include junior, experienced and team lead positions, but still my main skill and passion <b>"write code"</b>. Below you may see some drawing about my experience
+</div>
+  <div><h4>Experienced in</h4></div>
+  <div>
+	<div>
+	  <ul class="oInlineList">
+		<li class="oTag oSkill isTested">C#</li>
+		<li class="oTag oSkill isTested">C++</li>
+		<li class="oTag oSkill">.NET Framework</li>
+		<li class="oTag oSkill">ASP.NET MVC</li>
+		<li class="oTag oSkill">ASP.NET WebForms</li>
+		<li class="oTag oSkill">LINQ</li>
+		<li class="oTag oSkill">WebAPI</li>
+		<li class="oTag oSkill">WCF</li>
+		<li class="oTag oSkill">JavaScript</li>
+		<li class="oTag oSkill">MS SQL (T-SQL)</li>
+		<li class="oTag oSkill">Oracle (PL/SQL)</li>
+		<li class="oTag oSkill">Debian</li>
+		<li class="oTag oSkill">Ubuntu</li>
+		<li class="oTag oSkill">XML</li>
+		<li class="oTag oSkill">XPath</li>
+		<li class="oTag oSkill">WPF</li>
+		<li class="oTag oSkill">MVVM</li>
+		<li class="oTag oSkill">Windows Forms</li>
+		<li class="oTag oSkill">ADO.NET</li>
+		<li class="oTag oSkill">Entity Framework</li>
+		<li class="oTag oSkill">html</li>
+		<li class="oTag oSkill">css</li>
+		<li class="oTag oSkill">json</li>
+	  </ul>
+	</div>
+  <div><h4>Familiar with</h4></div>
+	<div>
+	  <ul class="oInlineList">
+		<li class="oTag oSkill">Windows Mobile</li>
+		<li class="oTag oSkill">Windows Phone 7.1</li>
+		<li class="oTag oSkill">Android NDK</li>
+		<li class="oTag oSkill">Android SDK</li>
+		<li class="oTag oSkill">VB .NET</li>
+		<li class="oTag oSkill">XNA</li>
+		<li class="oTag oSkill">MacOS X</li>
+		<li class="oTag oSkill">MySQL</li>
+		<li class="oTag oSkill">php</li>
+		<li class="oTag oSkill">json</li>
+		<li class="oTag oSkill">python</li>
+	  </ul>
+	</div>
+  </div>
+	<div style="margin-top: 30px; clear:both;">
+		<h3>Certificates</h3>
+	 </div>
+	<div style="margin-top: 10px;">
+		<table class="oTable" style="width: 100%;">
+			<thead class="nowrap">
+				<tr>
+					<th>Name</th>
+					<th>Score (out of 5)</th>
+					<th>Time to Complete</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>					
+				<tr>
+					<td>Brainbench Test C# 4.0</td>
+					<td class="nowrap">4.30 <span class="oScore oScore10">Top 5%</span>
+					</td>
+					<td class="nowrap">2014-10-13</td>
+					<td class="nowrap"><a href="http://www.brainbench.com/transcript.jsp?pid=9308180">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Retratech Programming on C# 4.0</td>
+					<td class="nowrap">78% <span class="oScore oScore10">Top 5%</span></td>
+					<td class="nowrap">2014-10-08</td>
+					<td class="nowrap"><a href="http://certifications.ru/resume/198958/">Details</a></td>
+				</tr>
+				<tr>
+					<td>WhoTrades course on Algorithmic Trading with MQL</td>
+					<td class="nowrap">Finished</td>
+					<td class="nowrap">2014-08-08</td>
+					<td class="nowrap"><a href="/Custom/Themes/Standard/files/whotrades.png">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Standford Univercity courses ԈTML5 Game DevelopmentԼ/td>
+					<td class="nowrap">Finished</td>
+					<td class="nowrap">2013-08-01</td>
+					<td class="nowrap"><a href="/Custom/Themes/Standard/files/udacity.JPG">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Programming with C++</td>
+					<td class="nowrap">3.60 <span class="oScore oScore20">Top 20%</span>
+					</td>
+					<td class="nowrap">2012-08-07</td>
+					<td class="nowrap"><a href="https://www.odesk.com/exams/C-Programmers_4920871">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>U.S. English Basic Skills</td>
+					<td class="nowrap">3.60 <span class="oScore oScore20">Top 20%</span>
+					</td>
+					<td class="nowrap">2012-08-07</td>
+					<td class="nowrap"><a href="https://www.odesk.com/exams/English-Sentence-Structure-Experts_4917532">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Standford Univercity courses ԁrtificial IntelligenceԠand Ԑrogramming a Robotic CarԼ/td>
+					<td class="nowrap">Finished</td>
+					<td class="nowrap">2010</td>
+					<td class="nowrap"><a href="http://www.udacity.com">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Microsoft Security Spring'05</td>
+					<td class="nowrap">Finished</td>
+					<td class="nowrap">2005</td>
+					<td class="nowrap"><a href="/Custom/Themes/Standard/files/certificate1.jpg">Details</a> 
+					</td>
+				</tr>
+				<tr>
+					<td>Microsoft Security Winter'05</td>
+					<td class="nowrap">Finished</td>
+					<td class="nowrap">2005</td>
+					<td class="nowrap"><a href="/Custom/Themes/Standard/files/certificate2.jpg">Details</a> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="margin-top: 50px;">
+		<h3>Employment History</h3>
+	</div>
+	<div class="row-fluid oListLite" style="margin-top: 20px;">
+			<article class="">
+				<h1 class="oRowTitle">
+				  Software Developer          <span class="oHMin">Velocity Markets LLC</span>
+				</h1>
+				<div class="oSupportInfo">
+					March 2014 - Present
+				</div>
+				<div>
+					Participate in the development of trading statistics system 
+					<a href="http://www.forexrazor.com">http://www.forexrazor.com</a> and rebates system <a href="http://cashbackforex.com">http://cashbackforex.com</a> for Forex market. 
+					<br>Work remotely (as officially registered Independent Contractor) in the distributed team of developers (Ireland, Russia, New Zealand, and USA). 
+					<br>Technologies and languages stack: 
+					<br>- C#, ASP.NET Web Forms, DotNetNuke, T-SQL, MS SQL Server, Git 
+					<br>- JavaScript, jQuery 
+<br>
+					<br>Goals: 
+					<br>1. Implemented authentication and authorization systems in the DotNetNuke and external OAuth 2.0 providers like Facebook, Google, LinkedIn, and Twitter. 
+					<br>2. Made many changes in standard DotNetNuke Forum platform for real-time news feeds and Forum modifications. 
+					<br>3. Made SQL queries optimizations. 
+					<br>4. Implemented and managed Security related features like HTTPS infrastructure, redirects, Cookie security (http only, secure flags), anti-CSRF attack mechanisms.
+				</div>
+			</article>
+			<article class="">
+				<h1 class="oRowTitle">
+				  Lead Software Developer          <span class="oHMin">Travelsystem LLC http://neoline.travel</span>
+				</h1>
+				<div class="oSupportInfo">
+					January 2013 - February 2014
+				</div>
+				<div>
+					<a href="http://neoline.travel">http://neoline.travel</a><br>
+					<br>
+					Role:<br>
+					- Engaged in the development of new highly loaded online booking system<br>
+					- Writing highly important parts of code,<br>
+					- Scrum-mastering,<br>
+					- Opened local regional office for developers in Taganrog,<br>
+					- Responsible for the funds distribution (timely payment of rent, services, procuremen),<br>
+					- Assisting the management in the selection of new candidates<br>
+					<br>
+					Technologies:<br>
+					- C#, ASP.NET WebForms, ASP.NET MVC, Windows Forms, WPF<br>
+					- JavaScript, jQuery<br>
+					- T-SQL, PL/SQL, Entity Framework, Oracle,<br>
+					- CQRS, Windows Azure
+				</div>
+			</article>
+			<article class="">
+				<h1 class="oRowTitle">
+				  C#/C++ Software Developer          <span class="oHMin">Software Technologies LLC</span>
+				</h1>
+				<div class="oSupportInfo">
+					September 2010 - December 2012
+				</div>
+				<div>
+					<a href="http://www.softech.ru">http://www.softech.ru</a><br>
+					<br>
+					<span class="jsFull">Programming Geo-Information Systems :<br>
+						- C++, COM, IDL, MFC, GCC 4.6 Linux Ubuntu, LLVM 3.1 MacOS, iOS5<br>
+						- Multiplatform development for Windows/Linux/MacOS<br>
+						- Visual Studio 2005-2012, Qt 4, XCode, Eclipse<br>
+						<br>
+						- C# .NET Framework 3.5/4, WPF, Windows Forms,<br>
+						- ADO.NET, Entity Framework, SQL Server,<br>
+						- Amazon Web Services<br>
+						<br>
+						- Android SDK<br>
+						- Windows Phone 7.1 SDK<br>
+						- Windows Mobile (.NET Compact Framework)<br>
+						<br>
+						- Agile development<br>
+						- Geocoding, routing, and other GIS-specific algorithms and technologies.
+					</span>
+				</div>
+			</article>
+			<article class="">
+				<h1 class="oRowTitle">
+				  Quality Assurance Engineer        <span class="oHMin">Software Technologies LLC</span>
+				</h1>
+				<div class="oSupportInfo">
+					July 2009 - August 2010
+				</div>
+				<div>
+					<a href="http://www.softech.ru">http://www.softech.ru</a><br>
+					<br>
+					<span class="jsFull">Automate testing:<br>
+						- QA TestComplete 7: JScript<br>
+						- C# plug-ins scripting,<br>
+						- SOAP UI,<br>
+						- testing documentation: test plan, test schedules, test data preparing;<br>
+						- design test cases and test suites;<br>
+						- functional, stress, load, performance testing;<br>
+<br>
+						Bug tracking: JIRA, StarTeam<br>
+						Planning and scheduling: MS Project<br>
+						Version control: Visual SourceSafe, SVN<br>
+						Process: RUP
+					</span>
+				</div>
+			</article>
+			<article class="">
+				<h1 class="oRowTitle">
+				  Content-manager          <span class="oHMin">E-house LLC</span>
+				</h1>
+				<div class="oSupportInfo">
+					December 2007 - May 2009
+				</div>
+				<div>
+					Content managing for big web-shops (<a href="http://www.ehouse.ru">http://www.ehouse.ru</a>, <a href="http://www.megashop.ru">http://www.megashop.ru</a>, etc.).<br>
+					Writing of descriptions for computer technics: PC's, Mac's, laptops, servers, motherboards, video-adapters, hard drives,<br>
+					CPU's, RAM and etc. Got good practice in technical english: writing /reading / preparing of documentation.<br>
+				</div>
+			</article>
+	</div>
+	</div> 
+    </div>
+		</div>
+	  </div>
+	</div>
+
+      <footer>
+        <p>&copy; OptikLab 2013-2015</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
