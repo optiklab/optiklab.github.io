@@ -1,0 +1,1064 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>OptikLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/sidenav.css" rel="stylesheet">
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    	
+	<script type="text/javascript" src="js/jquery1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/myscripts.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">OptikLab</a>
+          <div class="nav-collapse collapse">
+		  
+            <p class="navbar-text pull-right">
+			    Contact with me <a href="anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a> <span id="languages"></span> 
+            </p>
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+			  <li class="active"><a href="#">Blog</a></li>
+              <li><a href="trips.html">Trips</a></li>
+			  <li><a href="about.html">My experience</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+	
+	<div class="container">
+		<div class="row">
+		  <div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">			
+			  <li><a href="#goto"><i class="icon-chevron-right"></i>Why goto is so bad</a></li>
+			  <li><a href="#oauth"><i class="icon-chevron-right"></i>OAuth and tears</a></li>
+			  <li><a href="#identity2"><i class="icon-chevron-right"></i>Customize ASP.NET Identity 2.0</a></li>
+			  <li><a href="#codefirst"><i class="icon-chevron-right"></i>Select happy medium in practices of Entity Framework</a></li>
+			  <li><a href="#notepadcpp"><i class="icon-chevron-right"></i>A word about Notepad++</a></li>
+			  <li><a href="#neoline"><i class="icon-chevron-right"></i>It was a project of 1 year long...</a></li>
+			  <li><a href="#syscontext"><i class="icon-chevron-right"></i>Problems with Oracle SYS_CONTEXT function</a></li>
+			  <li><a href="#oracle"><i class="icon-chevron-right"></i>Query optimization in Oracle</a></li>
+			  <li><a href="#xmlserialize"><i class="icon-chevron-right"></i>XML serialization of derived classes</a></li>
+			  <li><a href="#registers"><i class="icon-chevron-right"></i>Let's call to CPU registers =)</a></li>
+			  <li><a href="#comments"><i class="icon-chevron-right"></i>What should be the comments in the code...</a></li>
+			  <li><a href="#cppcore"><i class="icon-chevron-right"></i>C++ core</a></li>
+			  <li><a href="#vs2012"><i class="icon-chevron-right"></i>Solved problems with cooperating of Visual Studio 2012 and SQL Server 2008</a></li>
+			  <li><a href="#utf"><i class="icon-chevron-right"></i>How to write a UTF-8 encoded string to a file in windows, in C++</a></li>
+			</ul>
+		  </div>
+		  <div class="span9">
+			  <section id="goto" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>Why goto is so bad</h3>					
+					<p class="blog-post-meta">30 of July, 2014</p>
+				</div>
+<p>    At any place I work there are was a moment with discussion about using of break. continue and goto operators.</p>
+<p align="center"><img src="http://imgs.xkcd.com/comics/goto.png"/></p>
+<p>	I read a lot about goto in books and even McConnel "Solid code" wrote about how it is bad.</p>
+<p>    And in all these places, in code styles, style guides and books, there are only one point: missing the main line of code or loosing the control.</p>
+<p>    But I belive that with correct splitting of the program to smaller parts (methods, functions, classes) and with solid architecture there are no such a big deal about loosing control by using just break or continue. Sometimes it makes code shorter and easier.</p>
+<p>    Recently I read very good article (or is this a book?) <a href="http://lwn.net/Articles/250967/">What every programmer should know about memory</a> I found good example of why we should not use operators which lead to assembly JUMP from the real performance point of view: (<a href="http://lwn.net/Articles/255364/">here is</a>) and it is called Prefetching.</p>
+<p><i>"Code has the advantage that it is linear between jumps. In these periods the processor can prefetch memory efficiently. Jumps disturb this nice picture because
+<br>- the jump target might not be statically determined;
+<br>- and even if it is static the memory fetch might take a long time if it misses all caches.
+<br>     These problems create stalls in execution with a possibly severe impact on performance. "
+</i></p>
+<p>    Of course, this is all about the total optimizations at the low lever and probably doesn't have such influence at the high level or OOP level languages. But I think this is good and useful description from the technical point of view.</p>
+		    </section>
+		  	<section id="oauth" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>OAuth and tears</h3>					
+					<p class="blog-post-meta">7 of July, 2014</p>
+				</div>
+<p>Not so far I moved my ASP.NET MVC 3 project to latest&greatest ASP.NET MVC 5. In my previous article I was writing about this process and how to use own datatables for ASP.NET Identity 2.0 model.
+One of the points for latest version was OAuth 2.0 "out of the box". But now I have to implement authentication in my Web API project part and read a lot about it...and here is tears...</p>
+<p align="center"><img src="http://jesse.ajoaz.org/wp-content/uploads/2010/08/OAuth-Shine-300x298.png"/></p>
+<p>I recommend to see one of the latest courses about Security in Web API 2.0: <a href="http://pluralsight.com/training/Courses/TableOfContents/webapi-v2-security">WebAPI 2.0 Security</a></p>
+<p>You may see this course available on <a href="http://rutracker.org">rutracker</a> =). This is express-course but it is very usefull and telling about SSL settings in your web server,
+main authentication mecanisms and capabilities in ASP.NET, client-side security in JavaScript, and also Token Based Authentication. Also there are good describing of problems in WebAPI 1.0 and how it was solved in WebAPI 2.0.</p>
+<p>During this course there are touched OAuth 2.0 a lot and there are gived link to another useful course <a href="http://pluralsight.com/training/Courses/TableOfContents/oauth2-json-web-tokens-openid-connect-introduction">Introduction to OAuth2, OpenID Connect and JSON Web Tokens (JWT)</a>,
+and this is course you should start from. Because I know a lot of new things about the history of OAuth 2.0 and where is it now.</p>
+<p>For some of you it is not a news, but briefly: Eran Hammer who is author of OAuth 1.0 was working on improvements for this protocol, but big companies like Google and Facebook and Microsoft wanted to help in this. These guys
+from Enterprise development wanted some other features then Consumer-developers did. And they pushed a lot on it. Everyone want his own features. Finally Eran leaved this community and asked to decline his Last Name from the Authors list.
+Sad final of OAuth 2.0 was even worse, because big companies was not able to agree with it on all the levels and everyone have its own implementation. So, we can't even call OAuth 2.0 as a "protocol", it is like simple set of rules (which is unnecessary to take into account).</p>
+<p>You can understand how Eran hates his creation by watching this <a href="https://vimeo.com/52882780">video</a>, and also he telling about his new creation in that area.</p>
+<p>He wrote several good articles about the problems of OAuth 2.0 in deep:<br/>
+<a href="http://hueniverse.com/2010/09/15/oauth-2-0-without-signatures-is-bad-for-the-web/">oauth-2-0-without-signatures-is-bad-for-the-web</a><br/>
+<a href="http://hueniverse.com/2012/07/26/oauth-2-0-and-the-road-to-hell/">oauth-2-0-and-the-road-to-hel</a>
+</p>
+<p>Final of this decisions was that "big guys" was forced to implement their own Security features in the protocol which <b>should be secure from the scratch</b>. Facebook, for example, was hacked several times:
+<a href="http://homakov.blogspot.ru/2013/02/hacking-facebook-with-oauth2-and-chrome.html">Hacking-facebook-with-oauth2-and-chrome</a><br/>
+<a href="http://www.breaksec.com/?p=5753">How I Hacked Any Facebook Account...Again!</a>
+</p>
+<p><b>OAuth 2.0 is a way to hell.</b>(C) Eran Hammer</p>
+<p>Resume from me: if you want to implement serious web-service with good level of security you should learn how to do this from the best professionals, implement it and ask for review from these guys. Now one will create a good implementation for you,
+for example, standard templates of Microsoft ASP.NET projects have a not so good functional to handle this (they write in MSDN "this is not for production"). Author of PluralSight courses develops Open-Source framework for security purposes and he have a nice web-site for support it <a href="http://leastprivilege.com/2014/06/24/resourceaction-based-authorization-for-owin-and-mvc-and-web-api/">link</a>. Hope this helps.</p>
+		    </section>
+			<section id="identity2" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>Customize ASP.NET Identity 2.0</h3>					
+					<p class="blog-post-meta">May 25, 2014</p>
+				</div>
+<p>Recently I found a nice explanation of latest <a href="https://vimeo.com/user22258446/review/79095048/9a4d62f61c">Securing (ASP.NET) web API-based architectures</a> from DevWeek about the totally new <a href="https://aspnetidentity.codeplex.com/">ASP.NET Identity 2.0</a> in <a href="http://www.asp.net/mvc/overview/releases/mvc51-release-notes">MVC 5.1</a> and <a href="http://msdn.microsoft.com/en-us/library/dn448365(v=vs.118).aspx">Web API 2.0</a> and I decided to rework my current project to use it because</p>
+<p>1. New system built on open standard <a href=” http://katanaproject.codeplex.com”>OWIN</a>, which allows to take a look 'What's inside?' and gives some flexibility in choosing web-server and OS.</p>
+<p>2. Owin-based authentication natively supports security for Web API 2.0.</p>
+<p>3. Latest projects contains OAuth 2.0 authentication out of the box.</p>
+<p>I think many of ASP.NET MVC 1 - 4 web-developers rework standard Forms authentication provided by Microsoft. I did this too. I had overrided Membership Provider, Roles Provider and Identity, and you may find a lot of <a href=”http://www.dotnet-tricks.com/Tutorial/mvc/G54G220114-Custom-Authentication-and-Authorization-in-ASP.NET-MVC.html">examples</a>. But there are no so much information about <a href="https://aspnetidentity.codeplex.com/">ASP.NET Identity 2.0</a>, so I think my post will cover it nicely.</p>
+
+<p>As you know, when you create a new project from ASP.NET MVC template, it create default database for you which such a nice list of tables:</p>
+<p align="center"><a href="http://2.bp.blogspot.com/-S7nzA4x9oug/U4EOg-fUbbI/AAAAAAAAJw4/4z2dNoZW1oc/s1600/aspnetusers.png" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-S7nzA4x9oug/U4EOg-fUbbI/AAAAAAAAJw4/4z2dNoZW1oc/s320/aspnetusers.png" /></a></p>
+<p>My goal is to show how to remove these tables and use my own tables, but still use its standard authentication system with support of external OAuth 2.0 providers and Web API 2.0 security system.</p>
+
+<p>I use nice MVC patterns in my projects where Model, Logic and Presentation layers are different projects. Presentation layer is MVC project and all others are libraries. It allows my to have minimal changes in Model and Logic projects, but rework only Web project from ASP.NET MVC 3.0 to ASP.NET MVC 5.1.
+As data model I use <a href=”https://googledrive.com/host/0B4Q3U97fHTqINzFfajF6U21tQTQ/blog.html#codefirst”>Reverse Engineered POCO classes</a>, so I can show you my changes in Database Schema and also in Code.</p>
+
+<p>In my database schema I use my own tables User, Roles, UserRoles (x-table), and its relations.</p>
+<p align="center"><a href="http://2.bp.blogspot.com/-IcHADJ6Vv6U/U4EXau2dnWI/AAAAAAAAJxQ/lZYjeaZqcgo/s1600/scheme0.jpg" imageanchor="1" ><img border="0" src="http://2.bp.blogspot.com/-IcHADJ6Vv6U/U4EXau2dnWI/AAAAAAAAJxQ/lZYjeaZqcgo/s320/scheme0.jpg" /></a></p>
+<p align="center"><i>Pic. DB schema.</i></p>
+
+<p><h3>1.</h3>To start you need to add some tables or columns in your schema. First of all, take a look in the standard tables, which ASP.NET generated by default. You may create a new ASP.NET MVC 5 project, find generated DB file in App_Data folder (Hidden by default, so use Show All Files button in Solution Explorer) and connect to this file to see the tables. In other way you may
+go to a <a href="https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/SimpleMembershipSchemeUpdateMigration/SimpleMembershipToIdentityMigration.sql">link with ASP.NET SQL scripts</a> a copy-paste column right in your script or DB model. Compare results for me shows that I need to add some columns in my <b>Users</b> tables, change type of Id key from INTEGER to NVARCHAR (same for <b>Roles</b> table), and also I needed to add tables <b>UserClaims</b> and <b>UserLogins</b>.</p>
+
+<p align="center"><a href="http://3.bp.blogspot.com/-TLhLdUWM2QQ/U4EXaqK24eI/AAAAAAAAJxc/UqFomIb9EDg/s1600/comparescheme.jpg" imageanchor="1" ><img border="0" src="http://3.bp.blogspot.com/-TLhLdUWM2QQ/U4EXaqK24eI/AAAAAAAAJxc/UqFomIb9EDg/s320/comparescheme.jpg" /></a></p>
+<p align="center"><i>Pic. New table Users at the left, old one at the right.</i></p>
+
+<p align="center"><a href="http://1.bp.blogspot.com/-IDzilVi4tws/U4EXasKAxRI/AAAAAAAAJxU/WgwgG_Nsc7I/s1600/scheme1.jpg" imageanchor="1" ><img border="0" src="http://1.bp.blogspot.com/-IDzilVi4tws/U4EXasKAxRI/AAAAAAAAJxU/WgwgG_Nsc7I/s320/scheme1.jpg" /></a></p>
+<p align="center"><i>Pic. New schema ready to work.</i></p>
+
+<p><h3>2.</h3>On my next step I generated SQL Script and created new database. After that <a href="https://googledrive.com/host/0B4Q3U97fHTqINzFfajF6U21tQTQ/blog.html#codefirst">I generated model classes via Visual Studio plug-in</a>.</p> 
+
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-fBD0hg-Cen8/U4HQl001hHI/AAAAAAAAJyA/lddrPeYgR4U/s1600/poco1.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-fBD0hg-Cen8/U4HQl001hHI/AAAAAAAAJyA/lddrPeYgR4U/s320/poco1.jpg" /></a></div>
+<p align="center"><i>Pic. Model classes.</i></p>
+
+<p><h3>3.</h3>Unload your old ASP.NET MVC 1-4 project from the solution and create a new one, MVC 5.1. Add all necessary dependent projects like Model and Repository in the References on a new web project. And now we gonna write code a little bit.</p> 
+
+<p><h3>4.</h3>Some steps described in <a href="http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity">Overview of Custom Storage Providers for ASP.NET Identity</a>, but it doesn't show anything about IoC engines and uses totally external Storage like MySQL. So I will duplicate information in some parts, but not everywhere.Go to References -> NuGet and do Uninstall for Microsoft ASP.NET Identity EntityFramework.
+This removes all dependencies like <b>IdentityUser, UserStore, RoleStore</b> and we need to create our own. Now if you compile your project, you will see some problem files:</p>
+<p>1. App_Start/Startup.Auth.cs</p> 
+<p>2. App_Start/IdentityConfig.cs</p> 
+<p>3. Models/IdentityModels.cs</p> 
+<p>4. Controllers/AccountController.cs</p> 
+<p><h3>5.</h3>Let's implement <b>IUserStore, IRoleStore, IClaimStore, IUserRoleStore, IUserLoginStore</b> in our classes, because it is necessary for <a href="https://aspnetidentity.codeplex.com/">ASP.NET Identity 2.0 system</a>. We may create 2 classes: <b>UserStore</b>, which implements interfaces like IUserStore, IClaimStore, IUserRoleStore, IUserLoginStore) and <b>RoleStore</b>, which implements IRoleStore. 
+My example for <b>RoleStore</b>, which uses IoC Framework (example for MySQL <a href="https://github.com/raquelsa/AspNet.Identity.MySQL/blob/master/RoleStore.cs">is here</a>):</p> 
+<pre class="cscode"><code><span class="key">class</span> RoleStore : IRoleStore&lt;Role&gt;
+{
+    #region Private fields
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// The _users repository.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">private</span> <span class="key">readonly</span> IRepository&lt;PhiUser&gt; _usersRepository;
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// The _roles repository.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">private</span> <span class="key">readonly</span> IRepository&lt;Role&gt; _rolesRepository;
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// The _user roles repository.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">private</span> <span class="key">readonly</span> IRepository&lt;UserRole&gt; _userRolesRepository;
+
+    #endregion
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Initializes a new instance of the &lt;see cref="RoleStore"/&gt; class.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="usersRepository"&gt;The users repository.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="rolesRepository"&gt;The roles repository.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="userRolesRepository"&gt;The user roles repository.&lt;/param&gt;</span>
+    <span class="key">public</span> RoleStore(
+        IRepository&lt;PhiUser&gt; usersRepository,
+        IRepository&lt;Role&gt; rolesRepository,
+        IRepository&lt;UserRole&gt; userRolesRepository)
+    {
+        <span class="key">this</span>._usersRepository = usersRepository;
+        <span class="key">this</span>._rolesRepository = rolesRepository;
+        <span class="key">this</span>._userRolesRepository = userRolesRepository;
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">public</span> <span class="key">void</span> Dispose()
+    {
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Inserts role in asynchronous mode.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;The role.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="System.ArgumentNullException"&gt;Role is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task CreateAsync(Role role)
+    {
+        <span class="key">if</span> (role == <span class="key">null</span>)
+        {
+            <span class="key">throw</span> <span class="key">new</span> ArgumentNullException(<span class="str">"role"</span>);
+        }
+
+        _rolesRepository.Insert(role);
+
+        <span class="key">return</span> Task.FromResult&lt;<span class="key">object</span>&gt;(<span class="key">null</span>);
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Deletes role in asynchronous mode.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;The role.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="System.ArgumentNullException"&gt;Role is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task DeleteAsync(Role role)
+    {
+        <span class="key">if</span> (role == <span class="key">null</span>)
+        {
+            <span class="key">throw</span> <span class="key">new</span> ArgumentNullException(<span class="str">"user"</span>);
+        }
+
+        _rolesRepository.Delete(role);
+
+        <span class="key">return</span> Task.FromResult&lt;Object&gt;(<span class="key">null</span>);
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Searches role by Id in asynchronous mode.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;The role Id.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="System.ArgumentNullException"&gt;Role Id is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;Role&gt; FindByIdAsync(<span class="key">string</span> roleId)
+    {
+        <span class="key">if</span> (String.IsNullOrEmpty(roleId))
+        {
+            <span class="key">throw</span> <span class="key">new</span> ArgumentNullException(<span class="str">"roleId"</span>);
+        }
+
+        Role result = _rolesRepository.GetById(roleId);
+
+        <span class="key">return</span> Task.FromResult&lt;Role&gt;(result);
+    }
+
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Searches role by name in asynchronous mode.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;The role name.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="System.ArgumentNullException"&gt;Rolename is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;Role&gt; FindByNameAsync(String roleName)
+    {
+        <span class="key">if</span> (String.IsNullOrEmpty(roleName))
+        {
+            <span class="key">throw</span> <span class="key">new</span> ArgumentNullException(<span class="str">"roleName"</span>);
+        }
+
+        Role result = <span class="key">this</span>._rolesRepository.Table.ToList().FirstOrDefault(x =&gt; x.Name == roleName);
+
+        <span class="key">return</span> Task.FromResult&lt;Role&gt;(result);
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Updates role in asynchronous mode.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;The role.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="System.ArgumentNullException"&gt;Role is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task UpdateAsync(Role role)
+    {
+        <span class="key">if</span> (role == <span class="key">null</span>)
+        {
+            <span class="key">throw</span> <span class="key">new</span> ArgumentNullException(<span class="str">"user"</span>);
+        }
+
+        _rolesRepository.Update(role);
+
+        <span class="key">return</span> Task.FromResult&lt;Object&gt;(<span class="key">null</span>);
+    }
+}</code></pre>
+<p>Cutted example of <b>UserStore</b>, just to show you implemented interfaces, because there are no Rocket Science, just do it like in RoleStore (example for MySQL <a href="https://github.com/raquelsa/AspNet.Identity.MySQL/blob/master/UserStore.cs">is here</a>):</p> 
+<pre class="cscode">
+<code><span class="key">public</span> <span class="key">class</span> UserStore : IUserStore&lt;PhiUser&gt;,
+                         IUserClaimStore&lt;PhiUser&gt;,
+                         IUserLoginStore&lt;PhiUser&gt;,
+                         IUserRoleStore&lt;PhiUser&gt;,
+                         IUserPasswordStore&lt;PhiUser&gt;
+{
+    #region Private fields
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// The _users repository.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">private</span> <span class="key">readonly</span> IRepository&lt;PhiUser&gt; _usersRepository;
+
+    ...
+
+    #endregion
+
+    #region Constructor
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Initializes a new instance of the &lt;see cref="UserStore"/&gt; class.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="usersRepository"&gt;The users repository.&lt;/param&gt;</span>
+    <span class="com">/// ...</span>
+    <span class="key">public</span> UserStore(IRepository&lt;PhiUser&gt; usersRepository, ... )
+    {
+        <span class="key">this</span>._usersRepository = usersRepository;
+        ...
+    }
+
+    #endregion
+
+    #region IUserStore
+    
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="key">public</span> <span class="key">void</span> Dispose()
+    {
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Insert a new PhiUser in the UserTable.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task CreateAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Deletes a user.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="key">public</span> Task DeleteAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns an PhiUser instance based on a userId query.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="userId"&gt;The user's Id.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User id is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;PhiUser&gt; FindByIdAsync(String userId)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns an PhiUser instance based on a userName query.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="userName"&gt;The user's nam.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;Username is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;PhiUser&gt; FindByNameAsync(String userName)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Updates the UsersTable with the PhiUser instance values.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;PhiUser to be updated.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task UpdateAsync(PhiUser user)
+    {
+        ...
+    }
+
+    #endregion
+
+    #region IUserClaimStore
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Inserts a claim to the UserClaimsTable for the given user.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;User to have claim adde.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="claim"&gt;Claim to be adde.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or claim is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task AddClaimAsync(PhiUser user, Claim claim)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns all claims for a given user.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;IList&lt;Claim&gt;&gt; GetClaimsAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Removes a claim froma user.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;User to have claim removed.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="claim"&gt;Claim to be removed.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or claim is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task RemoveClaimAsync(PhiUser user, Claim claim)
+    {
+        ...
+    }
+
+    #endregion
+
+    #region IUserLoginStore
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Inserts a Login in the UserLoginsTable for a given User.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;User to have login added.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="login"&gt;Login to be added.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or login is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task AddLoginAsync(PhiUser user, UserLoginInfo login)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns an PhiUser based on the Login info.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="login"&gt;User login.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;Login is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;PhiUser&gt; FindAsync(UserLoginInfo login)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns list of UserLoginInfo for a given PhiUser.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;IList&lt;UserLoginInfo&gt;&gt; GetLoginsAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Deletes a login from UserLoginsTable for a given PhiUser.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;User to have login remove.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="login"&gt;Login to be remove.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or login is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task RemoveLoginAsync(PhiUser user, UserLoginInfo login)
+    {
+        ...
+    }
+
+    #endregion
+
+    #region IUserRoleStore
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Inserts a entry in the UserRoles table.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;User to have role adde.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="roleName"&gt;Name of the role to be added to use.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or rolename is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task AddToRoleAsync(PhiUser user, String roleName)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns the roles for a given PhiUser.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;IList&lt;String&gt;&gt; GetRolesAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Verifies if a user is in a role.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;Current role.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="ArgumentNullException"&gt;User or role is null.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task&lt;Boolean&gt; IsInRoleAsync(PhiUser user, String role)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Removes a user from a role.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="role"&gt;Current role.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Throw exception.&lt;/returns&gt;</span>
+    <span class="com">/// &lt;exception cref="NotImplementedException"&gt;Always thrown.&lt;/exception&gt;</span>
+    <span class="key">public</span> Task RemoveFromRoleAsync(PhiUser user, String role)
+    {
+        <span class="key">throw</span> <span class="key">new</span> NotImplementedException();
+    }
+
+    #endregion
+
+    #region IUserPasswordStore
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Returns the PasswordHash for a given PhiUser.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="key">public</span> Task&lt;String&gt; GetPasswordHashAsync(PhiUser user)
+    {
+        ...
+    }
+
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Verifies if user has password.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="key">public</span> Task&lt;Boolean&gt; HasPasswordAsync(PhiUser user)
+    {
+        ...
+    }
+    
+    <span class="com">/// &lt;summary&gt;</span>
+    <span class="com">/// Sets the password hash for a given PhiUser.</span>
+    <span class="com">/// &lt;/summary&gt;</span>
+    <span class="com">/// &lt;param name="user"&gt;Current user.&lt;/param&gt;</span>
+    <span class="com">/// &lt;param name="passwordHash"&gt;Password hash.&lt;/param&gt;</span>
+    <span class="com">/// &lt;returns&gt;Task with result.&lt;/returns&gt;</span>
+    <span class="key">public</span> Task SetPasswordHashAsync(PhiUser user, String passwordHash)
+    {
+        ...
+    }
+
+    #endregion
+}</code>
+</pre>
+<p><h3>6.</h3>Next, if you use IoC Engine, then register all created classes in it, so it could instantiate it.I use <a href="https://simpleinjector.codeplex.com">Simple Injector</a>, so in my case it looks like this:</p> 
+<pre class="cscode">
+<code>...
+   _instance.Register&lt;IUserStore&lt;PhiUser&gt;, UserStore&gt;();
+   _instance.Register&lt;IUserClaimStore&lt;PhiUser&gt;, UserStore&gt;();
+   _instance.Register&lt;IUserLoginStore&lt;PhiUser&gt;, UserStore&gt;();
+   _instance.Register&lt;IUserRoleStore&lt;PhiUser&gt;, UserStore&gt;();
+   _instance.Register&lt;IUserPasswordStore&lt;PhiUser&gt;, UserStore&gt;();
+   _instance.Register&lt;IRoleStore&lt;Role&gt;, RoleStore&gt;();
+...</code>
+</pre>
+<p><h3>7.</h3>Next, we may remove or comment all code inside <b>3. Models/IdentityModels.cs</b>.</p> 
+<p><b>ApplicationUser</b> should be renamed to <b>User</b> everywhere. <b>ApplicationUserManager</b> will be renamed in <b>2. App_Start/IdentityConfig.cs</b> to <b>MyUserManager</b>, or something like this.
+ Rename parameter in the constructor call for UserManager. For <a href="https://simpleinjector.codeplex.com">Simple Injector</a> it looks like this:</p> 
+<pre class="cscode">
+<code>...
+   <span class="key">var</span> manager = <span class="key">new</span> PhiUserManager(ModelContainer.Instance.GetInstance&lt;UserStore&gt;());
+...</code>
+</pre>
+<p><h3>8.</h3>Now, fix the <b>4. Controllers/AccountController.cs</b> by the same way:</p>
+<pre class="cscode">
+<code>... 
+		<pre class="cscode"><code><span class="key">public</span> AccountController(IUserStore&lt;PhiUser&gt; userStore)
+		{
+			UserManager = <span class="key">new</span> PhiUserManager(userStore);
+		}</code></pre>
+...</code>
+</pre>
+<p><h3>9.</h3>Also, we need to reimplement method <b>GenerateUserIdentityAsync</b>. I did this by Static Helper class:</p> 
+<pre class="cscode">
+<code>...
+    <span class="key">public</span> <span class="key">class</span> MyUserHelpers
+    {
+        <span class="key">public</span> <span class="key">static</span> <span class="key">async</span> Task&lt;ClaimsIdentity&gt; GenerateUserIdentityAsync(PhiUser user, UserManager&lt;PhiUser&gt; manager)
+        {
+            <span class="com">// Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType</span>
+            <span class="key">var</span> userIdentity = <span class="key">await</span> manager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie);
+            <span class="com">// Add custom user claims here</span>
+            <span class="key">return</span> userIdentity;
+        }
+    }
+...</code>
+</pre>
+<p><h3>10.</h3>And last one. In <b>1. App_Start/Startup.Auth.cs</b> we need to specify methods for creation of Db context and User manager. So I did this:</p> 
+<pre class="cscode"><code>...
+    <span class="key">public</span> <span class="key">static</span> phiContext CreateContext()
+    {
+        <span class="key">return</span> ModelContainer.Instance.GetInstance&lt;phiContext&gt;();
+    }
+
+    <span class="com">// For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864</span>
+    <span class="key">public</span> <span class="key">void</span> ConfigureAuth(IAppBuilder app)
+    {
+        <span class="com">// Configure the db context and user manager to use a single instance per request</span>
+        app.CreatePerOwinContext(CreateContext);
+        app.CreatePerOwinContext&lt;PhiUserManager&gt;(PhiUserManager.Create);
+...</code>
+</pre>
+<p><h3>11.</h3>Now, it should be done. Compile and run. You should be able to register a new user and login with its credentials, but now you may control this information, since all classes implemented by you.</p> 
+
+<p>What to read:</p>
+<p>1. <a href=” http://katanaproject.codeplex.com”>What is Katana and Owin</a></p>
+<p>2. <a href=”http://www.youtube.com/watch?v=AAz2ka1NaWA“>Video introduction to Katana</a></p> 
+<p>3. <a href=”http://www.khalidabuhakmeh.com/asp-net-mvc-5-authentication-breakdown”>What's new in ASP.NET MVC 5</a></p>
+<p>4. <a href=”http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity”>How to use MySQL storage for ASP.NET Identity</a></p>
+<p>5. <a href=”https://aspnet.codeplex.com/SourceControl/latest#Samples/Identity/SimpleMembershipSchemeUpdateMigration/SimpleMembershipToIdentityMigration.sql”>Ready SQL scripts for ASP.NET project</a></p>
+			</section>
+			<section id="codefirst" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>Select happy medium in practices of Entity Framework</h3>					
+					<p class="blog-post-meta">May 15, 2014</p>
+				</div>
+					<p>Between 3 most known practices of Entity Framework (Code First, Model First, Database First) I selected one happy medium, because no one is perfect by itself. I like clean POCO classes of Code First, but it is not so easy to handle a good scheme/structure of database without modelling. In Database First and Model First I don't like EDMX files and a lot of redundancy.</p>
+
+					<p align="center"><a href="img/ef.jpg" imageanchor="1" ><img border="0" src="img/ef.jpg" /></a></p>
+
+					<p>So I found a perfect solution for me:</p>
+					<p>1.	I do modelling in any Modelling tool which supports generating SQL scripts for SQL Server.</p>
+
+					<p align="center"><a href="img/scheme.jpg" imageanchor="1" ><img border="0" src="img/scheme.jpg" /></a></p>
+					<p><i>Picture. Part of ready scheme.</i></p>
+
+					<p>2.	Create database and execute script in SQL Management Studio</p>
+					<p>3.	And... here is... make a Reverse Engineering of database into model POCO classes (just like Code First) with Visual Studio plug-in: Entity Framework Power Tools</p>
+
+					<p align="center"><a href="img/efplugin.jpg" imageanchor="1" ><img border="0" src="img/efplugin.jpg" /></a></p>
+					<p><i>Picture. Plugin for Reverse Engineering installed.</i></p>
+					 
+					<p align="center"><a href="img/efre.jpg" imageanchor="1" ><img border="0" src="img/efre.jpg" /></a></p>
+					<p><i>Picture. Here command to select for Reverse Engineering.</i></p>
+
+					<p align="center"><a href="img/poco.jpg" imageanchor="1" ><img border="0" src="img/poco.jpg" /></a></p>
+					<p><i>Picture. Result is POCO classes in the Models folder of my Model project. It includes database context, classes and mapping-classes.</i></p>
+
+					<p>Next step is to use ANY useful Inversion Of Control Framework and use Repository and Storage patterns to use database in any part of my project. So, I got flexible and nice structure. You may find an example of using <a href="https://simpleinjector.codeplex.com/">Simple Injector</a> in my MVC project. ModelContainer is class which registers all classes/repositories and services to resolve dependencies between them. Repositories supports simple operations for any database object/POCO class: Insert, GetById, Delete, Update.</p>
+
+<pre class="cscode"><code><span class="key">namespace</span> Phi.Repository
+{
+    <span class="key">using</span> System.Web;
+    <span class="key">using</span> Microsoft.AspNet.Identity;
+    <span class="key">using</span> Phi.Models;
+    <span class="key">using</span> SimpleInjector;
+
+    <span class="key">public</span> <span class="key">class</span> ModelContainer
+    {
+        <span class="key">private</span> <span class="key">static</span> <span class="key">readonly</span> Container _instance;
+
+        <span class="key">static</span> ModelContainer()
+        {
+            _instance = <span class="key">new</span> Container();
+
+            _instance.Register&lt;IDbContext, phiContext&gt;();
+            _instance.RegisterManyForOpenGeneric(
+                <span class="key">typeof</span>(IRepository&lt;&gt;),
+                <span class="key">new</span>[]
+                {
+                    <span class="key">typeof</span>(EfRepository&lt;PhiUser&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;Role&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;UserAttribute&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;UserRole&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;UserClaim&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;UserLogin&gt;),
+                    <span class="key">typeof</span>(EfRepository&lt;Setting&gt;),
+                    …
+                });
+            _instance.Register&lt;IAuthProvider, AuthProvider&gt;();
+            _instance.Register&lt;HttpContextBase&gt;(() =&gt; <span class="key">new</span> HttpContextWrapper(HttpContext.Current));
+            _instance.Register&lt;IUserStore&lt;PhiUser&gt;, UserStore&gt;();
+            _instance.Register&lt;IUserClaimStore&lt;PhiUser&gt;, UserStore&gt;();
+            _instance.Register&lt;IUserLoginStore&lt;PhiUser&gt;, UserStore&gt;();
+            _instance.Register&lt;IUserRoleStore&lt;PhiUser&gt;, UserStore&gt;();
+            _instance.Register&lt;IUserPasswordStore&lt;PhiUser&gt;, UserStore&gt;();
+
+            _instance.Register&lt;IRoleStore&lt;Role&gt;, RoleStore&gt;();
+
+            …
+        }
+
+        <span class="key">public</span> <span class="key">static</span> Container Instance
+        {
+            <span class="key">get</span>
+            {
+                <span class="key">return</span> _instance;
+            }
+        }
+    }
+}</code></pre>
+
+					<p>...and last step is to register your Injector in Application_Start method:</p>
+<pre class="cscode"><code><span class="key">protected</span> <span class="key">void</span> Application_Start()
+{
+    …
+    <span class="key">var</span> container = ModelContainer.Instance;
+
+    <span class="key">var</span> assem = Assembly.GetExecutingAssembly();
+    container.RegisterMvcControllers(assem);
+    container.RegisterMvcAttributeFilterProvider();
+    container.Verify();
+
+    <span class="com">// Set resolver.</span>
+    DependencyResolver.SetResolver(<span class="key">new</span> SimpleInjectorDependencyResolver(container));
+    …
+}</code></pre>
+
+					<p>So, I got simple POCO classes describing database model and didn't write any peace of code by myself. I create only logic. So, any change in my database could be done by simple drawing of relations and rectangles on my schema and pressing couple of buttons to generate script, create database and update model. All done automatically.</p>
+			</section>
+			<section id="notepadcpp" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>A word about Notepad++</h3>
+					<p class="blog-post-meta">April 9, 2014</p>
+				</div>
+				<p>I never wrote about my passion to Notepad++ before, but I feel that I should do this because it does <strike>saved my life</strike> solved my problem again...simply, nice and easy!<p>
+				<p align="center"><img src="img/Notepadpp.jpg" width="640" height="480" /></p>
+				<p>Notepad++ -  it is Windows-application and if you're developer, you probably know that very well. If not, go ahead, read this article. Obviously this is Notepad, but damn...what a Notepad!</p>
+				<p>First time I heard about it was many years ago in my student life. I liked it just for syntax highlighting for many languages out of the box. But later I liked these tabs, which supports work with many files
+				in the same time. And under "work" I mean not only open-read-write, but there are also operations for group of a files like Search-Replace and other useful things. Again, a couple of time later I found that 
+				this is a fast tool for handling a long system logs of events, errors etc. And also it has a great code-pages support.</p>
+	            <p>A couple of years later I was working already as a developer in one software company and I got interesting task for handling different encodings in the really big project. I needed to handle many encodings from english,
+				russian, german language to different kinds of chinese...and of course I used Unicode for this. But the old part of a project supported only ASCII and I needed also to correctly detect encodings, make bridges if need and etc. Of course
+				I readed books about "How to handle Unicode" like <a href="http://www.amazon.com/dp/B00B9ZFGRW">this one</a> (Windows via C/C++ by Jeffrey M. Richter). But also I found that Notepad++ is open source C++. That's I'm looked for! And I looked into it to find some answers and How-To's. So, this is another BIG PLUS of this project - open source.</p>
+				<p>Honestly saying not only Notepad++ is great itself. But also, anyone who creates plug-ins for it - really cool guy! I use different plug-ins every day. May lovely plug-in is XML Tools for beautifying XML's. Today I solved my problem of 
+				beautifying SQL scripts by installed new plug-in "Poor Man's T-SQL Formatter" through internal Plugin Manager!</p>
+				<p>Minus of this project is just single-platform. But, probably this has its positives: it fully supports .NET and that is because there are a lot of useful plug-ins for this project.</p>
+				<p>I think, if I will decide to take part in some open-source project, this would be Notepad++ first in my list. If they give me such an oppportunity, of course =).</p>
+			</section>
+			<section id="neoline" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>It was a project of 1 year long...</h3>
+					<p class="blog-post-meta">March 7, 2014</p>
+				</div>
+				<p>and my work finished in this project, I leave to another one. Now, to have a nice bye-present I made a beauty infographics about how we worked with team during this year. I think it looks really cool and hope that our work and decisions will not die for nothing.</p>
+				<p align="center"><iframe width="560" height="315" src="//www.youtube.com/embed/fQziJ3WyvIQ" frameborder="0" allowfullscreen></iframe></p>		
+			</section>
+			<section id="cppeleven" style="margin-bottom:150px;">
+				<div class="page-header">
+					<h3>C++11</h3>
+					<p class="blog-post-meta">December 3, 2013</p>
+				</div>
+				<p>In my free time I started to work on simple C++ game and there are a little bit complexity: I use Android NDK. Yes, this is for mobile and I use not native Java, but native-native C++, Open GL and other cool things =).
+				All goes very interesting and I will continue grow up with this project and probably later I will create a couple of posts about my advantages with it. For now I published very-draft PC-version (which I already fully re-worked for Android): <a href="http://github.com/optiklab/AsteroidsRecovery/wiki">GitHub</a>.</p>
+				<p>Since I didn't use C++ for a year I returned to some books and I have found a latest book <a href="http://www.stroustrup.com/4th.html">The C++ Programming Language (4th Edition)</a> from Stroustrup.</p>
+				<p align="center"><a href="http://www.stroustrup.com/4th.html"><img src="img/cpp.jpg" width="230" height="320" /></a>&nbsp;<img src="img/android-ndk.jpg" width="240" height="320" />&nbsp;<img src="img/debian.jpg" width="240" height="320" /></p>
+				<p>Many interesting news out there, but we need a latest compiler for all this staff.
+				So, for example, I couldn't compile some examples with gcc4.7 on Linux. And I found an article where author desribed "how to compile-and-run latest gcc4.8.2 on your machine" in details, here is: <a href="http://eli.thegreenplace.net/2014/01/16/building-gcc-4-8-from-source-on-ubunu-12-04/">http://eli.thegreenplace.net/2014/01/16/building-gcc-4-8-from-source-on-ubunu-12-04/</a>.</p>
+				<p>One thing I should note, that for Linux x64 you should add 32-bit libraries:</p>
+<pre class="prettyprint linenums">
+sudo apt-get install libc6-dev-i386
+</pre>
+				<p>I compiled test examples, like in article one. And here is I want to share how to integrate compiled project into Eclipse:</p>
+				<li>1. Create C++ project in Eclipse, and write something from Standard 2013. Actually I used Eclipse from <a href="http://developer.android.com/sdk/index.html">Android Developer Tools</a>. Get examples from the book.
+
+				<li>2. In the Project Properties create configuration:
+				<li>   Project -&gt; Properties -&gt; C/C+++ Build -&gt; Manage Configurations -&gt; create new
+
+				<li>3. Make configuration Active
+
+				<li>4. Go to C/C++Build -&gt; Discovery -&gt; Compiler invocation command --&gt; and put path to your compiler, for example  ./root/install/gcc-4.8.2/bin/gcc4.8
+
+				<li>5. Go to С/C++Build -&gt; Settings -&gt; Tool Settings -&gt; Miscellaneous and wirte to "Other flags": -std=C++11  to include latest toys =)
+
+				<p>Ready!</p>
+			</section>	
+			
+			<section id="syscontext" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>Problems with Oracle SYS_CONTEXT function</h3>
+				<p class="blog-post-meta">December 20, 2012</p>
+			  </div>
+<p>Hey there,</p>
+<p>&nbsp;&nbsp;Today I've solved an interesting bug in the existent database procedures. Actually, it's not the bug right now, but it definitely will after a couple of years.</p>
+<p align="center"><img src="img/ipv6.jpg" /></p>
+<p>&nbsp;&nbsp;We have an ASP.NET web site which works with the Oracle based database. There're no any entity model (it's old system with just a support for now) and all the queries are native SQL or calling SQL procedures from the database itself. Database generates new "unique" oid for every newly created entity with well-known procedure like this:</p>
+
+<pre class="prettyprint linenums">
+CREATE OR REPLACE FUNCTION new_uuid RETURN VARCHAR2 AS
+&nbsp;&nbsp;l_seed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BINARY_INTEGER;
+&nbsp;&nbsp;l_random_num&nbsp;&nbsp;NUMBER(5);
+&nbsp;&nbsp;l_date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR2(25);
+&nbsp;&nbsp;l_random&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VARCHAR2(4);
+&nbsp;&nbsp;l_ip_address&nbsp;&nbsp;VARCHAR2(12);
+BEGIN
+&nbsp;&nbsp;l_seed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= TO_NUMBER(TO_CHAR(SYSDATE,'YYYYDDMMSS'));
+DBMS_RANDOM.initialize (val => l_seed);
+&nbsp;&nbsp;l_random_num := TRUNC(DBMS_RANDOM.value(low => 1, high => 65535));
+DBMS_RANDOM.terminate;
+&nbsp;&nbsp;l_date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= conversion_api.to_hex(
+&nbsp;&nbsp;&nbsp;&nbsp;TO_NUMBER(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TO_CHAR(SYSTIMESTAMP, 'FFSSMIHH24DDMMYYYY' )));
+&nbsp;&nbsp;l_random&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= RPAD(
+&nbsp;&nbsp;&nbsp;&nbsp;conversion_api.to_hex(l_random_num), 4, '0');
+&nbsp;&nbsp;l_ip_address := conversion_api.to_hex(
+&nbsp;&nbsp;&nbsp;&nbsp;TO_NUMBER( REPLACE( NVL(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SYS_CONTEXT( 'USERENV','IP_ADDRESS'), '123.123.123.123'), '.', '')));
+RETURN SUBSTR(l_date, 1, 8)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|| '-' ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBSTR(l_date, 9, 4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|| '-' ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBSTR(l_date, 13, 4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|| '-' ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPAD(SUBSTR(l_date, 17), 4, '0')&nbsp;|| '-' ||
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPAD(l_random || l_ip_address, 12, '0');
+END;
+</pre>
+<p>Original links: <a href="http://www.oracle-base.com/articles/9i/uuid-9i.php">Universal Unique Identifier (UUID)</a></p>
+<p>All the system and a web site works OK in the publish. But it crashes on every calling of new_uuid procedure on my local machine with the local http-server. Oracle system describes some error during conversion of the string value into number. And it definitely shows up the wrong line.</p>
+<p>So, let's take a look at the SYS_CONTEXT function. At a first glance it looks OK.  What it does? It's trying to get current IP address. And if we can't get an IP address we have to take some default one, like 123.123.123.123. Everything should be fine. But, we it's not.</p>
+<p><h4>What is wrong?</h4></p>
+<p>What do we know about the IP addresses? Many things, but one thing we should point out here is that IP address can be different. At least two types of IP addresses we have already now: IPv4 and IPv6. And the problem have many points of view:</p>
+<p>1. Your PC or server may have both types of addresses.</p>
+<p>2. IPv4 and IPv6 have different formats...and different splitters.</p>
+<p>3. ...this one later in this article...</p>
+<p>As you probably understand for now, SYS_CONTEXT procedure may return both of these types of IP. If you have IPv6 turned on your machine, you will definitely get the IPv6 address instead of your IPv4 one.</p>
+<p><h4>Solutions</h4></p>
+<p>Simplest one: <b>Turn off IPv6 on your machine.</b> And here is another one point of problems: all the world is going to use IPv6 in the recent years. Some giants like Google do it already now. All the IPv4 addresses is ended now and first and simplest solution is bad and it is only for FAST FIX.</p>
+<p>Obvious one: you need to <b>expect both of the addresses from the SYS_CONTEXT and appropriately work around that</b>.</p>
+			</section>
+				
+			<section id="oracle" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>Query optimization in Oracle</h3>
+				<p class="blog-post-meta">December 15, 2012</p>
+			  </div>
+<p>Short article to help newbies (like me) find a way where to go for optimizing SQL queries in Oracle.</p>
+<p>First of all, before you started "dance with optimization" you need to know about "short-circuit" run. When you make a SELECT with many conditions Oracle handles this with short-circuit execution, so order of parameters is really matters.
+You should use optimal parameters order first of all: if Oracle will need to check only one condition from three, this is good way of optimization! 
+Let's think about example of selecting records in a dates range and filter out these records by NULL-field:</p>
+<pre class="prettyprint linenums">
+SELECT * FROM Table t WHERE t.SomeField not null
+AND t.StartDate between SomeDate1 and SomeDate1+0.999999
+</pre>
+<p>This query could be more effective if you set Dates Condition first, because Oracle will filter out MOST part of data and it will be more easy to check last one. Depending on the count of data, this could be very helpful.</p>
+<p>Second base knowing is Query Plan. Such application like "Oracle SQL Developer" have a tool named "Explain Plan". You can run your query, select "Explain plan" and on the numbers - which part of a query is not effective. 
+For example, if you see conditions with FULL traversal then you should set INDEX to these columns in tables. Without indexes you can't run your database fast enough.</p>
+<p align="center"><img src="img/oracle.jpg" width="240" height="320" /></p>
+			</section>
+
+			<section id="xmlserialize" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>XML serialization of derived classes</h3>
+				<p class="blog-post-meta">November 15, 2012</p>
+			  </div>
+<p>Sometimes you need to serialize objects of derived classes in the XML. You may find a lot of blogs about how to do this on C#. But the most of them will give a simple answer to add an <b>XmlInclude</b> attribute on base class. In some cases this is not enough because of tricky logic inside of standard XML Serializer. Some people solved this problem by overriding the XML Serializer with more tricky one. This article will give an answer to solve one particle task about the serialization of derived classes, but probably this may help to find out ways to do this with less pain.</p>
+<p>I had to create  an XML file which presents the full structure of maps database entities (i.e. with indeces, parents and childs ids, etc.). I've got specifications from the client describing how the XML file should look like. Every tag in the XML should present the real entity in their database. But the main problem is that our database looks differently from the their ones. So I had to create a lot of wrappers staff to do this.</p>
+<p>In one place I had to do the interesting mapping:</p>
+<p>- At one side I have two different entity classes (let's suppose <b>BlackKitten</b> and <b>WhiteKitten</b>) which describes probably some close or related information, but these classes are not the members of inheritance. (Why? They are different tables...and this is the topic for another article about the bad designs in programming =) )</p>
+<p align="center"><img src="img/the-black-white-kittens.jpg" /></p>
+<p>- On the other side I need to create such XML tags:</p>
+<pre class="prettyprint linenums">
+&lt;Kittens&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Kitten /&gt; &lt;-- Here is info about Black Kitten --&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;Kitten /&gt; &lt;-- Here is info about the White one --&gt;
+&lt;/Kittens&gt;
+</pre>
+</pre>
+<p>So, to serialize this information you have to create the base <b>Kitten</b> class and inherit <b>BlackKitten</b> and <b>WhiteKitten</b> from it. I've created similar wrappers to get this done, but I've found another "showstopper" problem. XML Serializer threw exception when tried to work with it:</p>
+<p>&nbsp;</p>
+<p>This happens because the Serializer doesn't know the types and we have to notice the types by setting <b>XmlInclude</b> attribute on base <b>Kitten</b> class. And...after doing this you will get the same exception again =). Many advices are stopped on this step and that is <u>why I decided</u> to write this article.</p>
+<p>The next problem is how to map derived classes to the tags in the XML, if you need to present any derived XXXXXKitten class with the base Kitten tag name. The obvious way to give and element name or type name of course not work.</p>
+<p>So, there is piece of code how to do this:</p>
+<pre class="prettyprint linenums">
+<font color="#23a949">// Base Kitten class</font>
+<font color="#1c0363">[</font>XmlInclude(<font color="#3c06d7">typeof</font>(BlackKitten))<font color="#1c0363">]</font>
+<font color="#1c0363">[</font>XmlInclude(<font color="#3c06d7">typeof</font>(WhiteKitten))<font color="#1c0363">]</font>
+<font color="#3c06d7">public abstract class</font> Kitten
+<font color="#1c0363">{</font>
+...
+<font color="#1c0363">}</font>
+&nbsp;
+<font color="#3c06d7">public class</font> BlackKitten: Kitten
+<font color="#1c0363">{</font>
+...
+<font color="#1c0363">}</font>
+&nbsp;
+<font color="#3c06d7">public class</font> WhiteKitten: Kitten
+<font color="#1c0363">{</font>
+...
+<font color="#1c0363">}</font>
+<font color="#23a949">// Container which keeps the different Kittens as one...</font>
+<font color="#3c06d7">public class</font> XMLContainer
+<font color="#1c0363">{</font>
+
+<font color="#1c0363">[</font>XmlElement(ElementName = <font color="#555">"Kitten"</font>,Namespace = <font color="#555">"BlackKitty"</font>,Type = <font color="#3c06d7">typeof</font>(BlackKitten)),
+XmlElement(ElementName = <font color="#555">"Kitten"</font>,Namespace = <font color="#555">"WhiteKitty"</font>,Type = <font color="#3c06d7">typeof</font>(WhiteKitten))<font color="#1c0363">]</font>
+<font color="#3c06d7">
+public</font> Kitten Kitten <font color="#1c0363">{</font> get; set; <font color="#1c0363">}</font>
+<font color="#1c0363">}</font>
+</Kittens>
+</pre>
+<p>And here we are!</p>
+<pre class="prettyprint linenums">
+&lt;Kittens&gt;
+&lt;Kitten xmlns="MyNamespace.BlackKitty" /&gt;
+&lt;Kitten xmlns="MyNamespace.WhiteKitty" /&gt;
+&lt;/Kittens&gt;
+</pre>
+			</section>
+
+			<section id="registers" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>Let's call to CPU registers =)</h3>
+				<p class="blog-post-meta">September 10, 2012</p>
+			  </div>
+<p>With that Skype Extension features in the browsers you may see some funny artifacts </p>
+<p><img src="img/reg.jpg" /></p>
+			</section>
+
+			<section id="comments" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>What should be the comments in the code...</h3>
+				<p class="blog-post-meta">September 9, 2012</p>
+			  </div>
+<p>Hi there,</p>
+<p>I've read a cool code review of the game Doom for iPhone ported recently by John Carmack. During the reading of this beautiful article I thought 'what a nice commenting of the bottlenecks'. I think such a comments should be in the every part of the code, where you should think more than 30 seconds to understand. Example:</p>
+
+<pre class="prettyprint linenums">
+// JDC: E3M8 has a map error that has a couple lines that should
+// be part of sector 1 instead orphaned off in sector 2.  I could
+// let the non-closed sector carving routine handle this, but it
+// would result in some pixel cracks.  Instead, I merge the lines
+// to where they should have been.
+// This is probably not the right solution, because there are
+// probably a bunch of other cases in the >100 Id maps.
+
+extern int gameepisode, gamemap;
+
+if ( gameepisode == 3 && gamemap == 8 ) 
+{
+void IR_MergeSectors( int fromSector, int intoSector );
+IR_MergeSectors( 2, 1 );
+}
+</pre>
+
+<p>Here is link: <a href="http://fabiensanglard.net/doomIphone">Doom Iphone code review</a></p>
+<p align="center"><img src="img/doom3.jpg" width="240" height="320" /></p>
+<p>Have a nice reading!</p>
+			</section>
+
+			<section id="cppcore" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>C++ core</h3>
+				<p class="blog-post-meta">August 20, 2012</p>
+			  </div>
+<p>At the morning I've read the beautiful article about the storage layout of Polymorphic Objects in C++. <a href="http://www.drdobbs.com/cpp/storage-layout-of-polymorphic-objects/240012098">Here is</a>. It describes how objects of a classes with virtual functions are placed in the memory, by simple pictures.</p>
+<p align="center"><img src="img/c++.png" width="240" height="320" />&nbsp;<img src="img/BjarneStroustrup.jpg" width="240" height="320" /></p>
+<p>I've some links to read more about the C++, tables of virtual functions, memory and etc. Here is (sorry, most of them is on russian language):</p>
+<p><a href="http://www.viva64.com/en/l/full/">Lessons on development of 64-bit C/C++ applications</a>.</p>
+<p><a href="http://www.viva64.com/en/a/0079/">100 bugs in Open Source C/C++ projects</a>.</p>
+<p><a href="http://www.developing.ru/com/index.html">COM C++ in deep</a>. Yes, old technology, but it describes really interesting things.</p>
+<p>Blog <a href="http://alenacpp.blogspot.ru/">Alena C++</a>.</p>
+			</section>
+
+			<section id="vs2012" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>Solved problems with cooperating of Visual Studio 2012 and SQL Server 2008</h3>
+				<p class="blog-post-meta">July 30, 2012</p>
+			  </div>
+<p>Hi guys,</p>
+<p>&nbsp;&nbsp;Today I've solved a problem of absense of SQL Server on mine machine after I had installed new Visual Studio 2012. So, a lil'bit of story...</p>
+<p>&nbsp;&nbsp;Recently I was needed to reinstall Windows 7 on mine machine and clearly install all the software for my work, like IDE's, SQL server, etc. So, after I've installed Visual Studio 2010 I decided to install trial version of newely available Visual Studio 2012 to look at it. VS 2010 installed some SQL Server 2008 developer tools and components and VS 2012 did the same for the SQL Server 2012. And I thought that all is gonna be OK with installing of SQL Server 2008 Express for working with databases from ASP.NET MVC... and I've installed it.</p>
+<p>&nbsp;&nbsp;I have ASP.NET MVC3 application with using of Entity Framework Code First as the ORM. As you probably now it lazily generates the database depending on the rules you have created for it (Inherit yours <a href="http://msdn.microsoft.com/en-us/library/system.data.entity.dbcontext(v=vs.103).aspx">DBContext</a> from the <a href="http://msdn.microsoft.com/en-us/library/gg679506(v=vs.103).aspx">DropCreateDatabaseAlways</a> or <a href="http://msdn.microsoft.com/en-us/library/gg679604(v=vs.103).aspx">DropCreateDatabaseIfModelChanges</a> classes). But after staring of my application it didn't call Seed method of my DatabaseInitializer and generated exception like "A network-related or instance-specific error occurred..." (here is <a href="http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=2&LinkId=20476">description from Microsoft</a>).</p>
+<p>&nbsp;&nbsp;When I came to the "My Computer -> Manage -> SQL Server Configuration management" and I saw the error instead of loaded information about the SQL Servers and services. Furthermore, after I've tried to reinstall SQL Server 2008 Express it finished with the Crash. Unfortunately I didn't have the screenshot, but it was telling about some conflit with assemblies dependencies.</p>
+<p>&nbsp;&nbsp;<b>The probem is in the order of installing components.</b> You should install SQL Server 2008 <b>BEFORE</b> you have installed Visual Studio 2012.</p>
+<p>&nbsp;&nbsp;All became perfect after I've completely uninstalled VS 2012 and than installed (1) SQL Server and (2) VS 2012.</p>
+<p>&nbsp;&nbsp;That's it for now. I hope to help someone who got the problem like this.</p>
+			</section>
+
+			<section id="utf" style="margin-bottom:150px;">
+			  <div class="page-header">
+				<h3>How to write a UTF-8 encoded string to a file in windows, in C++</h3>
+				<p class="blog-post-meta">July 15, 2012</p>
+			  </div>
+<p>   Recently I solved a problem of reading and writing UTF8 text for multiple cultures (like Japan, China, France, etc.) in C++. And I've posted this example on stackoverflow (<a href="http://stackoverflow.com/questions/207662/writing-utf16-to-file-in-binary-mode/12508122#12508122">original link</a>). Here is just a copy of my elder link.</p>
+<p align="center"><img src="img/utf8.gif" /></p>
+<p>    It is easy if you use C++11 standard. But if you want to create multiplatform code with elder standards, you can use this method (like I used):</p>
+<p>- Read the following article: <a href="http://www.codeproject.com/Articles/38242/Reading-UTF-8-with-C-streams">Code Project - Reading UTF-8 with C++ streams</a></p>
+<p>- Add `stxutif.h` to your project from sources above</p>
+<p>- Open file in ANSI mode and add BOM to the start of a file first of all, like this:</p>
+<pre class="prettyprint linenums">
+std::ofstream fs;
+fs.open(filepath, std::ios::out|std::ios::binary);
+unsigned char smarker[3];
+smarker[0] = 0xEF;
+smarker[1] = 0xBB;
+smarker[2] = 0xBF;
+fs&lt;&lt;smarker;
+fs.close();
+</pre>
+<p>- Then open file as UTF and write your content there:</p>
+<pre class="prettyprint linenums">
+std::wofstream fs;
+fs.open(filepath, std::ios::out|std::ios::app);
+std::locale utf8_locale(std::locale(), new utf8cvt<false>);
+fs.imbue(utf8_locale);
+fs << .. //write anything you want into this stream
+</pre>
+<p>So, I think this will be helpful for those who met problems like this.</p>
+			</section>
+		  </div>
+		</div>
+	</div>
+      <hr>
+
+      <footer>
+        <p>&copy; OptikLab 2013 - 2014</p>
+      </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
