@@ -1,1 +1,1 @@
-[http://optiklab.github.io/blog/](my blog)
+[my blog](http://optiklab.github.io/blog/)
