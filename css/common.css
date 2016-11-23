@@ -351,6 +351,22 @@ background-color: #03c3e5;
 display: inline-block;
 vertical-align: top;
 }
+
+
+.wTag {
+line-height: 1;
+font-size: 11px;
+padding: 7px 9px;
+margin: 2px;
+border-radius: 4px;
+-webkit-font-smoothing: antialiased;
+color: #FFFFFF;
+}
+.wTag:hover {
+cursor: pointer;
+text-decoration: none;
+}
+
 .oTag {
 line-height: 1;
 font-size: 11px;
