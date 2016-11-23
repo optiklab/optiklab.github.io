@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>OptikLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- Le scripts -->
+    <script type="text/javascript" src="js/jquery1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="index.html">OptikLab</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        Contact with me <a href="anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a> <span id="languages"></span>
+                    </p>
+                </div>
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="experience.html">My experience</a></li>
+                    <li><a href="books.html">Books</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+
+            <div class="span12">
+                <div class="hero-unit" style="padding: 30px;">
+                    <div style="float: right; margin:20px 0px 0px 0px;">
+                        <a href="img/photo.jpg"><img src="img/photo.jpg" width="120" height="120" /></a>
+                        <!-- Go to www.addthis.com/dashboard to customize your tools --> <div class="addthis_inline_follow_toolbox"></div>
+                    </div>
+                    <div>
+                        <h1>He110, w0r1d!</h1> My name is Anton Yarkov and I'm a software developer. Most of the time I'm working on a projects for my employers...
+                        but in my free time I'm continuosly learning programming and technologies, sometimes write <a href="https://optiklab.blogspot.ru">articles</a> and create small useful applications available on <a href="https://github.com/optiklab">GitHub</a>.
+                    </div>
+                </div>
+                <div class="row-fluid" style="text-decoration: none;">
+                    <style>
+                        /************************************************/
+
+                        .oTable {
+                            border-collapse: separate;
+                            border-spacing: 0 font-family: Helvetica,Arial,sans-serif;
+                            font-size: 13px;
+                            color: #252523;
+                            word-wrap: break-word;
+                        }
+
+                            .oTable th {
+                                color: #252523;
+                                padding: 6px 15px 6px 11px;
+                                font-size: 12px;
+                                font-weight: 700;
+                            }
+
+                            .oTable td {
+                                border: 1px solid #ededeb;
+                                border-top-width: 0;
+                                border-left-width: 0;
+                                border-right-width: 0;
+                                padding: 8px 11px 7px;
+                            }
+
+                            .oTable tbody tr:last-child td {
+                                border-bottom-width: 3px;
+                            }
+
+                            .oTable td:last-child {
+                                border-right-width: 3px;
+                            }
+
+                            .oTable td:first-child {
+                                border-left-width: 3px;
+                            }
+
+                            .oTable thead tr:first-child th:first-child {
+                                -moz-border-radius-topleft: 7px;
+                                -webkit-border-top-left-radius: 7px;
+                                border-top-left-radius: 7px;
+                            }
+
+                            .oTable thead tr:last-child th:first-child {
+                                -moz-border-radius-bottomleft: 7px;
+                                -webkit-border-bottom-left-radius: 7px;
+                                border-bottom-left-radius: 7px;
+                            }
+
+                            .oTable thead tr:last-child th:last-child {
+                                -moz-border-radius-bottomright: 7px;
+                                -webkit-border-bottom-right-radius: 7px;
+                                border-bottom-right-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child th:first-child {
+                                -moz-border-radius-topleft: 7px;
+                                -webkit-border-top-left-radius: 7px;
+                                border-top-left-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child th:last-child {
+                                -moz-border-radius-topright: 7px;
+                                -webkit-border-top-right-radius: 7px;
+                                border-top-right-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child td {
+                                border-top-width: 3px;
+                            }
+
+                            .oTable tbody tr:last-child th:first-child {
+                                -moz-border-radius-bottomleft: 5px;
+                                -webkit-border-bottom-left-radius: 5px;
+                                border-bottom-left-radius: 5px;
+                            }
+
+                            .oTable tbody tr:last-child th:last-child {
+                                -moz-border-radius-bottomright: 5px;
+                                -webkit-border-bottom-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                            }
+
+                            .oTable tbody tr:last-child td {
+                                border-bottom-width: 3px;
+                            }
+
+
+                        .nowrap {
+                            white-space: nowrap;
+                        }
+
+                        .oScore {
+                            vertical-align: middle;
+                            display: inline-block;
+                            font-size: 10px;
+                            font-weight: 700;
+                            white-space: nowrap;
+                            margin-left: 18px;
+                        }
+
+                        .oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
+                            padding: 5px 8px;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            -ms-border-radius: 5px;
+                            -o-border-radius: 5px;
+                        }
+
+                        .oScore10 {
+                            background-color: #87b829;
+                        }
+
+                        .oScore20 {
+                            background-color: #00a0e8;
+                        }
+
+                        .oScore30 {
+                            background-color: #03c3e5;
+                        }
+
+                        /*********************************/
+                        .oInlineList > li {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        .oTag {
+                            line-height: 1;
+                            font-size: 11px;
+                            padding: 7px 9px;
+                            margin: 2px;
+                            border-radius: 4px;
+                            -webkit-font-smoothing: antialiased;
+                            color: #646165;
+                        }
+
+                            .oTag:hover {
+                                cursor: pointer;
+                                text-decoration: none;
+                            }
+
+                        ul > li {
+                            list-style-position: outside;
+                        }
+
+                        .oSkill {
+                            background-color: #f2f2ed;
+                        }
+
+                            .oSkill.isCertified, .oSkill.isTested {
+                                position: relative;
+                                padding-right: 24px;
+                                border-radius: 4px;
+                            }
+
+                                .oSkill.isCertified:after, .oSkill.isTested:after {
+                                    content: "\00a0";
+                                    position: absolute;
+                                    padding: 7px 11px 7px 10px;
+                                    top: 0;
+                                    border-radius: 0 4px 4px 0;
+                                    background: url(image.svg) no-repeat center center transparent;
+                                    background-size: 12px;
+                                    font-size: 11px;
+                                    -webkit-filter: opacity(50%);
+                                    filter: opacity(50%);
+                                }
+
+                            .oSkill:hover, .oSkill.isActive {
+                                color: #fff;
+                                background: #00aeec;
+                            }
+
+                        /*********************************************/
+                        .xList > li, .oListLite > li, ul.oList > li, section.oList > .oBd > li, .xList > article, .oListLite > article, ul.oList > article, section.oList > .oBd > article {
+                            padding-bottom: 18px;
+                            margin-bottom: 18px;
+                            border-bottom: 1px solid #b2b2b2;
+                        }
+
+                        .oHMin {
+                            color: #8C8C89;
+                            font-weight: 400;
+                        }
+
+                            .oHMin:before {
+                                content: "|";
+                                color: #252523;
+                                padding-right: 6px;
+                            }
+
+                        .oRowTitle {
+                            display: block;
+                            margin-bottom: 6px;
+                            font: 700 14px sans-serif;
+                        }
+
+                        .oSupportInfo {
+                            font-size: 11px;
+                            color: #7c7c7a;
+                            line-height: 16px;
+                            font-weight: 400;
+                        }
+
+                        .isHidden, .hidden {
+                            display: none !important;
+                        }
+
+                        .oLinkButton, .oMore, .oMoreLarge {
+                            font-weight: 400 !important;
+                            color: #0093f0 !important;
+                            text-transform: none !important;
+                        }
+
+                            .oLinkButton:hover, .oMore:hover, .oMoreLarge:hover {
+                                color: #0093f0 !important;
+                                text-decoration: underline;
+                            }
+                    </style>
+                    <div style="font-size: 18px; margin-top:20px;"><h4>My primary experience is</h4></div>
+                    <div>
+                        <div>
+                            <ul class="oInlineList">
+                                <li class="oTag oSkill isTested">C# .NET</li>
+                                <li class="oTag oSkill isTested">C / C++</li>
+                                <li class="oTag oSkill">ASP.NET</li>
+                                <li class="oTag oSkill">WCF, HTTP, REST Web Services</li>
+                                <li class="oTag oSkill">T-SQL, PL/SQL</li>
+                                <li class="wTag gr_tag">AND</li>
+                                <li class="wTag gr_tag">I'm available for hire</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="font-size: 18px; margin-top:20px;">Feel free to contact me via <a href="anton.yarkov@gmail.com" class="navbar-link">e-mail</a> for a consulting or part/full time job offer.</div>
+                </div>
+                <div class="row-fluid" style="font-size: 18px; adding:10px; margin-top: 40px; text-decoration: none;">
+                    Below you can see list of my home-made projects and experiments which I have done in my free time for very different purposes. Most of them you can find <b>open-source</b> on GitHub. Code is not perfect at some places and everyone welcome for the commits, forks, etc.
+                </div>
+                <div class="row-fluid">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="portfolio1">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Type</th>
+                                        <th>Language</th>
+                                        <th>Link</th>
+                                        <th>Description</th>
+                                        <th>Year</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://www.instagram.com/p/46EaZMNuPV/">RC for Fire boat</a></td>
+                                        <td><div class="gy_tag">Hadware</div></td>
+                                        <td></td>
+                                        <td><a href="https://youtu.be/xSZLi1v6Zug">Youtube Video</a></td>
+                                        <td>Hand made remote control hardware for Fire boat.</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://instagram.com/p/6ZyLBjlAzn-ITiyyPn6AxGJs7Wbpea_LlyVeg0">Raspberry Pi experiments</a></td>
+                                        <td><div class="gy_tag">Hadware+Software</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://instagram.com/p/6Zw8Q3lAxgqcHK5LvLX6eVvY-aSfjxrv1IibQ0">Instagram Video</a></td>
+                                        <td>Hand made replace of RC to Raspberry Pi to control by software</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://bitbucket.org/optiklab/roboball">Robot Football-Player</a></td>
+                                        <td><div class="gy_tag">Hadware+Software</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://bitbucket.org/optiklab/roboball">BitBucket</a> and <a href="https://www.instagram.com/p/v4OMHHlAwxfF5dsrmDwOof7O0anxL99j1E3qc0/">Instagram Video</a></td>
+                                        <td><br></td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td><a href="http://cleverwearer.com">Clever Wearer</a></td>
+                                        <td><div class="bl_tag">WEB-SITE</div></td>
+                                        <td>C#, ASP.NET</td>
+                                        <td><a href="http://cleverwearer.com">http://cleverwearer.com</a></td>
+                                        <td>Help to choose clothes for weather</td>
+                                        <td>2014</td>
+                                    </tr>-->
+                                    <tr>
+                                        <td><a href="https://bitbucket.org/optiklab/vkontakte-wall-exporter">Vkontakte Wall Exporter</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://bitbucket.org/optiklab/vkontakte-wall-exporter">BitBucket</a></td>
+                                        <td><br></td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/Spectrometer">Portable USB Spectrometer</a></td>
+                                        <td><div class="gy_tag">Hadware+Software</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/Spectrometer">GitHub</a> and <a href="https://github.com/optiklab/Spectrometer/wiki/Spectrometer-home">Photos</a></td>
+                                        <td>Hardware and software kit for measuring laser light.</td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://github.com/optiklab/Asteroids-Mobile/wiki">Asteroids Recovery for Android</a></td>
+                                        <td><div class="yw_tag">MOBILE APP</div><div class="or_tag">GAME</div></td>
+                                        <td>C++, Open GL ES</td>
+                                        <td><a href="http://github.com/optiklab/Asteroids-Mobile">GitHub</a> and <a href="https://github.com/optiklab/Asteroids-Mobile/wiki">Photos</a></td>
+                                        <td>C++ game prototype written with OpenGL for Android as an experiment.</td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://github.com/optiklab/AsteroidsRecovery/wiki">Asteroids Recovery</a></td>
+                                        <td><div class="or_tag">GAME</div></td>
+                                        <td>C++, Open GL</td>
+                                        <td><a href="https://github.com/optiklab/AsteroidsRecovery">GitHub</a> and <a href="https://github.com/optiklab/AsteroidsRecovery/wiki">Photos</a></td>
+                                        <td>C++ game prototype written with OpenGL for Windows as an experiment.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://habrahabr.ru/post/172299">Funny Hamster</a></td>
+                                        <td><div class="bl_tag">WEB-SITE</div></td>
+                                        <td>Javascript, Flash</td>
+                                        <td><a href="https://googledrive.com/host/0B4Q3U97fHTqIVzhpb09XRTJ2enM/" style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);">Start</a></td>
+                                        <td>Small fun web site which modifies and replay your voice with in-browser Flash plugins.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/page/read-skype-history-without-password-to-account.aspx">Skype DB reader</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#</td>
+                                        <td><a href="http://github.com/optiklab/SkypeResearcher">GitHub</a> and <a href="https://github.com/optiklab/SkypeResearcher/wiki">Photos</a></td>
+                                        <td>Software for reading your Skype hitory and contacts with SQL Lite library.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/VKMessanger/wiki">Windows Phone messenger</a></td>
+                                        <td><div class="yw_tag">MOBILE APP</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/VKMessanger">GitHub</a> and <a href="https://github.com/optiklab/VKMessanger/wiki">Photos</a></td>
+                                        <td>Windows Phone message for VK social network.</td>
+                                        <td>2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/RealTimeVoiceRecognizer/wiki">Voice recognition</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#, WPF, Google Voice</td>
+                                        <td><a href="https://github.com/optiklab/RealTimeVoiceRecognizer">GitHub</a> and <a href="https://github.com/optiklab/RealTimeVoiceRecognizer/wiki">Photos</a></td>
+                                        <td>Voice recognition software working on Google Voice public service.</td>
+                                        <td>2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/BugsInSpaceGame/wiki">Space shooter</a></td>
+                                        <td><div class="or_tag">GAME</div></td>
+                                        <td>C#, XNA</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/BugsInSpaceGame">GitHub</a> and <a href="https://github.com/optiklab/BugsInSpaceGame/wiki">Photos</a></span></td>
+                                        <td>Small game written for fun and interest for Windows platform.</td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/MultipleTextEditor/wiki">Auto text replacing 2</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#, WPF</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/MultipleTextEditor">GitHub</a> and <a href="https://github.com/optiklab/MultipleTextEditor/wiki">Photos</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/SimpleStringReplacer/wiki">Auto text replacing</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#, Windows Forms</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/SimpleStringReplacer">GitHub</a> and <a href="https://github.com/optiklab/SimpleStringReplacer/wiki">Photos</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/LinksSaver/wiki">Links saver</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#, Windows Forms</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/LinksSaver">GitHub</a> and <a href="https://github.com/optiklab/LinksSaver/wiki">Photos</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/GraphOn/wiki">Graphs/Matrix calculations</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#, WPF</td>
+                                        <td><a href="https://github.com/optiklab/GraphOn/wiki">GitHub</a> and <a href="https://github.com/optiklab/GraphOn/wiki">Photos</a></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/page/how-to-share-windows-7-gadgets.aspx">Windows 7 gadgets</a></td>
+                                        <td><div class="gy_tag">DESKTOP GADGET</div></td>
+                                        <td>Javascript, C# installer</td>
+                                        <td><a href="http://googledrive.com/host/0B4Q3U97fHTqIem9DUDJJVWhlbW8/TextEditorGadget.msi" style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);">Run</a></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://googledrive.com/host/0B4Q3U97fHTqITkdWcnBRdUNveEU/index.html">Delivery database</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#</td>
+                                        <td>Application for managing deliveries of a small business</td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/page/utility-for-recovering-pim-vol-files.aspx">Pim.vol recovery</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://googledrive.com/host/0B4Q3U97fHTqIem9DUDJJVWhlbW8/PimRecover.exe" style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);">Run</a></td>
+                                        <td><br></td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/SealedNotes/wiki">Sealed Notes app</a></td>
+                                        <td><div class="yw_tag">MOBILE APP</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/SealedNotes">GitHub</a> and <a href="https://github.com/optiklab/SealedNotes/wiki">Photos</a></td>
+                                        <td><br></td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/PrimaKrakal/wiki">Prima-Kraskal solver</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C++, MFC</td>
+                                        <td><a href="https://github.com/optiklab/PrimaKrakal">GitHub</a> and <a href="https://github.com/optiklab/PrimaKrakal/wiki">Photos</a></td>
+                                        <td><br></td>
+                                        <td>2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/BoolGraph/wiki">Shapes intersections solver</a></td>
+                                        <td><div class="gr_tag">UTILITY</div></td>
+                                        <td>C++, MFC</td>
+                                        <td><a href="https://github.com/optiklab/BoolGraph">GitHub</a> and <a href="https://github.com/optiklab/BoolGraph/wiki">Photos</a></td>
+                                        <td><br></td>
+                                        <td>2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">ATMega 16 programming</a></td>
+                                        <td><div class="gy_tag">Hadware+Software</div></td>
+                                        <td>C</td>
+                                        <td><a href="">Instagram Photos</a></td>
+                                        <td><br></td>
+                                        <td>2007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanks Game</td>
+                                        <td><div class="or_tag">GAME</div></td>
+                                        <td>C</td>
+                                        <td>lost</td>
+                                        <td><br></td>
+                                        <td>2003</td>
+                                    </tr>
+                                    <tr>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td>...</td>
+                                        <td><br></td>
+                                        <td>...</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dental Database</td>
+                                        <td>UTILITY<br>DATABASE</td>
+                                        <td>Visual Basic, MS Access</td>
+                                        <td>lost</td>
+                                        <td><br></td>
+                                        <td>2002</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <footer>
+                    <p>&copy; OptikLab 2013-2016</p>
+                </footer>
+
+            </div><!--/.fluid-container-->
+        </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5836013f808e56b2"></script> 
+</body>
+</html>
