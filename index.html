@@ -61,12 +61,247 @@
                     <div>
                         <h1>He110, w0r1d!</h1> My name is Anton and I'm a software developer. Most of the time I'm working on a projects for my employers...
                         but in my free time I'm continuosly learning programming and technologies, sometimes write <a href="https://optiklab.blogspot.ru">articles</a> and create small useful applications available on <a href="https://github.com/optiklab">GitHub</a>.
-
-                        I work in a team and you may also want to hire us, so you can find more information <a href="http://gdriv.es/soliddevs">here</a>. Feel free to contact us for a free advice or with an offer.
                     </div>
                 </div>
-                <div class="row-fluid" style="border-bottom: 1px solid #eeeeee; text-decoration: none;">
-                    <h4>Below you can see list of my home-made projects and experiments which I have done in my free time for very different purposes. Most of them you can find <b>open-source</b> on GitHub. Code is not perfect at some places and everyone welcome for the commits, forks, etc.</h4>
+                <div class="row-fluid" style="text-decoration: none;">
+                    <style>
+                        /************************************************/
+
+                        .oTable {
+                            border-collapse: separate;
+                            border-spacing: 0 font-family: Helvetica,Arial,sans-serif;
+                            font-size: 13px;
+                            color: #252523;
+                            word-wrap: break-word;
+                        }
+
+                            .oTable th {
+                                color: #252523;
+                                padding: 6px 15px 6px 11px;
+                                font-size: 12px;
+                                font-weight: 700;
+                            }
+
+                            .oTable td {
+                                border: 1px solid #ededeb;
+                                border-top-width: 0;
+                                border-left-width: 0;
+                                border-right-width: 0;
+                                padding: 8px 11px 7px;
+                            }
+
+                            .oTable tbody tr:last-child td {
+                                border-bottom-width: 3px;
+                            }
+
+                            .oTable td:last-child {
+                                border-right-width: 3px;
+                            }
+
+                            .oTable td:first-child {
+                                border-left-width: 3px;
+                            }
+
+                            .oTable thead tr:first-child th:first-child {
+                                -moz-border-radius-topleft: 7px;
+                                -webkit-border-top-left-radius: 7px;
+                                border-top-left-radius: 7px;
+                            }
+
+                            .oTable thead tr:last-child th:first-child {
+                                -moz-border-radius-bottomleft: 7px;
+                                -webkit-border-bottom-left-radius: 7px;
+                                border-bottom-left-radius: 7px;
+                            }
+
+                            .oTable thead tr:last-child th:last-child {
+                                -moz-border-radius-bottomright: 7px;
+                                -webkit-border-bottom-right-radius: 7px;
+                                border-bottom-right-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child th:first-child {
+                                -moz-border-radius-topleft: 7px;
+                                -webkit-border-top-left-radius: 7px;
+                                border-top-left-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child th:last-child {
+                                -moz-border-radius-topright: 7px;
+                                -webkit-border-top-right-radius: 7px;
+                                border-top-right-radius: 7px;
+                            }
+
+                            .oTable tbody tr:first-child td {
+                                border-top-width: 3px;
+                            }
+
+                            .oTable tbody tr:last-child th:first-child {
+                                -moz-border-radius-bottomleft: 5px;
+                                -webkit-border-bottom-left-radius: 5px;
+                                border-bottom-left-radius: 5px;
+                            }
+
+                            .oTable tbody tr:last-child th:last-child {
+                                -moz-border-radius-bottomright: 5px;
+                                -webkit-border-bottom-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                            }
+
+                            .oTable tbody tr:last-child td {
+                                border-bottom-width: 3px;
+                            }
+
+
+                        .nowrap {
+                            white-space: nowrap;
+                        }
+
+                        .oScore {
+                            vertical-align: middle;
+                            display: inline-block;
+                            font-size: 10px;
+                            font-weight: 700;
+                            white-space: nowrap;
+                            margin-left: 18px;
+                        }
+
+                        .oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
+                            padding: 5px 8px;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            -ms-border-radius: 5px;
+                            -o-border-radius: 5px;
+                        }
+
+                        .oScore10 {
+                            background-color: #87b829;
+                        }
+
+                        .oScore20 {
+                            background-color: #00a0e8;
+                        }
+
+                        .oScore30 {
+                            background-color: #03c3e5;
+                        }
+
+                        /*********************************/
+                        .oInlineList > li {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+
+                        .oTag {
+                            line-height: 1;
+                            font-size: 11px;
+                            padding: 7px 9px;
+                            margin: 2px;
+                            border-radius: 4px;
+                            -webkit-font-smoothing: antialiased;
+                            color: #646165;
+                        }
+
+                            .oTag:hover {
+                                cursor: pointer;
+                                text-decoration: none;
+                            }
+
+                        ul > li {
+                            list-style-position: outside;
+                        }
+
+                        .oSkill {
+                            background-color: #f2f2ed;
+                        }
+
+                            .oSkill.isCertified, .oSkill.isTested {
+                                position: relative;
+                                padding-right: 24px;
+                                border-radius: 4px;
+                            }
+
+                                .oSkill.isCertified:after, .oSkill.isTested:after {
+                                    content: "\00a0";
+                                    position: absolute;
+                                    padding: 7px 11px 7px 10px;
+                                    top: 0;
+                                    border-radius: 0 4px 4px 0;
+                                    background: url(image.svg) no-repeat center center transparent;
+                                    background-size: 12px;
+                                    font-size: 11px;
+                                    -webkit-filter: opacity(50%);
+                                    filter: opacity(50%);
+                                }
+
+                            .oSkill:hover, .oSkill.isActive {
+                                color: #fff;
+                                background: #00aeec;
+                            }
+
+                        /*********************************************/
+                        .xList > li, .oListLite > li, ul.oList > li, section.oList > .oBd > li, .xList > article, .oListLite > article, ul.oList > article, section.oList > .oBd > article {
+                            padding-bottom: 18px;
+                            margin-bottom: 18px;
+                            border-bottom: 1px solid #b2b2b2;
+                        }
+
+                        .oHMin {
+                            color: #8C8C89;
+                            font-weight: 400;
+                        }
+
+                            .oHMin:before {
+                                content: "|";
+                                color: #252523;
+                                padding-right: 6px;
+                            }
+
+                        .oRowTitle {
+                            display: block;
+                            margin-bottom: 6px;
+                            font: 700 14px sans-serif;
+                        }
+
+                        .oSupportInfo {
+                            font-size: 11px;
+                            color: #7c7c7a;
+                            line-height: 16px;
+                            font-weight: 400;
+                        }
+
+                        .isHidden, .hidden {
+                            display: none !important;
+                        }
+
+                        .oLinkButton, .oMore, .oMoreLarge {
+                            font-weight: 400 !important;
+                            color: #0093f0 !important;
+                            text-transform: none !important;
+                        }
+
+                            .oLinkButton:hover, .oMore:hover, .oMoreLarge:hover {
+                                color: #0093f0 !important;
+                                text-decoration: underline;
+                            }
+                    </style>
+                    <div style="font-size: 18px; margin-top:20px;">Feel free to contact me via e-mail <a href="anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a> for a consulting or part/full time job offer.</div>
+                    <div><h4>My primary experience is</h4></div>
+                    <div>
+                        <div>
+                            <ul class="oInlineList">
+                                <li class="oTag oSkill isTested">C# .NET</li>
+                                <li class="oTag oSkill isTested">C / C++</li>
+                                <li class="oTag oSkill">ASP.NET</li>
+                                <li class="oTag oSkill">WCF, HTTP, REST Web Services</li>
+                                <li class="oTag oSkill">T-SQL, PL/SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gr_tag">I'm available for hire</div>
+                </div>
+                <div class="row-fluid" style="font-size: 18px; adding:10px; margin-top: 40px; text-decoration: none;">
+                    Below you can see list of my home-made projects and experiments which I have done in my free time for very different purposes. Most of them you can find <b>open-source</b> on GitHub. Code is not perfect at some places and everyone welcome for the commits, forks, etc.
                 </div>
                 <div class="row-fluid">
                     <div id="myTabContent" class="tab-content">
@@ -303,9 +538,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row-fluid" style="border-bottom: 1px solid #eeeeee; text-decoration: none;">
-                    <h4>Below you can find some fun geek photos and videos of my projects.</h4>
-                </div>
+                <div class="row-fluid" style="margin-top: 20px; margin-bottom: 20px; font-size: 18px;">Below you can find some fun geek photos and videos of my projects.</div>
                 <div class="row-fluid">
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="portfolio1">
@@ -389,7 +622,7 @@
                 <hr>
 
                 <footer>
-                    <p>&copy; OptikLab 2013-2015</p>
+                    <p>&copy; OptikLab 2013-2016</p>
                 </footer>
 
             </div><!--/.fluid-container-->
