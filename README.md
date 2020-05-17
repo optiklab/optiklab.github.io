@@ -1,1 +1,1 @@
-[my blog](http://optiklab.github.io/)
+[my personal page](http://optiklab.github.io/)
