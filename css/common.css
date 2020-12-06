@@ -97,7 +97,7 @@ pre code {
 	text-align: center;
 }
 
-.bl_tag {
+.cy_tag {
     font: bold 13px/26px sans-serif;
 	border: 1px solid #6faae8;
 	background-image: linear-gradient(to bottom, #8ccbfe, #6faae8);
@@ -121,6 +121,36 @@ pre code {
     font: bold 13px/26px sans-serif;
 	border: 1px solid #cfcfcf;
 	background-image: linear-gradient(to bottom, #efefef, #cfcfcf);
+	border-radius: 5px 5px;
+	max-width: 150px;
+	color: white;
+	text-align: center;
+}
+
+.vi_tag {
+    font: bold 13px/26px sans-serif;
+	border: 1px solid #AC1EFF;
+	background-image: linear-gradient(to bottom, #E0AAFF, #AC1EFF);
+	border-radius: 5px 5px;
+	max-width: 150px;
+	color: white;
+	text-align: center;
+}
+
+.bl_tag {
+    font: bold 13px/26px sans-serif;
+	border: 1px solid #0509FF;
+	background-image: linear-gradient(to bottom, #9092FF, #0509FF);
+	border-radius: 5px 5px;
+	max-width: 150px;
+	color: white;
+	text-align: center;
+}
+
+.pi_tag {
+    font: bold 13px/26px sans-serif;
+	border: 1px solid #FF03DC;
+	background-image: linear-gradient(to bottom, #FFA8F3, #FF03DC);
 	border-radius: 5px 5px;
 	max-width: 150px;
 	color: white;

@@ -11,6 +11,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/jcarousel.basic.css" type="text/css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,17 +21,20 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">	
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>	
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-100861699-1', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-100861699-1', 'auto');
+      ga('send', 'pageview');
 
-</script>
+    </script>
 </head>
 
 <body>
@@ -51,10 +55,8 @@
                 <ul class="nav">
                     <li class="active"><a href="#">Employment history</a></li>
                     <li><a href="achievements.html">Achievements</a></li>
+                    <li><a target="_blank" href="blogs.html">My publications</a></li>
                     <li><a href="books.html">Books I recommend</a></li>
-                    <li><a target="_blank" href="https://github.com/optiklab">Git Hub</a></li>
-                    <li><a target="_blank" href="blogs.html">Blogs and articles</a></li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/optiklab">Linked In</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -66,7 +68,7 @@
 
             <div class="span12">
                 <div id="page" class="page-global">
-                    <h3 id="h1Title" class="page-global-title">My experience</h3>
+                    <h3 id="h1Title" class="page-global-title">Employment History</h3>
                     <div id="divText">
                         <style>
                             /************************************************/
@@ -289,141 +291,6 @@
                                     text-decoration: underline;
                                 }
                         </style>
-                        <div>
-I'm a software engineer and team lead with 10+ years of experience in application development mostly on C# and C++, but also practicing with a variety of technologies.
-I've a master degree in Information Security field and primarily work on web projects with plenty of visitors every day using different technologies and architectures.
-I've done projects in such areas like fin tech, traveling, GIS with using different technological stacks inclduing Linux, MacOS and mobile environments, different programming languages, frameworks and libraries. 
-Currently, I manage large distributed team of software engineers as Engineering manager and Chief of remote development staff. 
-Below you can find my employment history and description of my skills. You can find some more certificates, awards and achievements that I have on <a href="achievements.html">Achievements</a> page. Welcome to join me on professional <a href="https://www.linkedin.com/in/optiklab">Linked In network</a>
-                        </div>
-                        <div>
-                            <div><h4>I know practically what is</h4></div>
-                            <div>
-                                <ul class="oInlineList">
-                                    <li class="oTag oSkill">SOLID</li>
-                                    <li class="oTag oSkill">DDD</li>
-                                    <li class="oTag oSkill">BDD</li>
-                                    <li class="oTag oSkill">TDD</li>
-                                    <li class="oTag oSkill">DI</li>
-                                    <li class="oTag oSkill">CQRS</li>
-                                    <li class="oTag oSkill">Event sourcing</li>
-                                    <li class="oTag oSkill">Event driven architecture</li>
-                                    <li class="oTag oSkill">Clean Architecture principles</li>
-                                    <li class="oTag oSkill">Three tier architecture</li>
-                                    <li class="oTag oSkill">Microservices architecture</li>
-                                </ul>
-                            </div>
-                            <div><h4>I experienced in</h4></div>
-                            <div>
-                                <ul class="oInlineList">
-                                    <li class="oTag oSkill isTested">C#</li>
-                                    <li class="oTag oSkill isTested">C / C++</li>
-                                    <li class="oTag oSkill">AWS</li>
-                                    <li class="oTag oSkill">ASP.NET</li>
-                                    <li class="oTag oSkill">.NET Core</li>
-                                    <li class="oTag oSkill">.NET Framework</li>
-                                    <li class="oTag oSkill">MVC, WebAPI, WebForms</li>
-                                    <li class="oTag oSkill">WCF, SOA, REST</li>
-                                    <li class="oTag oSkill">JavaScript</li>
-                                    <li class="oTag oSkill">WPF, Windows Forms</li>
-                                    <li class="oTag oSkill">MS SQL (T-SQL)</li>
-                                    <li class="oTag oSkill">Oracle (PL/SQL)</li>
-                                    <li class="oTag oSkill">LINQ, Entity Framework, ADO.NET</li>
-                                    <li class="oTag oSkill">XML, JSON</li>
-                                    <li class="oTag oSkill">XPath</li>
-                                    <li class="oTag oSkill">html, css, LESS</li>
-                                </ul>
-                            </div>
-                            <div><h4>I at least familiar with</h4></div>
-                            <div>
-                                <ul class="oInlineList">
-                                    <li class="oTag oSkill">AWS Lambda</li>
-                                    <li class="oTag oSkill">AWS API Gateway</li>
-                                    <li class="oTag oSkill">AWS DynamoDB</li>
-                                    <li class="oTag oSkill">AWS EC2</li>
-                                    <li class="oTag oSkill">AWS SNS</li>
-                                    <li class="oTag oSkill">AWS SQS</li>
-                                    <li class="oTag oSkill">Azure</li>
-                                    <li class="oTag oSkill">Google Cloud</li>
-                                    <li class="oTag oSkill">Firebase</li>
-                                    <li class="oTag oSkill">python</li>
-                                    <li class="oTag oSkill">Android NDK</li>
-                                    <li class="oTag oSkill">Android SDK</li>
-                                    <li class="oTag oSkill">XNA</li>
-                                    <li class="oTag oSkill">Windows Mobile</li>
-                                    <li class="oTag oSkill">Windows Phone 7.1</li>
-                                    <li class="oTag oSkill">MySQL</li>
-                                    <li class="oTag oSkill">php</li>
-                                    <li class="oTag oSkill">VB .NET</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div style="margin-top: 30px; clear:both;">
-                            <h4>I prefer to proof experience by practice (see <a href="achievements.html">Achievements</a>), but also have certificates:</h4>
-                        </div>
-                        <div style="margin-top: 10px;">
-                            <table class="oTable" style="width: 100%;">
-                                <thead class="nowrap">
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Score (out of 5)</th>
-                                        <th>Time to Complete</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Programming on C++ (Stepik.org)</td>
-                                        <td class="nowrap">
-                                            98% out of 100%
-                                        </td>
-                                        <td class="nowrap">2015-11-01</td>
-                                        <td class="nowrap">
-                                            <a href="https://stepic.org/certificate/bf48758a46af338aa86d50bb2e448de4a4871f98.pdf">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brainbench Test C# 4.0</td>
-                                        <td class="nowrap">
-                                            4.30 <span class="oScore oScore10">Top 5%</span>
-                                        </td>
-                                        <td class="nowrap">2014-10-13</td>
-                                        <td class="nowrap">
-                                            <a href="http://www.brainbench.com/transcript.jsp?pid=9308180">Details</a> and <a href="https://optiklab.github.io/certificates/2014 Brainbench C# 5.0 9308180.PNG">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Programming on C# 4.0 (Retratech)</td>
-                                        <td class="nowrap">78% <span class="oScore oScore10">Top 5%</span></td>
-                                        <td class="nowrap">2014-10-08</td>
-                                        <td class="nowrap"><a href="http://certifications.ru/resume/198958/">Details</a> and <a href="https://optiklab.github.io/certificates/2014 C# Retratech.png">Certificate</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Programming with C++ (ODesk aka Upwork)</td>
-                                        <td class="nowrap">
-                                            3.60 <span class="oScore oScore20">Top 20%</span>
-                                        </td>
-                                        <td class="nowrap">2012-08-07</td>
-                                        <td class="nowrap">
-                                            <a href="https://www.odesk.com/exams/C-Programmers_4920871">Details</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>U.S. English Basic Skills</td>
-                                        <td class="nowrap">
-                                            3.60 <span class="oScore oScore20">Top 20%</span>
-                                        </td>
-                                        <td class="nowrap">2012-08-07</td>
-                                        <td class="nowrap">
-                                            <a href="https://www.odesk.com/exams/English-Sentence-Structure-Experts_4917532">Certificate</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div style="margin-top: 50px;">
-                            <h3>Employment History</h3>
-                        </div>
                         <div class="row-fluid oListLite" style="margin-top: 20px;">
                             <article class="">
                                 <h1 class="oRowTitle">
@@ -621,6 +488,44 @@ Below you can find my employment history and description of my skills. You can f
                                     <br>Programming php, html, css and writing descriptions for computer technics: PC's, Mac's, laptops, servers, motherboards, video-adapters, hard drives,
                                     <br>CPU's, RAM and etc. Got good practice in technical english: writing /reading / preparing of documentation.
                                     <br>Now this holding is <a href="https://oborot.ru/articles/ehouse-ne-vyderzhal-003-i34377.html">not exists anymore</a>.
+                                </div>
+                            </article>
+                            <article class="">
+                                <h1 class="oRowTitle">
+                                    Visited the USA as participant of Work&Travel          <span class="oHMin">while was student of South Federal University (former Taganrog State University of Radioengineering)</span>
+                                </h1>
+                                <div class="oSupportInfo">
+                                    2006
+                                </div>
+                                <div>
+                                    During summer I visited the USA while participating Work&Travel international students exchange program. I worked in New York City in a small company <a href="https://signselectny.com/">Sign Select Corp.</a>. I have a <a href="https://optiklab.livejournal.com/3417.html">blog article</a> about this cool experience.
+
+                                    <div class="wrapper">
+                                        <div class="jcarousel-wrapper">
+                                            <div class="jcarousel" data-jcarousel="true">
+                                                <ul>
+                                                    <li><src href="achievements/W&T 1.jpg"><img src="achievements/W&T 1.jpg" width="600" height="400" alt=""></src></li>
+                                                    <li><src href="achievements/W&T 2.jpg"><img src="achievements/W&T 2.jpg" width="600" height="400" alt=""></src></li>
+                                                    <li><src href="achievements/W&T 3.jpg"><img src="achievements/W&T 3.jpg" width="600" height="400" alt=""></src></li>
+                                                </ul>
+                                            </div>
+                                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>                                        
+                                            <p class="jcarousel-pagination">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="">
+                                <h1 class="oRowTitle">
+                                    Worked as a male nurse during school holidays <span class="oHMin">Main city hospital of Ust-Labinsk, Krasondar region</span>
+                                </h1>
+                                <div class="oSupportInfo">
+                                    Summer of 2000's
+                                </div>
+                                <div>
+                                    Got real medical experience by myself (to check if I want to be a doctor like my Mom). Worked in a schedule 1 working day plus 2 weekends. The working day was 24 hours where I was on duty to help doctors, other nurses, hospital patients of all ages. My most vivid recollection of those days was the morgue of the hospital, where I had to take bodies when there was my shift.
                                 </div>
                             </article>
                         </div>
