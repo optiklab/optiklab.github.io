@@ -67,424 +67,435 @@
                     </p>
                 </div>
                 <ul class="nav">
-                    <li><a href="employment.html">Employment history</a></li>
-                    <li class="active"><a href="#">Achievements</a></li>
-                    <li><a href="blogs.html">My publications</a></li>
+                    <li><a href="blogs.html">My articles</a></li>
+                    <li><a href="opensource.html">My code & hackathons</a></li>
+                    <li class="active"><a href="#">Certificates & exams</a></li>
+                    <li><a href="employment.html">CV</a></li>
                     <li><a href="books.html">Books I recommend</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
     </div>
-
     <div class="container-fluid">
         <div class="row-fluid">
-
-            <div class="span12">
+            <div class="span5">
                 <div id="page" class="page-global">
-                    <h3 id="h1Title" class="page-global-title">Certificates</h3>
-                    <div id="divText">
-                        <style>
-                            /************************************************/
-
-                            .oTable {
-                                border-collapse: separate;
-                                border-spacing: 0 font-family: Helvetica,Arial,sans-serif;
-                                font-size: 13px;
-                                color: #252523;
-                                word-wrap: break-word;
-                            }
-
-                                .oTable th {
-                                    color: #252523;
-                                    padding: 6px 15px 6px 11px;
-                                    font-size: 12px;
-                                    font-weight: 700;
-                                }
-
-                                .oTable td {
-                                    border: 1px solid #ededeb;
-                                    border-top-width: 0;
-                                    border-left-width: 0;
-                                    border-right-width: 0;
-                                    padding: 8px 11px 7px;
-                                }
-
-                                .oTable tbody tr:last-child td {
-                                    border-bottom-width: 3px;
-                                }
-
-                                .oTable td:last-child {
-                                    border-right-width: 3px;
-                                }
-
-                                .oTable td:first-child {
-                                    border-left-width: 3px;
-                                }
-
-                                .oTable thead tr:first-child th:first-child {
-                                    -moz-border-radius-topleft: 7px;
-                                    -webkit-border-top-left-radius: 7px;
-                                    border-top-left-radius: 7px;
-                                }
-
-                                .oTable thead tr:last-child th:first-child {
-                                    -moz-border-radius-bottomleft: 7px;
-                                    -webkit-border-bottom-left-radius: 7px;
-                                    border-bottom-left-radius: 7px;
-                                }
-
-                                .oTable thead tr:last-child th:last-child {
-                                    -moz-border-radius-bottomright: 7px;
-                                    -webkit-border-bottom-right-radius: 7px;
-                                    border-bottom-right-radius: 7px;
-                                }
-
-                                .oTable tbody tr:first-child th:first-child {
-                                    -moz-border-radius-topleft: 7px;
-                                    -webkit-border-top-left-radius: 7px;
-                                    border-top-left-radius: 7px;
-                                }
-
-                                .oTable tbody tr:first-child th:last-child {
-                                    -moz-border-radius-topright: 7px;
-                                    -webkit-border-top-right-radius: 7px;
-                                    border-top-right-radius: 7px;
-                                }
-
-                                .oTable tbody tr:first-child td {
-                                    border-top-width: 3px;
-                                }
-
-                                .oTable tbody tr:last-child th:first-child {
-                                    -moz-border-radius-bottomleft: 5px;
-                                    -webkit-border-bottom-left-radius: 5px;
-                                    border-bottom-left-radius: 5px;
-                                }
-
-                                .oTable tbody tr:last-child th:last-child {
-                                    -moz-border-radius-bottomright: 5px;
-                                    -webkit-border-bottom-right-radius: 5px;
-                                    border-bottom-right-radius: 5px;
-                                }
-
-                                .oTable tbody tr:last-child td {
-                                    border-bottom-width: 3px;
-                                }
-
-
-                            .nowrap {
-                                white-space: nowrap;
-                            }
-
-                            .oScore {
-                                vertical-align: middle;
-                                display: inline-block;
-                                font-size: 10px;
-                                font-weight: 700;
-                                white-space: nowrap;
-                                margin-left: 18px;
-                            }
-
-                            .oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
-                                padding: 5px 8px;
-                                -webkit-border-radius: 5px;
-                                -moz-border-radius: 5px;
-                                -ms-border-radius: 5px;
-                                -o-border-radius: 5px;
-                            }
-
-                            .oScore10 {
-                                background-color: #87b829;
-                            }
-
-                            .oScore20 {
-                                background-color: #00a0e8;
-                            }
-
-                            .oScore30 {
-                                background-color: #03c3e5;
-                            }
-
-                            /*********************************/
-                            .oInlineList > li {
-                                display: inline-block;
-                                vertical-align: top;
-                            }
-
-                            .oTag {
-                                line-height: 1;
-                                font-size: 11px;
-                                padding: 7px 9px;
-                                margin: 2px;
-                                border-radius: 4px;
-                                -webkit-font-smoothing: antialiased;
-                                color: #646165;
-                            }
-
-                                .oTag:hover {
-                                    cursor: pointer;
-                                    text-decoration: none;
-                                }
-
-                            ul > li {
-                                list-style-position: outside;
-                            }
-
-                            .oSkill {
-                                background-color: #f2f2ed;
-                            }
-
-                                .oSkill.isCertified, .oSkill.isTested {
-                                    position: relative;
-                                    padding-right: 24px;
-                                    border-radius: 4px;
-                                }
-
-                                    .oSkill.isCertified:after, .oSkill.isTested:after {
-                                        content: "\00a0";
-                                        position: absolute;
-                                        padding: 7px 11px 7px 10px;
-                                        top: 0;
-                                        border-radius: 0 4px 4px 0;
-                                        background: url(image.svg) no-repeat center center transparent;
-                                        background-size: 12px;
-                                        font-size: 11px;
-                                        -webkit-filter: opacity(50%);
-                                        filter: opacity(50%);
-                                    }
-
-                                .oSkill:hover, .oSkill.isActive {
-                                    color: #fff;
-                                    background: #00aeec;
-                                }
-
-                            /*********************************************/
-                            .xList > li, .oListLite > li, ul.oList > li, section.oList > .oBd > li, .xList > article, .oListLite > article, ul.oList > article, section.oList > .oBd > article {
-                                padding-bottom: 18px;
-                                margin-bottom: 18px;
-                                border-bottom: 1px solid #b2b2b2;
-                            }
-
-                            .oHMin {
-                                color: #8C8C89;
-                                font-weight: 400;
-                            }
-
-                                .oHMin:before {
-                                    content: "|";
-                                    color: #252523;
-                                    padding-right: 6px;
-                                }
-
-                            .oRowTitle {
-                                display: block;
-                                margin-bottom: 6px;
-                                font: 700 14px sans-serif;
-                            }
-
-                            .oSupportInfo {
-                                font-size: 11px;
-                                color: #7c7c7a;
-                                line-height: 16px;
-                                font-weight: 400;
-                            }
-
-                            .isHidden, .hidden {
-                                display: none !important;
-                            }
-
-                            .oLinkButton, .oMore, .oMoreLarge {
-                                font-weight: 400 !important;
-                                color: #0093f0 !important;
-                                text-transform: none !important;
-                            }
-
-                                .oLinkButton:hover, .oMore:hover, .oMoreLarge:hover {
-                                    color: #0093f0 !important;
-                                    text-decoration: underline;
-                                }
-                        </style>
-                        <div style="margin-top: 10px;">
-                            <table class="oTable" style="width: 100%;">
-                                <thead class="nowrap">
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Score</th>
-                                        <th>When</th>
-                                        <th>Links</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>A diploma from <a href="https://mipt.ru">The Moscow Institute of Physics and Technology</a> about professional qualification upgrade in programming of advanced algorithms./td>
-                                        <td class="nowrap">
-                                            fulfilled the requirements
-                                        </td>
-                                        <td class="nowrap">Since April 2021</td>
-                                        <td class="nowrap">
-                                            <a href="https://optiklab.github.io/certificates/2021 Mipt - certificate.jpeg">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>ACM (Association for Computing Machinery) member</td>
-                                        <td class="nowrap">
-                                            fulfilled the requirements
-                                        </td>
-                                        <td class="nowrap">Since May 2020</td>
-                                        <td class="nowrap">
-                                            <a href="https://optiklab.github.io/certificates/2020 My ACM membership.pdf">Membership certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Certified SAFe 5 Agilist</td>
-                                        <td class="nowrap">
-                                            92% from 100%
-                                        </td>
-                                        <td class="nowrap">2020-04-02</td>
-                                        <td class="nowrap">
-                                            <a href="https://optiklab.github.io/certificates/2020 Certified SAFe 5 Agilist.JPG">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "AWS Certified Solutions Architect Associate 2020"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2020-01-02</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/A8A5113E331E">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "AWS Certified DevOps Engineer - Professional 2020"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2020-01-02</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/A85CD799874B">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of ".NET Core Microservices"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2019-11-27</td>
-                                        <td class="nowrap">
-                                            <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-MBHNXRL3.jpg">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "Serverless Framework with GraphQL"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2019-08-29</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/1F4E27646BB4">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "AWS Lambda"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2019-08-13</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/FEE73820CADE">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "The complete Serverless Course"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2019-08-13</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/1B22E44FD0FF">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Completed course of "Serverless for Beginners"</td>
-                                        <td class="nowrap">
-                                            Exam passed
-                                        </td>
-                                        <td class="nowrap">2019-08-13</td>
-                                        <td class="nowrap">
-                                            <a href="https://verify.acloud.guru/9E91516D70C8">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Stepic C++</td>
-                                        <td class="nowrap">
-                                            98%
-                                        </td>
-                                        <td class="nowrap">2015-11-01</td>
-                                        <td class="nowrap">
-                                            <a href="https://stepic.org/certificate/bf48758a46af338aa86d50bb2e448de4a4871f98.pdf">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Brainbench Test C# 4.0</td>
-                                        <td class="nowrap">
-                                            4.30 <span class="oScore oScore10">Top 5%</span>
-                                        </td>
-                                        <td class="nowrap">2014-10-13</td>
-                                        <td class="nowrap">
-                                            <a href="http://www.brainbench.com/transcript.jsp?pid=9308180">Details</a> and <a href="https://optiklab.github.io/certificates/2014 Brainbench C# 5.0 9308180.PNG">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Retratech Programming on C# 4.0</td>
-                                        <td class="nowrap">78% <span class="oScore oScore10">Top 5%</span></td>
-                                        <td class="nowrap">2014-10-08</td>
-                                        <td class="nowrap"><a href="http://certifications.ru/resume/198958/">Details</a> and <a href="https://optiklab.github.io/certificates/2014 C# Retratech.png">Certificate</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Finished course from WhoTrades on Algorithmic Trading with MQL</td>
-                                        <td class="nowrap">Finished</td>
-                                        <td class="nowrap">2014-08-08</td>
-                                        <td class="nowrap">
-                                            <a href="https://optiklab.github.io/certificates/whotrades.png">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Finished course of Standford Univercity on HTML5 Game Development</td>
-                                        <td class="nowrap">Exam passed</td>
-                                        <td class="nowrap">2013-08-01</td>
-                                        <td class="nowrap">
-                                            <a href="https://optiklab.github.io/certificates/2013 HTML5 Game development.JPG">Certificate</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Programming with C++</td>
-                                        <td class="nowrap">
-                                            3.60 <span class="oScore oScore20">Top 20%</span>
-                                        </td>
-                                        <td class="nowrap">2012-08-07</td>
-                                        <td class="nowrap">
-                                            <a href="https://www.odesk.com/exams/C-Programmers_4920871">Details</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>U.S. English Basic Skills</td>
-                                        <td class="nowrap">
-                                            3.60 <span class="oScore oScore20">Top 20%</span>
-                                        </td>
-                                        <td class="nowrap">2012-08-07</td>
-                                        <td class="nowrap">
-                                            <a href="https://www.odesk.com/exams/English-Sentence-Structure-Experts_4917532">Certificate</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="hero-unit" style="padding: 30px; font-size: 35px;">
+                        <div>
+                             #assessments #exams
                         </div>
+                    </div>
+                    <style>
+                    /************************************************/
 
-                        <div style="margin-top: 50px;">
-                            <h3>Some other achievements history</h3>
+                    .oTable {
+                        border-collapse: separate;
+                        border-spacing: 0 font-family: Helvetica,Arial,sans-serif;
+                        font-size: 13px;
+                        color: #252523;
+                        word-wrap: break-word;
+                    }
+
+                        .oTable th {
+                            color: #252523;
+                            padding: 6px 15px 6px 11px;
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+
+                        .oTable td {
+                            border: 1px solid #ededeb;
+                            border-top-width: 0;
+                            border-left-width: 0;
+                            border-right-width: 0;
+                            padding: 8px 11px 7px;
+                        }
+
+                        .oTable tbody tr:last-child td {
+                            border-bottom-width: 3px;
+                        }
+
+                        .oTable td:last-child {
+                            border-right-width: 3px;
+                        }
+
+                        .oTable td:first-child {
+                            border-left-width: 3px;
+                        }
+
+                        .oTable thead tr:first-child th:first-child {
+                            -moz-border-radius-topleft: 7px;
+                            -webkit-border-top-left-radius: 7px;
+                            border-top-left-radius: 7px;
+                        }
+
+                        .oTable thead tr:last-child th:first-child {
+                            -moz-border-radius-bottomleft: 7px;
+                            -webkit-border-bottom-left-radius: 7px;
+                            border-bottom-left-radius: 7px;
+                        }
+
+                        .oTable thead tr:last-child th:last-child {
+                            -moz-border-radius-bottomright: 7px;
+                            -webkit-border-bottom-right-radius: 7px;
+                            border-bottom-right-radius: 7px;
+                        }
+
+                        .oTable tbody tr:first-child th:first-child {
+                            -moz-border-radius-topleft: 7px;
+                            -webkit-border-top-left-radius: 7px;
+                            border-top-left-radius: 7px;
+                        }
+
+                        .oTable tbody tr:first-child th:last-child {
+                            -moz-border-radius-topright: 7px;
+                            -webkit-border-top-right-radius: 7px;
+                            border-top-right-radius: 7px;
+                        }
+
+                        .oTable tbody tr:first-child td {
+                            border-top-width: 3px;
+                        }
+
+                        .oTable tbody tr:last-child th:first-child {
+                            -moz-border-radius-bottomleft: 5px;
+                            -webkit-border-bottom-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                        }
+
+                        .oTable tbody tr:last-child th:last-child {
+                            -moz-border-radius-bottomright: 5px;
+                            -webkit-border-bottom-right-radius: 5px;
+                            border-bottom-right-radius: 5px;
+                        }
+
+                        .oTable tbody tr:last-child td {
+                            border-bottom-width: 3px;
+                        }
+
+
+                    .nowrap {
+                        white-space: nowrap;
+                    }
+
+                    .oScore {
+                        vertical-align: middle;
+                        display: inline-block;
+                        font-size: 10px;
+                        font-weight: 700;
+                        white-space: nowrap;
+                        margin-left: 18px;
+                    }
+
+                    .oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
+                        padding: 5px 8px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                    }
+
+                    .oScore10 {
+                        background-color: #87b829;
+                    }
+
+                    .oScore20 {
+                        background-color: #00a0e8;
+                    }
+
+                    .oScore30 {
+                        background-color: #03c3e5;
+                    }
+
+                    /*********************************/
+                    .oInlineList > li {
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+
+                    .oTag {
+                        line-height: 1;
+                        font-size: 11px;
+                        padding: 7px 9px;
+                        margin: 2px;
+                        border-radius: 4px;
+                        -webkit-font-smoothing: antialiased;
+                        color: #646165;
+                    }
+
+                        .oTag:hover {
+                            cursor: pointer;
+                            text-decoration: none;
+                        }
+
+                    ul > li {
+                        list-style-position: outside;
+                    }
+
+                    .oSkill {
+                        background-color: #f2f2ed;
+                    }
+
+                        .oSkill.isCertified, .oSkill.isTested {
+                            position: relative;
+                            padding-right: 24px;
+                            border-radius: 4px;
+                        }
+
+                            .oSkill.isCertified:after, .oSkill.isTested:after {
+                                content: "\00a0";
+                                position: absolute;
+                                padding: 7px 11px 7px 10px;
+                                top: 0;
+                                border-radius: 0 4px 4px 0;
+                                background: url(image.svg) no-repeat center center transparent;
+                                background-size: 12px;
+                                font-size: 11px;
+                                -webkit-filter: opacity(50%);
+                                filter: opacity(50%);
+                            }
+
+                        .oSkill:hover, .oSkill.isActive {
+                            color: #fff;
+                            background: #00aeec;
+                        }
+
+                    /*********************************************/
+                    .xList > li, .oListLite > li, ul.oList > li, section.oList > .oBd > li, .xList > article, .oListLite > article, ul.oList > article, section.oList > .oBd > article {
+                        padding-bottom: 18px;
+                        margin-bottom: 18px;
+                        border-bottom: 1px solid #b2b2b2;
+                    }
+
+                    .oHMin {
+                        color: #8C8C89;
+                        font-weight: 400;
+                    }
+
+                        .oHMin:before {
+                            content: "|";
+                            color: #252523;
+                            padding-right: 6px;
+                        }
+
+                    .oRowTitle {
+                        display: block;
+                        margin-bottom: 6px;
+                        font: 700 14px sans-serif;
+                    }
+
+                    .oSupportInfo {
+                        font-size: 11px;
+                        color: #7c7c7a;
+                        line-height: 16px;
+                        font-weight: 400;
+                    }
+
+                    .isHidden, .hidden {
+                        display: none !important;
+                    }
+
+                    .oLinkButton, .oMore, .oMoreLarge {
+                        font-weight: 400 !important;
+                        color: #0093f0 !important;
+                        text-transform: none !important;
+                    }
+
+                        .oLinkButton:hover, .oMore:hover, .oMoreLarge:hover {
+                            color: #0093f0 !important;
+                            text-decoration: underline;
+                        }
+                    </style>
+                    <div style="margin-top: 10px;">
+                        <table class="oTable" style="width: 100%;">
+                            <thead class="nowrap">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Score</th>
+                                    <th>When</th>
+                                    <th>Links</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A diploma from <a href="https://mipt.ru">The Moscow Institute of Physics and Technology</a> about professional qualification upgrade in programming of advanced algorithms./td>
+                                    <td class="nowrap">
+                                        fulfilled the requirements
+                                    </td>
+                                    <td class="nowrap">Since April 2021</td>
+                                    <td class="nowrap">
+                                        <a href="https://optiklab.github.io/certificates/2021 Mipt - certificate.jpeg">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ACM (Association for Computing Machinery) member</td>
+                                    <td class="nowrap">
+                                        fulfilled the requirements
+                                    </td>
+                                    <td class="nowrap">Since May 2020</td>
+                                    <td class="nowrap">
+                                        <a href="https://optiklab.github.io/certificates/2020 My ACM membership.pdf">Membership certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Certified SAFe 5 Agilist</td>
+                                    <td class="nowrap">
+                                        92% from 100%
+                                    </td>
+                                    <td class="nowrap">2020-04-02</td>
+                                    <td class="nowrap">
+                                        <a href="https://optiklab.github.io/certificates/2020 Certified SAFe 5 Agilist.JPG">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "AWS Certified Solutions Architect Associate 2020"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2020-01-02</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/A8A5113E331E">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "AWS Certified DevOps Engineer - Professional 2020"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2020-01-02</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/A85CD799874B">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of ".NET Core Microservices"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2019-11-27</td>
+                                    <td class="nowrap">
+                                        <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-MBHNXRL3.jpg">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "Serverless Framework with GraphQL"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2019-08-29</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/1F4E27646BB4">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "AWS Lambda"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2019-08-13</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/FEE73820CADE">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "The complete Serverless Course"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2019-08-13</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/1B22E44FD0FF">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Completed course of "Serverless for Beginners"</td>
+                                    <td class="nowrap">
+                                        Exam passed
+                                    </td>
+                                    <td class="nowrap">2019-08-13</td>
+                                    <td class="nowrap">
+                                        <a href="https://verify.acloud.guru/9E91516D70C8">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Stepic C++</td>
+                                    <td class="nowrap">
+                                        98%
+                                    </td>
+                                    <td class="nowrap">2015-11-01</td>
+                                    <td class="nowrap">
+                                        <a href="https://stepic.org/certificate/bf48758a46af338aa86d50bb2e448de4a4871f98.pdf">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Brainbench Test C# 4.0</td>
+                                    <td class="nowrap">
+                                        4.30 <span class="oScore oScore10">Top 5%</span>
+                                    </td>
+                                    <td class="nowrap">2014-10-13</td>
+                                    <td class="nowrap">
+                                        <a href="http://www.brainbench.com/transcript.jsp?pid=9308180">Details</a> and <a href="https://optiklab.github.io/certificates/2014 Brainbench C# 5.0 9308180.PNG">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Retratech Programming on C# 4.0</td>
+                                    <td class="nowrap">78% <span class="oScore oScore10">Top 5%</span></td>
+                                    <td class="nowrap">2014-10-08</td>
+                                    <td class="nowrap"><a href="http://certifications.ru/resume/198958/">Details</a> and <a href="https://optiklab.github.io/certificates/2014 C# Retratech.png">Certificate</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Finished course from WhoTrades on Algorithmic Trading with MQL</td>
+                                    <td class="nowrap">Finished</td>
+                                    <td class="nowrap">2014-08-08</td>
+                                    <td class="nowrap">
+                                        <a href="https://optiklab.github.io/certificates/whotrades.png">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Finished course of Standford Univercity on HTML5 Game Development</td>
+                                    <td class="nowrap">Exam passed</td>
+                                    <td class="nowrap">2013-08-01</td>
+                                    <td class="nowrap">
+                                        <a href="https://optiklab.github.io/certificates/2013 HTML5 Game development.JPG">Certificate</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Programming with C++</td>
+                                    <td class="nowrap">
+                                        3.60 <span class="oScore oScore20">Top 20%</span>
+                                    </td>
+                                    <td class="nowrap">2012-08-07</td>
+                                    <td class="nowrap">
+                                        <a href="https://www.odesk.com/exams/C-Programmers_4920871">Details</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>U.S. English Basic Skills</td>
+                                    <td class="nowrap">
+                                        3.60 <span class="oScore oScore20">Top 20%</span>
+                                    </td>
+                                    <td class="nowrap">2012-08-07</td>
+                                    <td class="nowrap">
+                                        <a href="https://www.odesk.com/exams/English-Sentence-Structure-Experts_4917532">Certificate</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                       &nbsp;
+                    </div>
+                </div>
+            </div>   
+            <div class="span7">
+                <div id="page" class="page-global">
+                    <div id="">
+                        <div class="hero-unit" style="padding: 30px; font-size: 35px;">
+                            <div>
+                                 #certificates #diplomas
+                            </div>
                         </div>
                         <div class="row-fluid oListLite" style="margin-top: 20px;">
                             <article id="cruzhack2">
@@ -1139,7 +1150,7 @@
     </div>
 
     <footer>
-        &copy; OptikLab 2013-2021
+        &copy; OptikLab 2013-2022
     </footer>
 
     </div><!--/.fluid-container-->

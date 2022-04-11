@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Anton Yarkov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+		<!-- OLD Google Analytics
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-100861699-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100861699-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-100861699-1');
+    </script>   
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="index.html">&#8962;</a>
+                <div class="nav-collapse collapse">
+                    <p class="navbar-text pull-right">
+                        Contact with me <a href="mailto:anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a> <span id="languages"></span>
+                    </p>
+                </div>
+                <ul class="nav">
+                    <li><a href="blogs.html">My articles</a></li>
+                    <li class="active"><a href="#">My code & hackathons</a></li>
+                    <li><a href="achievements.html">Certificates & exams</a></li>
+                    <li><a href="employment.html">CV</a></li>
+                    <li><a href="books.html">Books I recommend</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span5">
+                <div class="hero-unit" style="padding: 30px; font-size: 35px;">
+                    <div>
+                         #hackathons
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="portfolio1">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Hackathon</th>
+                                        <th>Description</th>
+                                        <th>Timeframe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://hacktj.org/">HackTJ 2021</a></td>
+                                        <td>Helped to mentor students and judge the event. Mentioned on <a href="https://hacktj2021.devpost.com/">event devpost</a>.</td>
+                                        <td>2021-Apr</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://cruzhacks-2021.devpost.com/">CruzHack 2021</a></td>
+                                        <td>Helped to judge the event. Mentioned on <a href="https://cruzhacks-2021.devpost.com/">event devpost</a>.</td>
+                                        <td>2021-Jan</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://fit-m.org/hack">Fit-M 2020</a></td>
+                                        <td>Helpted to organize scientific hackathon and mentor students. Got <a href="https://optiklab.github.io/achievements.html#fitmhack">diplomas</a> and wrote an <a href="https://habr.com/ru/post/534422/">article</a> about cloud computing, CFD and HPC. <br/> Tech stack: Yandex.Cloud, OpenFOAM, ParaView, docker, JavaScript</td>
+                                        <td>2020-Dec</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://unihack.eu/people#people">UniHack 2020</a></td>
+                                        <td>Judging. Got <a href="https://optiklab.github.io/achievements.html#unihack">diploma</a>.</td>
+                                        <td>2020-Nov</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://codegeist.devpost.com/">Atlassian's Codegeist 2020</a></td>
+                                        <td>Contributing to Atlassian CodeGeist 2020 hackathon by building a potentially useful <a href="https://devpost.com/software/tactic-assignments">TacTic Assignments JIRA add-on</a> for further usage with my team.<br/> Tech stack: Atlassian-connect-express JS framework, nodeJS, C#, .NET Core, docker, AWS<br/><a href="https://github.com/optiklab/tacticaddon">Source code</a></td>
+                                        <td>2020-Jul</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span7">
+                <div class="hero-unit" style="padding: 30px; font-size: 35px;">
+                    <div>
+                         #open-source
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="portfolio1">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Type</th>
+                                        <th>Stack</th>
+                                        <th>GitHub</th>
+                                        <th>Description</th>
+                                        <th>Timeframe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>CQRS with .NET Core</td>
+                                        <td><div class="cy_tag">Source code</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/actio_3.0">Source code</a></td>
+                                        <td>Playing with .NET Core 3.0 microservices.</td>
+                                        <td>2019-Sep</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multithreading and Networking programming examples in C++</td>
+                                        <td><div class="cy_tag">Source code</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://github.com/optiklab/multithreaded-network-programming-examples">Source code</a></td>
+                                        <td>Playing with low level coding for networks and web servers.</td>
+                                        <td>2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/earthshape">earthShape</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://github.com/optiklab/earthshape">Source code</a></td>
+                                        <td>An application built with openFrameworks C++ toolkit for drawing 3D Earth based on actual elevation data.</td>
+                                        <td>2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/dircopierapp">DirCopierApp</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/dircopierapp">Source code</a></td>
+                                        <td>Application for recursive copying of files and folders from source path or URL to target folder in the file system.</td>
+                                        <td>2016</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/cleverwearer">cleverwearer.com</a></td>
+                                        <td><div class="cy_tag">Web App</div></td>
+                                        <td>ASP.NET</td>
+                                        <td><a href="https://github.com/optiklab/cleverwearer">Source code</a></td>
+                                        <td>Helps to get dressed for the weather and plan users wardrobe for the trips, and also warning users about surprises of the nature.</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://instagram.com/p/6ZyLBjlAzn-ITiyyPn6AxGJs7Wbpea_LlyVeg0">Raspberry Pi experiments</a></td>
+                                        <td><div class="gy_tag">HardwareSW</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://instagram.com/p/6Zw8Q3lAxgqcHK5LvLX6eVvY-aSfjxrv1IibQ0">Instagram Video</a></td>
+                                        <td>Hand made replace of RC to Raspberry Pi to control by software</td>
+                                        <td>2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://bitbucket.org/optiklab/roboball">Robot Football-Player</a></td>
+                                        <td><div class="gy_tag">HardwareSW</div></td>
+                                        <td>C++</td>
+                                        <td><a href="https://bitbucket.org/optiklab/roboball">Source code</a> and <a href="https://www.instagram.com/p/v4OMHHlAwxfF5dsrmDwOof7O0anxL99j1E3qc0/">Instagram Video</a></td>
+                                        <td><br></td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://bitbucket.org/optiklab/vkontakte-wall-exporter">Vkontakte Wall Exporter</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://bitbucket.org/optiklab/vkontakte-wall-exporter">BitBucket</a></td>
+                                        <td><br></td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/Spectrometer/wiki/Spectrometer-home">Portable USB Spectrometer</a></td>
+                                        <td><div class="gy_tag">HardwareSW</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/Spectrometer">Source code</a> and <a href="https://github.com/optiklab/Spectrometer/wiki/Spectrometer-home">screenshots</a></td>
+                                        <td>Hardware and software kit for measuring laser light.</td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://github.com/optiklab/Asteroids-Mobile/wiki">Asteroids Recovery for Android</a></td>
+                                        <td><div class="or_tag">MobileGame</div></td>
+                                        <td>C++, Open GL ES</td>
+                                        <td><a href="http://github.com/optiklab/Asteroids-Mobile">Source code</a> and <a href="https://github.com/optiklab/Asteroids-Mobile/wiki">screenshots</a></td>
+                                        <td>C++ Game prototype written with OpenGL for Android as an experiment.</td>
+                                        <td>2014</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://github.com/optiklab/AsteroidsRecovery/wiki">Asteroids Recovery</a></td>
+                                        <td><div class="or_tag">Game</div></td>
+                                        <td>C++, Open GL</td>
+                                        <td><a href="https://github.com/optiklab/AsteroidsRecovery">Source code</a> and <a href="https://github.com/optiklab/AsteroidsRecovery/wiki">screenshots</a></td>
+                                        <td>C++ Game prototype written with OpenGL for Windows as an experiment.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="http://habrahabr.ru/post/172299">Funny Hamster</a></td>
+                                        <td><div class="cy_tag">Web App</div></td>
+                                        <td>Javascript, Flash</td>
+                                        <td><a href="http://habrahabr.ru/post/172299">Publication</a> and <a href="https://optiklab.github.io/hamster/index.html">try it</a></td>
+                                        <td>Small fun web site which modifies and replay your voice with in-browser Flash plugins.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://optiklab.blogspot.com/2013/02/retieving-skype-information-with-sqlite.html">Skype DB reader</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#</td>
+                                        <td><a href="http://github.com/optiklab/SkypeResearcher">Source code</a> and <a href="https://github.com/optiklab/SkypeResearcher/wiki">screenshots</a></td>
+                                        <td>Software for reading your Skype hitory and contacts with SQL Lite library.</td>
+                                        <td>2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/VKMessanger/wiki">Windows Phone messenger</a></td>
+                                        <td><div class="yw_tag">Mobile App</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/VKMessanger">Source code</a> and <a href="https://github.com/optiklab/VKMessanger/wiki">screenshots</a></td>
+                                        <td>Social network Vkontakte messenger app while participating <a href="https://vk.com/wp_contest">Windows Phone Contest</a>.</td>
+                                        <td>2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/RealTimeVoiceRecognizer/wiki">Voice recognition</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#, WPF, Google Voice</td>
+                                        <td><a href="https://github.com/optiklab/RealTimeVoiceRecognizer">Source code</a> and <a href="https://github.com/optiklab/RealTimeVoiceRecognizer/wiki">screenshots</a></td>
+                                        <td>Voice recognition software working on Google Voice public service.</td>
+                                        <td>2012</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/BugsInSpaceGame/wiki">Space shooter</a></td>
+                                        <td><div class="or_tag">Game</div></td>
+                                        <td>C#, XNA</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/BugsInSpaceGame">Source code</a> and <a href="https://github.com/optiklab/BugsInSpaceGame/wiki">screenshots</a></span></td>
+                                        <td>Small Game written for fun and interest for Windows platform.</td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/MultipleTextEditor/wiki">Auto text replacing 2</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#, WPF</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/MultipleTextEditor">Source code</a> and <a href="https://github.com/optiklab/MultipleTextEditor/wiki">screenshots</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/SimpleStringReplacer/wiki">Auto text replacing</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#, Windows Forms</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/SimpleStringReplacer">Source code</a> and <a href="https://github.com/optiklab/SimpleStringReplacer/wiki">screenshots</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/LinksSaver/wiki">Links saver</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#, Windows Forms</td>
+                                        <td><span style="line-height: 18.5714282989502px; background-color: rgb(255, 255, 255);"><a href="https://github.com/optiklab/LinksSaver">Source code</a> and <a href="https://github.com/optiklab/LinksSaver/wiki">screenshots</a></span></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/GraphOn/wiki">Graphs/Matrix calculations</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#, WPF</td>
+                                        <td><a href="https://github.com/optiklab/GraphOn/wiki">Source code</a> and <a href="https://optiklab.blogspot.com/2011/01/new-application-for-working-with-graphs.html">blog publication</a></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Windows 7 gadgets</td>
+                                        <td><div class="gy_tag">Extention</div></td>
+                                        <td>Javascript, C# installer</td>
+                                        <td><a href="https://optiklab.blogspot.com/2010/11/gadgets-for-windows-7.html">Publication</a></td>
+                                        <td><br></td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://optiklab.github.io/DeliveryAppWebSite/index.html">Delivery database</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://optiklab.github.io/DeliveryAppWebSite/index.html">My old Web App</a></td>
+                                        <td>Application for managing deliveries of a small business</td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://optiklab.blogspot.com/2010/10/pimvol.html">Pim.vol recovery</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://optiklab.blogspot.com/2010/10/pimvol.html">Publication</a></td>
+                                        <td>Application for recovering contacts from internal storage file of *.PIM format for Windows Mobile phone.</td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/SealedNotes/wiki">Sealed Notes app</a></td>
+                                        <td><div class="yw_tag">Mobile App</div></td>
+                                        <td>C#</td>
+                                        <td><a href="https://github.com/optiklab/SealedNotes">Source code</a> and <a href="https://github.com/optiklab/SealedNotes/wiki">screenshots</a></td>
+                                        <td><br></td>
+                                        <td>2010</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/PrimaKrakal/wiki">Prima-Kraskal solver</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C++, MFC</td>
+                                        <td><a href="https://github.com/optiklab/PrimaKrakal">Source code</a> and <a href="https://github.com/optiklab/PrimaKrakal/wiki">screenshots</a></td>
+                                        <td><br></td>
+                                        <td>2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://github.com/optiklab/BoolGraph/wiki">Shapes intersections solver</a></td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>C++, MFC</td>
+                                        <td><a href="https://github.com/optiklab/BoolGraph">Source code</a> and <a href="https://github.com/optiklab/BoolGraph/wiki">screenshots</a></td>
+                                        <td>Developed in university as part of my application to my first full-time job as a software engineer (it was successful but separate from university program).</td>
+                                        <td>2008</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="">ATMega 16 programming</a></td>
+                                        <td><div class="gy_tag">HardwareSW</div></td>
+                                        <td>C</td>
+                                        <td><a href="">Instagram Photos</a></td>
+                                        <td><br></td>
+                                        <td>2007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanks 2D Game</td>
+                                        <td><div class="or_tag">Game</div></td>
+                                        <td>C</td>
+                                        <td>lost</td>
+                                        <td>Developed as part of my university program course about C language.</td>
+                                        <td>2003</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Clients registry system for municipal Dental clinic</td>
+                                        <td><div class="gr_tag">Little app</div></td>
+                                        <td>Visual Basic, MS Access</td>
+                                        <td>lost</td>
+                                        <td>Developed when I was a schoolboy and started to learn to program. This project helped me to learn a lot and sell my first software program ever.</td>
+                                        <td>2002</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <footer>
+                    <p>&copy; OptikLab 2013-2022</p>
+                </footer>
+
+            </div><!--/.fluid-container-->
+        </div>
+    </div>
+</body>
+</html>
