@@ -267,6 +267,27 @@ pre code {
 }
 
 /************************************************/
+.pTable {
+	border-collapse: separate;
+	border-spacing: 0
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	color: #252523;
+	word-wrap: break-word;
+}
+.pTable th {
+	color: #252523;
+	padding: 6px 15px 6px 11px;
+	font-size: 12px;
+	font-weight: 700
+}
+.pTable td {
+	border: 1px solid #ededeb;
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	padding: 2px 0px 3px
+}
 
 .oTable {
 	border-collapse: separate;
@@ -365,10 +386,9 @@ display: inline-block;
 font-size: 10px;
 font-weight: 700;
 white-space: nowrap;
-margin-left: 18px;
 }
 .oScoreBadget, .oScoreFirst, .oScoreSecond, .oScoreThird, .oScore10, .oScore20, .oScore30, .oScoreBelowAvg {
-padding: 5px 8px;
+padding: 3px 5px;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 -ms-border-radius: 5px;
