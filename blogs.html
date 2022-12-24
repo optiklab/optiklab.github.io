@@ -11,6 +11,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/jcarousel.index.css" type="text/css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,6 +22,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.basic.js"></script>	
 		<!-- OLD Google Analytics
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -60,11 +64,8 @@
                     </p>
                 </div>
                 <ul class="nav">
-                    <li class="active"><a href="#">My articles</a></li>
-                    <li><a href="opensource.html">My code & hackathons</a></li>
-                    <li><a href="achievements.html">Certificates & exams</a></li>
-                    <li><a href="employment.html">CV</a></li>
-                    <li><a href="books.html">Books I recommend</a></li>
+                    <li><a href="employment.html">About author</a></li>
+                    <li class="active"><a href="#">Archive</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -73,61 +74,111 @@
     <div class="container-fluid">
         <div class="row-fluid">
 
-            <div class="span3">
+            <div class="span4">
                 <div class="hero-unit" style="padding: 30px;">
-                    <div>
-                        <div>
-                            <div>
-                                I write blog posts and articles realted to IT where I share my own experience, reasoning, a-ha moments, and outcomes from time to time:
-                            </div>
-                            <div class="row-fluid" style="margin:2px;">
-                                <a target="_blank" href="https://dev.to/optiklab" alt="Dev Community"><img src="icons/devto.png" width="47" height="35" /></a>
-                                <a href="https://dev.to/optiklab">Dev Community [English]</a>
-                            </div>
-                            <div class="row-fluid" style="margin:2px;">
-                                <div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
-                                    <a target="_blank" href="https://optiklab.medium.com/" alt="Medium">
-                                        <img src="icons/medium.png" width="35" height="35" />
-                                    </a>
-                                </div>
-                                <a href="https://optiklab.medium.com/">Medium [English]</a>
-                            </div>
-                            <div class="row-fluid" style="margin:2px;">
-                                <div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
-                                    <a target="_blank" href="https://www.reddit.com/user/optiklab/" alt="Reddit">
-                                        <img src="icons/reddit.png" width="35" height="35" />
-                                    </a>
-                                </div>
-                                <a href="https://www.reddit.com/user/optiklab/">Reddit [English]</a>
-                            </div>
-                            <div class="row-fluid" style="margin:2px;">
-                                <div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
-                                    <a target="_blank" href="https://habr.com/ru/users/optiklab/" alt="Habr">
-                                        <img src="icons/habr.png" width="35" height="35" />
-                                    </a>
-                                </div>
-                                <a href="https://habr.com/ru/users/optiklab/">Habr [Russian]</a>
-                            </div>
-                            <div class="row-fluid" style="margin:2px;">
-                                <div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
-                                    <a target="_blank" href="http://optiklab.blogspot.com" alt="Blogspot">
-                                        <img src="icons/blogspot.png" width="35" height="35" />
-                                    </a>
-                                </div>
-                                <a href="http://optiklab.blogspot.com">Blog Spot [Russian]</a>
-                            </div>
-                        </div>
-                    </div>
+					<div>
+						I write blog posts and articles realted to IT where I share my own experience, reasoning, a-ha moments, and outcomes from time to time:
+					</div>
+					<div class="row-fluid" style="margin:2px;">
+						<a target="_blank" href="https://dev.to/optiklab" alt="Dev Community"><img src="icons/devto.png" width="47" height="35" /></a>
+						<a href="https://dev.to/optiklab">Dev Community [English]</a>
+					</div>
+					<div class="row-fluid" style="margin:2px;">
+						<div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
+							<a target="_blank" href="https://optiklab.medium.com/" alt="Medium">
+								<img src="icons/medium.png" width="35" height="35" />
+							</a>
+						</div>
+						<a href="https://optiklab.medium.com/">Medium [English]</a>
+					</div>
+					<div class="row-fluid" style="margin:2px;">
+						<div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
+							<a target="_blank" href="https://www.reddit.com/user/optiklab/" alt="Reddit">
+								<img src="icons/reddit.png" width="35" height="35" />
+							</a>
+						</div>
+						<a href="https://www.reddit.com/user/optiklab/">Reddit [English]</a>
+					</div>
+					<div class="row-fluid" style="margin:2px;">
+						<div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
+							<a target="_blank" href="https://habr.com/ru/users/optiklab/" alt="Habr">
+								<img src="icons/habr.png" width="35" height="35" />
+							</a>
+						</div>
+						<a href="https://habr.com/ru/users/optiklab/">Habr [Russian]</a>
+					</div>
+					<div class="row-fluid" style="margin:2px;">
+						<div style="float: left; padding-left:5px;padding-right:5px; margin-right:5px;">
+							<a target="_blank" href="http://optiklab.blogspot.com" alt="Blogspot">
+								<img src="icons/blogspot.png" width="35" height="35" />
+							</a>
+						</div>
+						<a href="http://optiklab.blogspot.com">Blog Spot [Russian]</a>
+					</div>
                     <div>
                         &nbsp;
                     </div>
+					
                 </div>
+				
+                <div class="hero-unit" style="padding: 30px 30px 10px 30px;">
+					
+                    I helped to judge and mentor in a number of <a href="opensource.html">hackathons</a> and co-organized a number of <a href="opensource.html">training webinars, courses and intensives</a>
+                    <div class="wrapper">
+                        <div class="jcarousel-wrapper">
+                            <div class="jcarousel" data-jcarousel="true">
+                                <ul>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/alpha-hacks-certificate.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/cruzhacks-2022-judge-certificate.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/hack3-certificate.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/cruzhacks-judge-certificate.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/fitm-jury.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/unihack-certificate-2020.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/hacktj-certificate.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/fitm-mentor.jpg"  /></a></li>
+                                    <li><a href="opensource.html"><img style="height:150px; border-radius: 20% !important;" src="img/hackathons/unihack-certificate-2021.jpg"  /></a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                            </p>
+                        </div>
+                    </div>
+					
+					I learn non-stop and thus have <a href="achievements.html">various certificates</a>
+                    <div class="wrapper">
+                        <div class="jcarousel-wrapper">
+                            <div class="jcarousel" data-jcarousel="true">
+                                <ul>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/mipt.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/safe.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/dzone.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/dzne.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/clouguru.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/udemy.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/udacity.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/stepik-certificate.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/microsoft.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/cloud-guru-lambda.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/cloud-guru-serverless.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/cloud-guru-serverless-complete.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/cloud-guru-serverless-complete.jpg" /></a></li>
+                                    <li><a href="achievements.html"><img style="height:150px; border-radius: 20% !important;" src="img/certificates/itstarz.jpg" /></a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+					
             </div>
-            <div class="span9">
-                
+			
+            <div class="span7">
                 <div style="font-size: 18px; font-weight: 200; line-height: 30px; margin-bottom:20px;">
                     <div>
-                        All my publications:
+                        Full archive of publications:
                     </div>
                 </div>
                 <div class="row-fluid">
@@ -136,517 +187,450 @@
                             <table class="table table-condensed">                                
                                 <thead>
                                     <tr>
-                                        <th>Platform</th>
-                                        <th>Publication</th>
-                                        <th>Additional references, translations</th>
+                                        <th>Timeframe</th>
+                                        <th>English</th>
+                                        <th>Russian</th>
                                         <th>Tags</th>
-                                        <th>Date</th>
                                     </tr>
                                 </thead>
-                                <tbody>                                    
+                                <tbody>
                                     <tr>
-                                        <td><div class="cy_tag">it-world</div></td>
+                                        <td>2022-Nov</td>
+                                        <td>I review the practical approaches in <a href="https://dzone.com/articles/learn-with-practice-api-versioning-snags">API versioning</a>, the pros and cons, as well as some basic reasons for API versioning. Reposted on <a href="https://dev.to/optiklab/learn-with-practice-api-versioning-snags-3fp4">dev.to</a>.</td>
+                                        <td><a href="https://optiklab.blogspot.com/2022/11/api-versioning.html">Заметки по версионированию API</a></td>
+                                        <td>#api #versioning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-Nov</td>
+                                        <td>I have listed a few <a href="https://dzone.com/articles/graphql-trade-offs">GraphQL trade offs</a> that you should keep in mind when you choose a way to build your new API. Reposted on <a href="https://dev.to/optiklab/graphql-trade-offs-ipk">dev.to</a>.</td>
+                                        <td><a href="https://optiklab.blogspot.com/2022/11/graphql-trade-offs.html">Проблемы GraphQL</a></td>
+                                        <td>#api #graphql</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-Oct</td>
+                                        <td>Step by step guide on how to use biometric citizen passports to manage Russian Enterpreneur account abroad.</td>
+                                        <td><a href="https://vc.ru/u/557354-anton-yarkov/529720-kak-otkryt-ili-zakryt-ip-iz-za-rubezha-prilozhiv-smartfon-k-zagranpasportu-rf">Как открыть или закрыть ИП из-за рубежа приложив смартфон к загранпаспорту РФ</a></td>
+                                        <td>#guide #ip #enterpreneurship</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-Aug</td>
+                                        <td>Expert opinion published on topic of <a href="https://clickup.com/blog/saas-examples/">Software-as-a-Service</a>.</td>
+                                        <td></td>
+                                        <td >#saas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-Feb</td>
                                         <td>An article about <a href="https://www.it-world.ru/cionews/business/182541.html">transformation of a remote distributed team</a>.</td>
                                         <td>Additionally published in <a href="https://www.it-world.ru/itmanager/218/">February issue of IT World magazine</a></td>
                                         <td >#remote #teamlead #business</td>
-                                        <td>2022-Feb</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">listennotes.com</div></td>
+                                        <td>2021-Nov</td>
                                         <td>Expert opinion published on topic of <a href="https://www.listennotes.com/blog/how-to-evaluate-a-3rd-party-restful-api-47/">How to evaluate a 3rd party RESTful API</a>.</td>
                                         <td></td>
                                         <td >#api #engineering</td>
-                                        <td>2021-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cy_tag">Habr.com</div></td>
+                                        <td>2021-Nov</td>
                                         <td>I've done some weekend research and wrote an article about the internals of <a href="https://www.indyautonomouschallenge.com/indy-autonomous-challenge-powered-by-cisco-announces-final-details-for-october-23-2021-at-the-indianapolis-motor-speedway">Indy Autonomous Challenge 2021</a>.</td>
                                         <td><a href="https://habr.com/ru/post/586722/">Как устроены первые в мире соревнования беспилотных болидов Formula 3 на Indy Autonomous Challenge 2021. Команда TUM</a></td>
                                         <td >#selfdriving #ai #engineering</td>
-                                        <td>2021-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">Netology</div></td>
+                                        <td>2021-Oct</td>
                                         <td>An interview with me on <a href="https://netology.ru">Netology</a>'s blog.</td>
                                         <td><a href="https://netology.ru/blog/09-2021-iz-taganroga-v-americanskoe-it">Интервью со мной на Нетологии</a></td>
                                         <td >#career #teamlead</td>
-                                        <td>2021-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">VC.RU</div></td>
+                                        <td>2021-Sept</td>
                                         <td>Technical article in Russian on how to make a cheap serverless web site for your small business.</td>
                                         <td><a href="https://vc.ru/dev/292061-publikuem-prostoy-serverless-sayt-s-formoy-obratnoy-svyazi-dlya-proverki-gipotez?comments">Публикуем простой Serverless сайт с формой обратной связи для проверки гипотез</a></td>
                                         <td >#aws #serverless #business #agile</td>
-                                        <td>2021-Sept</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">Alison Pill's Blog</div></td>
+                                        <td>2021-Aug</td>
                                         <td>Expert comments on <a href="https://clickup.com/blog/tips-for-agile-project-management/">20+ Tips for Agile Project Management</a></td>
                                         <td></td>
                                         <td >#agile #teamlead</td>
-                                        <td>2021-Aug</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="bl_tag">DZone.com</div></td>
-                                        <td><a href="https://dzone.com/articles/how-to-write-self-documented-code-with-low-cogniti">How to write self-documented code with low cognitive complexity</a></td>
-                                        <td>Reposted on <a href="https://optiklab.medium.com/how-to-write-self-documented-code-with-low-cognitive-complexity-84d3e0bc53ad">Medium</a> and <a href="https://dev.to/optiklab/writing-self-documented-code-with-low-cognitive-complexity-3k2l">dev.to</a></td>
-                                        <td>#programming #engineering #codequality #metrics #self-documented code</td>
                                         <td>2021-July</td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cy_tag">Habr.com</div></td>
-                                        <td>An article in Russian "How to write self-documented code with low cognitive complexity".</td>
+                                        <td><a href="https://dzone.com/articles/how-to-write-self-documented-code-with-low-cogniti">How to write self-documented code with low cognitive complexity</a>. Reposted on <a href="https://optiklab.medium.com/how-to-write-self-documented-code-with-low-cognitive-complexity-84d3e0bc53ad">Medium</a> and <a href="https://dev.to/optiklab/writing-self-documented-code-with-low-cognitive-complexity-3k2l">dev.to</a></td>
                                         <td>Статья <a href="https://habr.com/ru/post/565652/">Метрика Cognitive complexity или простой способ измерить сложность кода</a></td>
-                                        <td>#programming #engineering #codequality #metrics #self-documented code</td>
-                                        <td>2021-July</td>
+										<td>#programming #engineering #codequality #metrics #self-documented code</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">iFour Technolab</div></td>
+                                        <td>2021-Jun</td>
                                         <td>Expert comments on <a href="https://www.ifourtechnolab.com/blog/comparative-analysis-of-blazor-angular-react-vue-and-node-for-web-development">Comparative Analysis of Blazor, Angular, React, Vue and Node for Web development</a></td>
                                         <td></td>
                                         <td>#react #angular #blazor #vue #nodejs #frontend #development #programming #engineering</td>
-                                        <td>2021-Jun</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">Promdevelop.ru</div></td>
+                                        <td>2021-June</td>
                                         <td>An article in Russian "How to higher salary and acknowledgement being a software developer?" in the business information portal from Saint-Petersburg.</td>
                                         <td>Статья <a href="https://promdevelop.ru/rabota/karera-programmista">Карьера программиста: как получить высокую зарплату и признание</a></td>
                                         <td>#programming #engineering #career</td>
-                                        <td>2021-June</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="bl_tag">DZone.com</div></td>
-                                        <td><a href="https://dzone.com/articles/pragmatic-guide-to-starting-communities-of-practice-in-organization">A pragmatic guide to starting Communities of Practice in the organization</a></td>
-                                        <td>Reposted on <a href="https://dev.to/optiklab/a-pragmatic-guide-to-starting-communities-of-practice-in-the-organization-25n3">Dev.to</a> and <a href="https://optiklab.medium.com/starting-communities-of-practice-in-your-organization-19a43ae70f6d">Medium</a></td>
-                                        <td>#teamlead</td>
                                         <td>2021-May</td>
+                                        <td><a href="https://dzone.com/articles/pragmatic-guide-to-starting-communities-of-practice-in-organization">A pragmatic guide to starting Communities of Practice in the organization</a>. Reposted on <a href="https://dev.to/optiklab/a-pragmatic-guide-to-starting-communities-of-practice-in-the-organization-25n3">Dev.to</a> and <a href="https://optiklab.medium.com/starting-communities-of-practice-in-your-organization-19a43ae70f6d">Medium</a></td>
+                                        <td></td>
+										<td>#teamlead</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">Promdevelop.ru</div></td>
+                                        <td>2021-May</td>
                                         <td>An article in Russian "How to become a programmer from scratch?" in the business information portal from Saint-Petersburg.</td>
                                         <td>Статья <a href="https://promdevelop.ru/rabota/kak-stat-programmistom-s-nulya/">Как стать программистом с нуля</a></td>
                                         <td>#programming #learning #engineering #education</td>
-                                        <td>2021-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">top-personal.ru</div></td>
+                                        <td>2021-Apr</td>
                                         <td>An article in in Russian in the Moscow management magazine Top Personal. Issue #9.</td>
                                         <td>Статья в выпуске <a href="https://www.top-personal.ru/newsissue.html?29336">№9 журнала "Управление персоналом", г.Москва</a></td>
                                         <td>#hr #peoplemanagement</td>
-                                        <td>2021-Apr</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">iFour Technolab</div></td>
+                                        <td>2021-Mar</td>
                                         <td>Expert comments on <a href="https://www.ifourtechnolab.com/blog/how-to-ensure-your-development-team-is-truly-dedicated">How to ensure your development team is truly dedicated?</a></td>
                                         <td></td>
                                         <td>#teamlead #peoplemanagement #hr</td>
-                                        <td>2021-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="bl_tag">DZone.com</div></td>
-                                        <td><a href="https://dzone.com/articles/web-crawlers-make-it-harder-to-follow-digital-mill">Web Crawlers, the DMCA, and Thinking Ahead</a></td>
-                                        <td>Reposted on <a href="https://optiklab.medium.com/web-crawlers-make-it-harder-to-follow-digital-millennium-copyright-act-so-developers-have-to-43e5e032c">Medium</a></td>
-                                        <td>#copyrights #web #architecture</td>
                                         <td>2021-Feb</td>
+                                        <td><a href="https://dzone.com/articles/web-crawlers-make-it-harder-to-follow-digital-mill">Web Crawlers, the DMCA, and Thinking Ahead</a>. Reposted on <a href="https://optiklab.medium.com/web-crawlers-make-it-harder-to-follow-digital-millennium-copyright-act-so-developers-have-to-43e5e032c">Medium</a></td>
+                                        <td></td>
+										<td>#copyrights #web #architecture</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="vi_tag">dev.to</div></td>
-                                        <td><a href="https://dev.to/optiklab/working-example-of-saml-single-sign-on-integration-using-c-39mb">Working example of SAML Single Sign-On integration using C# </a></td>
-                                        <td>Reposted on <a href="https://www.reddit.com/user/optiklab/comments/llqa5z/working_example_of_saml_single_signon_integration/">Reddit</a> and <a href="https://optiklab.medium.com/working-example-of-saml-single-sign-on-integration-using-c-9c4a14dad141">Medium</a></td>
-                                        <td>#api #docs</td>
                                         <td>2021-Feb</td>
+                                        <td><a href="https://dev.to/optiklab/working-example-of-saml-single-sign-on-integration-using-c-39mb">Working example of SAML Single Sign-On integration using C# </a>. Reposted on <a href="https://www.reddit.com/user/optiklab/comments/llqa5z/working_example_of_saml_single_signon_integration/">Reddit</a> and <a href="https://optiklab.medium.com/working-example-of-saml-single-sign-on-integration-using-c-9c4a14dad141">Medium</a></td>
+                                        <td></td>
+										<td>#api #docs</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
-                                        <td><a href="https://optiklab.medium.com/five-facts-about-security-to-know-in-2021-b067aec942ea">Five facts about security to know in 2021</a>.</td>
-                                        <td><a href="http://optiklab.blogspot.com/2021/02/five-facts-about-security-to-know-in.html">Пять фактов о безопасности в 2021</a></td>
-                                        <td>#review #architecture</td>
                                         <td>2021-Feb</td>
+                                        <td><a href="https://optiklab.medium.com/five-facts-about-security-to-know-in-2021-b067aec942ea">Five facts about security to know in 2021</a>. Reposted on <a href="https://www.reddit.com/user/optiklab/comments/kwdyzp/five_facts_about_security_to_know_in_2021/">Reddit</a> and <a href="https://optiklab.medium.com/five-facts-about-security-to-know-in-2021-b067aec942ea">Medium</a>. <br> Translated in Russian: <a href="http://optiklab.blogspot.com/2021/02/five-facts-about-security-to-know-in.html">Пять фактов о безопасности в 2021</a></td>
+                                        <td></td>
+										<td>#review #architecture</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="vi_tag">dev.to</div></td>
-                                        <td><a href="https://optiklab.medium.com/five-facts-about-security-to-know-in-2021-b067aec942ea">Five facts about security to know in 2021</a></td>
-                                        <td>Reposted on <a href="https://www.reddit.com/user/optiklab/comments/kwdyzp/five_facts_about_security_to_know_in_2021/">Reddit</a> and <a href="https://optiklab.medium.com/five-facts-about-security-to-know-in-2021-b067aec942ea">Medium</a></td>
-                                        <td>#api #docs</td>
                                         <td>2021-Jan</td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="gr_tag">TProger.ru</div></td>
                                         <td>An article in Russian where I review the book "Monolith to Microservices. Evolutionary patterns to transform your monolith" by Sam Newman</td>
                                         <td><a href="https://tproger.ru/books/obzor-knigi-sjema-njumana-monolith-to-microservices-evolutionary-patterns-to-transform-your-monolith/">Стоит прочитать: обзор книги Сэма Ньюмана «Monolith to Microservices. Evolutionary patterns to transform your monolith»</a></td>
                                         <td>#review #architecture</td>
-                                        <td>2021-Jan</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="bl_tag">DZone.com</div></td>
-                                        <td><a href="https://dzone.com/articles/how-scrum-helps-developers-build-technical-skills-flexible-architecture">How Scrum Helps Developers Build Technical Skills and Flexible Architecture</a></td>
-                                        <td>Reposted on <a href="https://dev.to/optiklab/how-scrum-helps-developers-build-technical-skills-and-flexible-architecture-pm8">Dev.to</a>, <a href="https://medium.com/@OptikLab/how-scrum-helps-developers-build-technical-skills-and-flexible-architecture-ee28cc34118c">Medium</a> and <a href="https://www.reddit.com/user/optiklab/comments/khcss8/how_scrum_helps_developers_build_technical_skills/">Reddit</a></td>
-                                        <td>#teamlead #agile #scrum #architecture</td>
                                         <td>2020-Dec</td>
+                                        <td><a href="https://dzone.com/articles/how-scrum-helps-developers-build-technical-skills-flexible-architecture">How Scrum Helps Developers Build Technical Skills and Flexible Architecture</a>. Reposted on <a href="https://dev.to/optiklab/how-scrum-helps-developers-build-technical-skills-and-flexible-architecture-pm8">Dev.to</a>, <a href="https://medium.com/@OptikLab/how-scrum-helps-developers-build-technical-skills-and-flexible-architecture-ee28cc34118c">Medium</a> and <a href="https://www.reddit.com/user/optiklab/comments/khcss8/how_scrum_helps_developers_build_technical_skills/">Reddit</a></td>
+                                        <td></td>
+										<td>#teamlead #agile #scrum #architecture</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cy_tag">Habr.com</div></td>
+                                        <td>2020-Dec</td>
                                         <td>An article in Russian about modelling physical processes with OpenFOAM and visualizing results in Web</td>
                                         <td><a href="https://habr.com/ru/post/534422/">Моделируем процессы в OpenFOAM и отображаем результаты в веб</a></td>
                                         <td>#cloud #cfd #hpc #cloudcomputing #science #physics</td>
-                                        <td>2020-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gr_tag">TProger.ru</div></td>
+                                        <td>2020-Dec</td>
                                         <td>An article in Russian where I review the book "Clean architecture" by Robert C. Martin</td>
                                         <td><a href="https://tproger.ru/books/obzor-knigi-roberta-martina-chistaja-arhitektura/">Стоит прочитать: обзор книги Роберта Мартина «Чистая Архитектура»</a></td>
                                         <td>#review #architecture</td>
-                                        <td>2020-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="vi_tag">dev.to</div></td>
-                                        <td><a href="https://dev.to/optiklab/tips-tricks-on-api-documentation-fkl">Tips & Tricks on API documentation </a></td>
-                                        <td>Reposted on <a href="https://www.reddit.com/user/optiklab/comments/k575on/tips_tricks_on_api_documentation/">Reddit</a> and <a href="https://medium.com/optiklab/tips-tricks-on-api-documentation-cd7e46334055">Medium</a></td>
-                                        <td>#api #docs</td>
                                         <td>2020-Nov</td>
+                                        <td><a href="https://dev.to/optiklab/tips-tricks-on-api-documentation-fkl">Tips & Tricks on API documentation </a>. Reposted on <a href="https://www.reddit.com/user/optiklab/comments/k575on/tips_tricks_on_api_documentation/">Reddit</a> and <a href="https://medium.com/optiklab/tips-tricks-on-api-documentation-cd7e46334055">Medium</a></td>
+                                        <td></td>
+										<td>#api #docs</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cy_tag">Habr.com</div></td>
+                                        <td>2020-Nov</td>
                                         <td>An article in Russian on How scrum helps developers to build their technical skills?</td>
                                         <td><a href="https://habr.com/ru/post/530330/">Как скрам помогает стать более сильным разработчиком?</a></td>
                                         <td>#teamlead #agile #scrum #architecture</td>
-                                        <td>2020-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2020-Oct</td>
                                         <td>Tips & Tricks on API documentation reposted on <a href="https://dev.to/optiklab/tips-tricks-on-api-documentation-fkl">Dev.to</a>, <a href="https://www.reddit.com/user/optiklab/comments/k575on/tips_tricks_on_api_documentation/">Reddit</a> and <a href="https://medium.com/optiklab/tips-tricks-on-api-documentation-cd7e46334055">Medium</a></td>
                                         <td><a href="https://optiklab.blogspot.com/2020/12/tips-tricks-on-api-documentation.html">Приёмы составления правильной API документации</a></td>
                                         <td>#api #docs</td>
-                                        <td>2020-Oct</td>
                                     </tr>                   
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2017-Oct</td>
                                         <td>An article in Russian where I review by bluetooth Beats Solo 3</td>
                                         <td><a href="http://optiklab.blogspot.com/2017/10/beats-solo-3.html">Отзыв пользователя беспроводных наушников Beats Solo 3 </a></td>
                                         <td>#random</td>
-                                        <td>2017-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2016-Nov</td>
                                         <td>An article in Russian where I tell how to build a personal VPN server using AWS</td>
                                         <td><a href="http://optiklab.blogspot.com/2016/11/vpn-amazon-ec2.html">Делаем себе бесплатный VPN на Amazon EC2 </a> and repost <a href="https://telegra.ph/Делаем-себе-бесплатный-VPN-на-Amazon-EC2-11-26">on telegraph</a></td>
                                         <td>#vpn</td>
-                                        <td>2016-Nov</td>
                                     </tr>         
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2016-Nov</td>
                                         <td>An article about the news in the world of navigation maps.</td>
                                         <td><a href="http://optiklab.blogspot.com/2016/11/blog-post_3.html">Интересная новость из мира картографии и дизайна</a></td>
                                         <td>#random #maps</td>
-                                        <td>2016-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2016-Nov</td>
                                         <td>An article about my toy RC model.</td>
                                         <td><a href="http://optiklab.blogspot.com/2016/11/rc.html">Опыт покупки китайской RC модели краулера </a></td>
                                         <td>#rc #fun</td>
-                                        <td>2016-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2015-Dec</td>
                                         <td>An article about IPTV setup on Web OS-based TV.</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/12/iptv-web-os.html">Настройка IPTV на Web OS телевизорах от Интернет-провайдера </a></td>
                                         <td>#iptv</td>
-                                        <td>2015-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2015-Jul</td>
                                         <td>An article about how to keep the notes efficiently.</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/07/blog-post.html">Как запомнить всё или конспект нового формата </a></td>
                                         <td>#random</td>
-                                        <td>2015-Jul</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2015-Apr</td>
                                         <td>Sharing materials from the conference CLRium #2.</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/04/c-clrium-2.html">Делюсь материалами c CLRium #2 </a></td>
                                         <td>#architecture</td>
-                                        <td>2015-Apr</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2015-Mar</td>
                                         <td>Sharing must watch lections on databases from Yandex.</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/03/blog-post.html">Лекции по Базам Данных от Яндекс </a></td>
                                         <td>#architecture</td>
-                                        <td>2015-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2015-Mar</td>
                                         <td>Sharing must watch lections on High Load.</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/03/highload-mailru.html">Лекции HighLoad от Mail.Ru </a></td>
                                         <td>#architecture</td>
-                                        <td>2015-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-Jul</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/06/why-goto-is-so-bad.html">Why goto is so bad </a></td>
                                         <td><a href="http://optiklab.blogspot.com/2014/07/goto.html">Почему goto плох </a></td>
                                         <td>#codequality</td>
-                                        <td>2014-Jul</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-Jul</td>
                                         <td><a href="http://optiklab.blogspot.com/2014/07/oauth-and-tears.html">OAuth and tears </a></td>
                                         <td>-</td>
                                         <td>#architecture</td>
-                                        <td>2014-Jul</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-Jul</td>
                                         <td><a href="http://optiklab.blogspot.com/2014/07/oauth-and-tears.html">OAuth and tears </a></td>
                                         <td><a href="http://optiklab.blogspot.com/2014/07/oauth.html">OAuth и слёзы </a></td>
                                         <td>#architecture</td>
-                                        <td>2014-Jul</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-May</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/05/customize-aspnet-identity-20.html">Customize ASP.NET Identity 2.0 </a></td>
                                         <td>-</td>
                                         <td>#architecture</td>
-                                        <td>2014-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-May</td>
                                         <td><a href="http://optiklab.blogspot.com/2014/05/select-happy-medium-in-practices-of.html">Select happy medium in practices of Entity Framework</a></td>
                                         <td>-</td>
                                         <td>#architecture</td>
-                                        <td>2014-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">livejournal</div></td>
+                                        <td>2014-May</td>
                                         <td>Translated interesting article <a href="http://www.iflscience.com/plants-and-animals/%E2%80%9Cworld%E2%80%99s-biggest-dinosaur%E2%80%9D-discovered">about World’s Biggest Dinosaur finding in Argentina</a></td>
                                         <td><a href="https://optiklab.livejournal.com/19002.html">Найдены остатки самого большого в мире динозавра</a></td>
                                         <td>#random #translation</td>
-                                        <td>2014-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-May</td>
                                         <td><a href="http://optiklab.blogspot.com/2015/05/customize-aspnet-identity-20.html">Customize ASP.NET Identity 2.0 </a></td>
                                         <td><a href="http://optiklab.blogspot.com/2014/05/aspnet-identity-20.html">Кастомизируем ASP.NET Identity 2.0 </a></td>
                                         <td>#architecture</td>
-                                        <td>2014-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-May</td>
                                         <td><a href="http://optiklab.blogspot.com/2014/05/select-happy-medium-in-practices-of.html">Select happy medium in practices of Entity Framework</a></td>
                                         <td><a href="http://optiklab.blogspot.com/2014/05/entity-framework.html">Выбираем все плюсы из трех парадигм Entity Framework</a></td>
                                         <td>#architecture</td>
-                                        <td>2014-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2014-Jan</td>
                                         <td>Technical article where I'm <a href="http://optiklab.blogspot.com/2014/01/c11.html">sharing experience in C++11 for Android NDK</a></td>
                                         <td><a href="http://optiklab.blogspot.com/2014/01/11.html">Опыт в C++11 для Android NDK</a></td>
                                         <td>#cpp #c++ #android #ndk</td>
-                                        <td>2014-Jan</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cy_tag">Habr.com</div></td>
+                                        <td>2013-Mar</td>
                                         <td>Technical article on Recording and modifying sound with the web app in real time</td>
                                         <td><a href="https://habr.com/ru/post/172299/">Запись и модификация звука в Web</a> и репост в <a href="http://optiklab.blogspot.com/2013/03/web.html">блоге</a></td>
                                         <td>#experiments #web</td>
-                                        <td>2013-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2013-Feb</td>
                                         <td>Technical article on how to read internal database from Skype Desktop application.</td>
                                         <td><a href="http://optiklab.blogspot.com/2013/02/retieving-skype-information-with-sqlite.html">Читаем сообщения Skype без пароля к аккаунту </a></td>
                                         <td>#experiments #myapps</td>
-                                        <td>2013-Feb</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Dec</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/xml-serialization-of-derived-classes.html">XML serialization of derived classes </a></td>
                                         <td>-</td>
                                         <td>#architecture</td>
-                                        <td>2012-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Dec</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/what-should-be-comments-in-code.html">What should be the comments in the code... </a></td>
                                         <td>-</td>
                                         <td>#codequality</td>
-                                        <td>2012-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Dec</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/c-core.html">C++ core</a></td>
                                         <td>-</td>
                                         <td>#cpp #c++</td>
-                                        <td>2012-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Dec</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/solved-problems-with-cooperating-visual.html">Solved problems with cooperating of Visual Studio 2012 and SQL Server 2008 </a></td>
                                         <td>-</td>
                                         <td></td>
-                                        <td>2012-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Dec</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/query-optimization-in-oracle.html">Query optimization in Oracle DB</a></td>
                                         <td><a href="http://optiklab.blogspot.com/2012/12/oracle.html">Оптимизация запросов Oracle DB</a></td>
                                         <td>#databases</td>
-                                        <td>2012-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Nov</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/11/problems-with-oracle-syscontext-function.html">Problems with Oracle SYS_CONTEXT function </a></td>
                                         <td>-</td>
                                         <td>#oracle #databases</td>
-                                        <td>2012-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Sep</td>
                                         <td>PR: I made a Windows Phone app for the <a href="https://vk.com/wp_contest">contest participation<a/></td>
                                         <td><a href="http://optiklab.blogspot.com/2012/09/windows-phone.html">PR: Сделал Windows Phone приложение для</a> <a href="https://vk.com/wp_contest">конкурса Вконтакте</a></td>
                                         <td>#myapps #experiments</td>
-                                        <td>2012-Sep</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-May</td>
                                         <td>Technical article about using Entity Framework in ASP.NET MVC3</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/05/aspnet-mvc3-ninject-entity-framework.html">Моё знакомство с ASP.NET MVC3 и Entity Framework Code First... </a></td>
                                         <td>#architecture #experience</td>
-                                        <td>2012-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Mar</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/09/how-to-write-utf-8-encoded-string-to.html">How to write a UTF-8 encoded string to a file in windows, in C++</a></td>
                                         <td>-</td>
                                         <td>#cpp #c++</td>
-                                        <td>2012-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2012-Feb</td>
                                         <td><a href="http://optiklab.blogspot.com/2012/02/life.html">Домбай 2012</a></td>
                                         <td>-</td>
                                         <td>#travel</td>
-                                        <td>2012-Feb</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2011-Dec</td>
                                         <td>PR: Presenting a simple C# app for voice recognition and text-to-speech translation using non-official Google Voice API.</td>
                                         <td><a href="http://optiklab.blogspot.com/2011/12/google-voice-application.html">Программа распознавания речи с Google Voice</a></td>
                                         <td>#myapps #experiments</td>
-                                        <td>2011-Dec</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2011-Jul</td>
                                         <td>PR: Presenting a simple game made using C# and XNA framework. This game won a prize of sympathy at Microsoft Dreamspark contest.</td>
                                         <td><a href="http://optiklab.blogspot.com/2011/07/bugs-in-space.html">Игра на XNA </a></td>
                                         <td>#games #myapps #experiments</td>
-                                        <td>2011-Jul</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2011-Jan</td>
                                         <td>PR: Presenting my WPF application that allows to work with graphs and execute some algorithms on it.</td>
                                         <td><a href="http://optiklab.blogspot.com/2011/01/new-application-for-working-with-graphs.html">Программа для работы с графами </a></td>
                                         <td>#algorithms #myapps #experiments</td>
-                                        <td>2011-Jan</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2010-Nov</td>
                                         <td>Built so-called gadgets for Windows 7</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/11/gadgets-for-windows-7.html">Гаджеты для Windows 7</a></td>
                                         <td>#mydesign #myapps #experiments</td>
-                                        <td>2010-Nov</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2010-Oct</td>
                                         <td>My thoughts and a concept on mobile services design.</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/10/blog-post.html">Мобильные сервисы</a></td>
                                         <td>#mydesign #concept</td>
-                                        <td>2010-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2010-Oct</td>
                                         <td>Made a concept design for a car display.</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/10/digital-car-control.html">Цифровое управление автомобилем</a></td>
                                         <td>#mydesign #concept</td>
-                                        <td>2010-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2010-Oct</td>
                                         <td>How to restore pim.vol - contacts file from Windows Mobile</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/10/pimvol.html">Файл контактов на Windows Mobile Pim.vol </a></td>
                                         <td>#experience</td>
-                                        <td>2010-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2010-Jun</td>
                                         <td>Travel notes after vacation on the Black sea</td>
                                         <td><a href="https://optiklab.livejournal.com/8736.html">Отдых</a></td>
                                         <td>#travel</td>
-                                        <td>2010-Jun</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
-                                        <td><a href="http://optiklab.blogspot.com/2010/06/invented-white-clocks.html">Presented design for a watches</a></td>
-                                        <td>-</td>
-                                        <td>#mydesign #concept</td>
-                                        <td>2010-Jun</td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2010-May</td>
                                         <td>Travel notes after visiting Saint Petersburg during vacation</td>
                                         <td><a href="https://optiklab.livejournal.com/6475.html">Санкт-Петербург</a></td>
                                         <td>#travel</td>
-                                        <td>2010-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="gy_tag">blogpost</div></td>
+                                        <td>2010-May</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/05/multi-text-editor-application.html">PR: Replace text like a Pro with my Multi Text Editor application</a></td>
                                         <td>-</td>
                                         <td>#myapps</td>
-                                        <td>2010-May</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2010-Mar</td>
                                         <td><a href="http://optiklab.blogspot.com/2010/03/blog-post_14.html">PR: save links like a Pro with my tLinker</a></td>
                                         <td>-</td>
                                         <td>#myapps</td>
-                                        <td>2010-Mar</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2010-Jan</td>
                                         <td>My travel notes after winter trip to Caucasus region.</td>
                                         <td><a href="https://optiklab.livejournal.com/7080.html">Кавказские Минеральные Воды</a></td>
                                         <td>#travel</td>
-                                        <td>2010-Jan</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2009-Oct</td>
                                         <td>My review of the signs and banners martket in the NYC. Notes made after my participation in work-and-travel USA during summer of 2006.</td>
                                         <td><a href="https://optiklab.livejournal.com/3417.html">Лето в США</a></td>
                                         <td>#travel</td>
-                                        <td>2009-Oct</td>
                                     </tr>
                                     <tr>
-                                        <td><div class="or_tag">livejournal</div></td>
+                                        <td>2009-Jun</td>
                                         <td>My notes after summer trip from South of Russia to Syberia where I was born</td>
                                         <td><a href="https://optiklab.livejournal.com/1592.html">Летняя Россия</a></td>
                                         <td>#travel</td>
-                                        <td>2009-Jun</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-                <hr>
-
-                <footer>
-                    <p>&copy; OptikLab 2013-2022</p>
-                </footer>
-
-            </div><!--/.fluid-container-->
+            </div>
         </div>
+            <footer>
+                <p>&copy; OptikLab 2013-2022</p>
+            </footer>
     </div>
+	
 </body>
 </html>
