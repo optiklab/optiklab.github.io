@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fractal Terrain Generator</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./lib/fd-slider/fd-slider.css" />
+    <link rel="stylesheet" href="./lib/fd-slider/fd-slider-tooltip.css" />
+    <script type="text/javascript" src="./lib/Three.js"></script>
+    <script type="text/javascript" src="./lib/RequestAnimationFrame.js"></script>
+    <script type="text/javascript" src="./lib/Detector.js"></script>
+    <script type="text/javascript" src="./lib/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery.pubsub.js"></script>
+    <script type="text/javascript" src="./lib/fd-slider/fd-slider.js"></script>
+    <script type="text/javascript" src="../lib/terrain.js"></script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="sidebar-inner">
+        <h1 id="title">Fractal Terrain Generator</h1>
+
+        <div id="intro">
+          <p>
+            This is a demo of using the <b>diamond-square</b> algorithm to generate a random fractal terrain.
+          </p>
+          <p>
+            You may refer to Paul Martz's <a href="http://gameprogrammer.com/fractal.html">great article</a>
+            for a detailed description on how the algorithm works.
+          </p>
+          <p>
+            The visualization is built with <a href="https://github.com/mrdoob/three.js">Three.js</a>.
+          </p>
+        </div>
+
+
+        <form id="opts">
+          <label for="size">Size:</label>
+          <select class="opt" id="opt-size" name="size">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64" selected="yes">64</option>
+            <option value="128">128</option>
+          </select>
+          
+          <label for="smoothness">Smoothness:</label>
+          <input class="opt" id="opt-smoothness" type="text" name="smoothness" min="0.1" max="5" step="0.1" value="1.0"><br>
+
+          <label for="z-scale">Z-Scale:</label>
+          <input class="opt" id="opt-z" type="text" name="z-scale" min="0" max="500" step="20" value="340"><br>
+
+          <a id="new" href="#">new</a>
+        </form>
+      </div>
+    </div>
+    <div id="container"></div>
+
+    <a href="https://github.com/qiao/fractal-terrain-generator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></img></a>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+      TerrainController.init();
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21856083-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
