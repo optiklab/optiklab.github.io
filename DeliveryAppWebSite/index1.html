@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>OptikLab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<script type="text/javascript" src="js/jquery1.9.1/jquery.min.js"></script>
+	
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="shortcut icon" href="ico/favicon.ico">-->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">-->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">-->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">-->
+    <!--<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">-->
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-39168765-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+	<script>
+		window.onload = function() {
+			$("#menu").load("menu.html");
+		};
+	</script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">OptikLab</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Contact with me <a href="anton.yarkov@gmail.com" class="navbar-link">anton.yarkov@gmail.com</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Projects</a></li>
+			  <li><a href="blog.html">Blog</a></li>
+			  <li><a href="#">Trips blog</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div id="menu" class="well sidebar-nav">
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+		  	<div>
+				<!-- <div>
+					<img align="center" src="img\applemon.png" width="564" height="511" />
+				</div>-->
+			  <!--  Carousel -->
+			  <div id="this-carousel-id" class="carousel slide">
+				<div class="carousel-inner">
+				  <div class="item active">
+					<img src="img/step1.jpg" alt="Первое что нужно понять: главное быть здоровой, а не худой" />
+					<div class="carousel-caption">
+					  <p>Первое что нужно понять: главное быть здоровой, а не худой</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step2.jpg" alt="Вашей целью должно стать оздоровление, а не похудение" />
+					<div class="carousel-caption">
+					  <p>Вашей целью должно стать оздоровление, а не похудение</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step3.jpg" alt="При правильной настройке и оздоровлении организма, он сам избавляется от излишков веса" />
+					<div class="carousel-caption">
+					  <p>При правильной настройке и оздоровлении организма, он сам избавляется от излишков веса</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step4.jpg" alt="Идите к оздоровлению своего организма небольшими шагами" />
+					<div class="carousel-caption">
+					  <p>Идите к оздоровлению своего организма небольшими шагами</p>
+   				    </div>
+				  </div>
+				  <div class="item">
+					<img src="img/step5.jpg" alt="Записывайте свои достижения каждый день, даже если они небольшие" />
+					<div class="carousel-caption">
+					  <p>Записывайте свои достижения каждый день, даже если они небольшие</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step6.jpg" alt="Что же нужно делать?" />
+					<div class="carousel-caption">
+					  <p>Что же нужно делать?</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step7.jpg" alt="1. Каждый день заходите на наш сайт и выполняйте упражнения под предоставленную нами мелодию" />
+					<div class="carousel-caption">
+					  <p>1. Каждый день заходите на наш сайт и выполняйте упражнения под предоставленную нами мелодию</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step8.jpg" alt="2. Когда вы почувствуете в себе силы, переходите к упражнениям 2ой и далее 3ей категории с более высоким темпом" />
+					<div class="carousel-caption">
+					  <p>2. Когда вы почувствуете в себе силы, переходите к упражнениям 2ой и далее 3ей категории с более высоким темпом</p>
+   				    </div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step9.jpg" alt="3. Делитесь своими результатами с другими, ориентируйтесь на тех, кто сейчас имеет более высокую результативность" />
+					<div class="carousel-caption">
+					  <p>3. Делитесь своими результатами с другими, ориентируйтесь на тех, кто сейчас имеет более высокую результативность</p>
+					</div>
+				  </div>
+				  <div class="item">
+					  <img src="img/step10.jpg" alt="Уже через месяц вы почувствуете разницу того, что было до, и что стало после!" />
+					<div class="carousel-caption">
+					  <p>Уже через месяц вы почувствуете разницу того, что было до, и что стало после!</p>
+   				    </div>
+				  </div>
+				</div><!-- .carousel-inner -->
+				<!--  next and previous controls here
+					  href values must reference the id for this carousel -->
+				  <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+			  </div><!-- .carousel -->
+			  <!-- end carousel -->
+			</div>
+		  </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; OptikLab 2013 <a href="index2.html">Russian page</a></p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

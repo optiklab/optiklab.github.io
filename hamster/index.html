@@ -1,0 +1,265 @@
+﻿<html>
+<head>  
+<script src="jquery.min.js"> </script>
+<script src="jRecorder.js"> </script>
+<title>Hamster speech</title>  
+<style>
+li {display:inline; margin-right:10px;}
+body { margin: 0;
+padding: 0;overflow: auto;
+overflow-x: auto;
+overflow-y: scroll;background:url(space.png) no-repeat #000; width:100%; min-width:1004px; overflow }
+
+.container{
+	width:100%;
+	height:100%;
+}
+
+.images{
+	width:1532px;
+	height:100%;
+}
+
+.rocket{ 
+	width:1532px;
+	height:669px;
+}
+
+.hamster{
+top: 181;
+left: 694; 
+z-index:-100;
+position:absolute;
+}
+
+.level{
+width:200px;
+left:10px;
+position:absolute;
+z-index:200;
+top: 10px;}
+
+.buttons{
+width:800px;
+left:10px;
+position:absolute;
+z-index:200;
+top: 700px;
+}
+
+a, a.link, a.visited { color: white; }
+
+.ribbon-banner {
+   display: block;
+   position: absolute;
+   top: 50px;
+   right: -120px;
+   width: 400px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+   opacity: 0.7;
+   -webkit-transform: rotate(45deg);
+   -moz-transform:    rotate(45deg);
+   -ms-transform:     rotate(45deg);
+   transform:         rotate(45deg);
+   font-size: 20px;
+   font-weight: 700;
+   color: white;
+   background-color: red;
+   border: 1px solid white;
+   z-index: 500;
+   }
+</style> 
+<script type="text/javascript">
+	function setPictureHamsterStart()
+	{
+		// Change picture after 2 seconds
+		var timer = setTimeout('startAll()', 1500);
+	}
+	
+	function startAll()
+	{
+		setPictureHamsterStop();
+		$.jRecorder.record(30);
+	}
+	
+	function setPictureHamsterStop()
+	{
+		document.getElementById("switch").src = "2.png";
+	}
+	
+	function setPictureHamsterSpeech()
+	{
+		document.getElementById("switch").src = "3.gif";
+	}
+	
+	// Begin hamster on load.
+	window.onload = setPictureHamsterStart();
+</script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39169656-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class=ribbon-banner>Turn On microphone<p></p></div>
+
+<!--[if IE]>
+<!--[if IE]>
+<div style="text-align:center">
+<p style="color: white;">Для оптимального отображения сайта, рекомендуем пользоваться одним из этих браузеров:<p/>
+<p><a href='http://www.google.ru/chrome' target='_blank' rel='nofollow'><img title='Chrome' alt='Chrome' width=50 height=50 src='ch.png' border=0></a>
+<a href='http://www.mozilla-europe.org/ru/firefox/' target='_blank' rel='nofollow'><img title='Firefox' width=50 height=50 alt='Firefox' src='ff.png' border=0></a>
+<a href='http://www.opera.com/download/' target='_blank' rel='nofollow'><img title='Opera' alt='Opera' width=50 height=50 src='op.png' border=0></a>
+<a href='http://www.apple.com/ru/safari/download/' target='_blank' rel='nofollow'><img title='Safari' width=50 height=50 alt='Safari' src='sa.png' border=0></a></p>
+</div>
+<![endif]-->
+	<div class="container">
+		<div class="images">			
+			<img class="rocket" src="rocket.png" />
+			<img class="hamster" id="switch" src="1.gif" />
+		</div>
+		<div class="level">
+			<p><img height=20px width=10px src="mic.png" />&nbsp;&nbsp;<span style="color: white; font-size:20px; font-weight: bold;" id="status"></span></p>
+			<!--<p>Time <span id="time"></span></p>
+			<div>Level: <span id="level"></span></div> --> 
+			<div id="levelbase" style="width:200px;height:20px;background-color:#ffff00">
+				<div id="levelbar" style="height:19px; width:2px;background-color:red"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script>   
+	   $.jRecorder(     
+		 { 
+			host : 'https://googledrive.com/host/0B4Q3U97fHTqIVzhpb09XRTJ2enM/acceptfile.php?filename=hello.wav'  ,  //replace with your server path please
+			callback_started_recording:     function(){callback_started(); },
+			callback_stopped_recording:     function(){callback_stopped(); },
+			callback_activityLevel:          function(level){callback_activityLevel(level); },
+			callback_activityTime:     function(time){callback_activityTime(time); },
+			callback_finished_sending:     function(time){ callback_finished_sending() },
+			swf_path : 'jRecorder.swf',
+		 }
+	   );
+	</script>
+	<div style="float:left; width:25%;">&nbsp;</div>
+	<div style="color:white; margin:auto 0px; width:50%; float:left; ">
+		This project was created to test Audio functionality of web browsers: Hamster may listen (means record :) ) to you and then play your voice with some modifications.
+		<br>Because browsers have very poor support of sound record functionality there are a lot of cases where my site will not work. If it doesn't work for you, please check:
+		<br>1. You have installed <a href="https://support.google.com/chrome/answer/108086?hl=en">Flash Player plugin</a>.
+		<br>   In Chrome:
+		<br>   * type "chrome:flash" in URI to see information about installed version of plugin.
+		<br>   * type "chrome:plugins" to check if it is turned on.
+		<br>
+		<br>2.  Check if using microphone is allowed in your browser:
+		<br><a href="help.ru.jpg"><img src="help.ru.jpg" width="400" height="200" /></a>
+		<a href="help1.ru.jpg"><img src="help1.ru.jpg" width="400" height="200" /></a>
+	</div>
+	<div style="width:25%;">&nbsp;</div>
+	<div>
+		<p style="color: white;">© <a href="http://gdriv.es/optiklab">OptikLab</a> 2013. I created this just for fun. None of the hamsters was not injured during the creation.</p>
+	</div>
+</div>
+</body>
+</html>
+ <script type="text/javascript">
+	var SILENCE_LEVEL = 5;
+	var PEAK_LEVEL = 10;
+	var MAX_SILENCE_TICKS = 50;
+	var MICROPHONE_AMPLIFY_LEVEL = 10;
+    var silenceCounter = 0;
+	var totalTime = 0;
+	var wasLevelPeak = 0;	
+	var isRecording = 0;
+	
+	function callback_started(){
+		$('#status').html('Hamster is listening!');
+	    //$('#status').html('Started: stop hamster');
+		setPictureHamsterStop();
+		silenceCounter = 0;
+		totalTime = 0;
+		wasLevelPeak = 0;
+		isRecording = 1;		
+	}
+
+	function callback_error(code) {
+		$('#status').html('Not clear!');
+	    //alert('Error, code:' + code);
+	}
+
+	function callback_stopped(){
+		//$('#status').html('Stoped');
+		silenceCounter = 0;
+		isRecording = 0;
+
+		if (wasLevelPeak) {
+			//$('#status').html('Send data');
+			$('#status').html('Alhpa, delta, bravo!');
+			wasLevelPeak = 0;
+			$.jRecorder.sendData();  
+		}
+		else {
+			$('#status').html('Not clear!');
+			//$('#status').html('No voice, record again.');
+			$.jRecorder.record(30);
+		}
+	}
+
+	function callback_finished_recording(){
+		//$('#status').html('Finished_recording');
+	}
+
+	function callback_finished_sending(){
+		// We show hamster speaking with delay: because sound playing by event
+		// inside of ActionScript and it is not determinated.
+		var timer = setTimeout('setPictureHamsterSpeech();', 2000);
+		var timer = setTimeout('$.jRecorder.record(5);', totalTime * 1000);	 
+	}
+
+	function callback_activityLevel(level){
+	  // Is user speaking or not?
+	  if (level > PEAK_LEVEL && isRecording)
+	  {
+		wasLevelPeak = 1; // Yes, we got a peak level of sound.
+		silenceCounter = 0;
+	  }
+	  
+	  // Count silence ticks when level of sound is less than SILENCE_LEVEL.
+	  if(level < SILENCE_LEVEL && isRecording)
+	  {
+		silenceCounter = silenceCounter + 1;
+	  }	  
+    
+	  // If we got MAX_SILENCE_TICKS, stop recording...
+	  if (silenceCounter == MAX_SILENCE_TICKS && isRecording)
+	  {
+	     silenceCounter = 0;
+	     $.jRecorder.stop();
+	  }
+	  
+	  // Show level bar
+	  //$('#level').html(level);                    
+	  if(level == -1)
+	  {
+	    $('#levelbar').css("width",  "2px");
+	  }
+	  else
+	  {
+	    $('#levelbar').css("width", (level * 2)+ "px");
+	  }
+	}
+
+	function callback_activityTime(time){
+		totalTime = time;		
+		//$('#time').html(time);
+	}
+</script>
