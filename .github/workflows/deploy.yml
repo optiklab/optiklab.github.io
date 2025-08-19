@@ -1,0 +1,44 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    # run every Sunday at 22:12 UTC
+    - cron: '12 22 * * 0'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/checkout@v2
+        with:
+          repository: mozilla-firefox/firefox
+          path: firefox
+
+      - uses: actions/checkout@v2
+        with:
+          repository: chromium/chromium
+          path: chromium
+
+      - run: npm install -g mustache
+
+      - name: Build
+        run: |
+          mkdir build
+          dev/build-data ./firefox > build/data.json
+          dev/build-data ./chromium >> build/data.json
+          cat build/data.json
+          mustache build/data.json browsers-lang-stats.mustache > browsers-lang-stats.html
+          cat browsers-lang-stats.html
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.8
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
